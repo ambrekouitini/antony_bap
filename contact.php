@@ -7,8 +7,12 @@
     <link rel="stylesheet" href="public/css/style.css">
     <title>Contact</title>
 </head>
-<body class="index contactBody">
+<body class="index ">
+<?php
+require_once 'header.php';
+?>
 
+<main class="contactBody">
 <section class="contactPres">
     <h1 class="contactTitle">Nous contacter</h1>
     <div class="contactText">Nous apprécions votre opinion ! N'hésitez pas à partager votre expérience avec nous !</div>
@@ -29,7 +33,8 @@
             <label for="retour">Ecrivez votre retour</label>
             <input type="text" name="retour" >
         </div>
+        <button type="submit" value="contactForm">Envoyer</button>
     </form>
-
+</main>
 </body>
 </html>
