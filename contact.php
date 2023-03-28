@@ -19,19 +19,21 @@ require_once 'header.php';
 </section>
 
     <form action="POST" class="contactForm">
-        <div class="contactFormLeftSide">
-            <div>
-                <label for="etablissement">Selectionner un établissement</label>
-                <input type="text" name="etablissement" placeholder="Nom de l’établissement ...">
+        <div class="contactInputs">
+            <div class="contactFormLeftSide">
+                <div>
+                    <label for="etablissement">Selectionner un établissement</label>
+                    <input type="text" name="etablissement" placeholder="Nom de l’établissement ...">
+                </div>
+                <div>
+                    <label for="nom">Votre nom</label>
+                    <input type="text" name="nom" placeholder="Votre nom ...">
+                </div>
             </div>
-            <div>
-                <label for="nom">Votre nom</label>
-                <input type="text" name="nom" placeholder="Votre nom ...">
+            <div class="contactFormRightSide">
+                <label for="retour">Ecrivez votre retour</label>
+                <input type="text" name="retour" >
             </div>
-        </div>
-        <div class="contactFormRightSide">
-            <label for="retour">Ecrivez votre retour</label>
-            <input type="text" name="retour" >
         </div>
         <button type="submit" value="contactForm">Envoyer</button>
     </form>
