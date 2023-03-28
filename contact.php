@@ -38,5 +38,9 @@ require_once 'header.php';
         <button type="submit" value="contactForm">Envoyer</button>
     </form>
 </main>
+
+<?php
+require_once 'footer.php';
+?>
 </body>
 </html>

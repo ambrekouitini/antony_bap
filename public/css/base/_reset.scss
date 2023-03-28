@@ -1,12 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 16px;
-    font-family: 'Koho', sans-serif;
-}
 @import url('https://fonts.cdnfonts.com/css/euclid-flex');
-
 * {
     margin: 0;
     padding: 0;
@@ -15,9 +7,6 @@
     font-family: "Koho", sans-serif;
     font-family: 'Euclid Triangle', sans-serif;
 }
-
-
-
 .index {
     width: 100%;
     height: 100%;
@@ -110,5 +99,58 @@
     }
     .navbar>ul.active {
         display: block;
+    }
+}
+/*----------------------------------------------------*/
+footer{
+    section{
+        width: 100%;
+        height: 185px;
+        background-color: #05306E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+        z-index: 999;
+        margin-top: 85px ;
+
+        color: white;
+        font-family: "Euclid Triangle", sans-serif;
+        font-size: 16px;
+        .footerSection1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 900px;
+            a, a:link, a:visited, a:active, a:hover{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        .footerSection2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 900px;
+            a, a:link, a:visited, a:active, a:hover{
+                text-decoration: none;
+                color: white;
+            }
+        }
+        .footerSection3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 900px;
+            a, a:link, a:visited, a:active, a:hover{
+                color: white;
+            }
+        }
+        .footerSectionFirstLine {
+            margin-bottom: 25px;
+        }
     }
 }
