@@ -14,8 +14,22 @@
     <p class="tempMarg"></p>
     <hr>
 
+<section class="refParticuliers">
+    <div class="refParticuliersBox">
+        <div class="refParticuliersDesc">
+            <div class="refParticuliersTitle">
+                Réferencement de particuliers
+            </div>
+            <div class="refParticuliersText">
+                Vous voulez que votre bâtiment soit référencé comme accessible à tous sur nos services. Faites votre demande ici !
+            </div>
+        </div>
+        <div class="refParticuliersButtonBox">
+            <a class="refParticuliersButton" href="#">Accéder</a>
+        </div>
+    </div>
 
-
+</section>
 
 
 
