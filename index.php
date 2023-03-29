@@ -28,13 +28,19 @@
             <a class="refParticuliersButton" href="#">Accéder</a>
         </div>
     </div>
-
 </section>
 
-
-
-
-
+<section class="partenaires">
+    <h3 class="partenairesTitle">Nos partenaires</h3>
+    <div class="partenairesLogos">
+        <img src="images/SNCF logo" alt="SNCF logo" class="partenairesImg">
+        <img src="images/RATP logo" alt="RATP logo" class="partenairesImg">
+        <img src="images/Anthony Voyages logo" alt="Anthony Voyages logo" class="partenairesImg">
+        <img src="images/Croix Rouge logo" alt="Croix Rouge logo" class="partenairesImg">
+        <img src="images/MONOPRIX logo" alt="MONOPRIX logo" class="partenairesImg">
+        <img src="images/Citya logo" alt="Citya logo" class="partenairesImg">
+    </div>
+</section>
 
 
 <section class="contactSection">

@@ -225,14 +225,33 @@ footer section .footerSectionFirstLine {
   font-weight: bold;
 }
 
-/*-----------------Formulaire de contact -------------------*/
+/*----------------- Listes des partenaires -------------------*/
+.partenaires {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.partenaires .partenairesTitle {
+  display: flex;
+  align-items: center;
+  font-family: "Euclid Flex SemiBold";
+  font-size: 32px;
+  margin-bottom: 35px;
+  margin-top: 70px;
+  margin-left: -600px;
+}
+.partenaires .partenairesLogos {
+  display: flex;
+  justify-content: center;
+}
+/*----------------- Formulaire de contact -------------------*/
 .contactSection {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .contactSection .contactTitle {
-  font-family: "Euclid Flex Medium";
+  font-family: "Euclid Flex SemiBold";
   font-size: 32px;
   margin-bottom: 35px;
   margin-top: 70px;
