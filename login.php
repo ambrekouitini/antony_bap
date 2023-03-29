@@ -49,8 +49,8 @@
 
         <?php if(isset($_GET['error']) && $_GET['error'] == 1) { ?>
             <div class="errorLog">
-                <h3>Incorrect mail or password !</h3>
-                <p>Please enter an email address and a corresponding password</p>
+                <h3>Mot de passe ou email incorrect !</h3>
+                <p>Entrez un mot de passe et un email correspondant</p>
             </div>
         <?php } ?>
 

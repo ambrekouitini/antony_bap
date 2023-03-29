@@ -2,14 +2,7 @@
     session_start();
     require_once 'object/connection.php';
     require_once 'object/user.php';
-
-    if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
-        $autorisation = 1;
-    }
-
-    if($autorisation != 1){
-        header('Location: login.php');
-    }
+    require_once 'object/establishment.php';
 ?>
 
 <!DOCTYPE html>
@@ -22,10 +15,47 @@
     <title>Dashboard Admin</title>
 </head>
 <body>
-    <h1>Dashboard Admin</h1>
-    <h2>Bienvenue</h2>
-    <form action="login.php" method="POST">
-        <button type="submit">Se deconnecter</button>
+
+    <?php
+        if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
+            $autorisation = 1;
+            $connection = new Connection();
+            $establishmentsLabeled = $connection->GetLabeledEstablishment();
+        }
+    
+        if($autorisation != 1){
+            header('Location: login.php');
+        }
+    ?>
+
+    <nav>
+        <ul>
+            <li><a href="dashboard-admin.php">Tous les établissement</a></li>
+            <li><a href="dashboard-request.php">Demandes de label</a></li>
+        </ul>
+    </nav>
+
+    <form method="POST">
+        <input type="hidden" name="deconnection" ?>
+        <input type="submit" name="deconnection" value="Se deconnecter">
     </form>
+    <?php 
+        if(isset($_POST["deconnection"])){
+            session_destroy();
+            header('Location: login.php');
+        }
+    ?>
+
+    <h1>Tous les établissements labelisés</h1>
+
+    <?php foreach ($establishmentsLabeled as $labeled): ?>
+        <p> Nom de l'établissement : <?= $labeled['establishment_name'] ?></p>
+        <p> Adresse de l'établissement : <?= $labeled['establishment_adress'] ?></p>
+    <?php endforeach; ?>
+
+
+
+
+
 </body>
 </html>

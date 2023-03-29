@@ -1,6 +1,7 @@
 <?php
 
 require_once 'user.php';
+require_once 'establishment.php';
 
 class Connection
 {
@@ -12,6 +13,7 @@ class Connection
         //$this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', '');
     }
 
+    // USER'S FUNCTION
     public function InsertUser(User $user): bool
     {
         $query = 'INSERT INTO user (name, email, password, role)
@@ -51,4 +53,122 @@ class Connection
 
         return $passVerified;
     }
+
+    // ESTABLISHMENT'S FUNCTION
+    public function InsertEstablishment(Establishment $establishment): bool
+    {
+        $query = 'INSERT INTO establishment (owner_firstname, owner_lastname, owner_email, owner_number, establishment_name, establishment_adress)
+                    VALUES (:owner_firstname, :owner_lastname, :owner_email, :owner_number, :establishment_name, :establishment_adress)';
+
+        $statement = $this->pdo->prepare($query);
+
+        return $statement->execute([
+            'owner_firstname' => $establishment->owner_firstname,
+            'owner_lastname' => $establishment->owner_lastname,
+            'owner_email' => $establishment->owner_email,
+            'owner_number' => $establishment->owner_number,
+            'establishment_name' => $establishment->establishment_name,
+            'establishment_adress' => $establishment->establishment_adress,
+        ]);
+    }
+
+    public function GetEstablishment()
+    {
+        $query = 'SELECT * FROM establishment ORDER BY id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
+    }
+
+    public function GetEstablishmentById($id)
+    {
+        $query = 'SELECT * FROM establishment WHERE id = :id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute([
+            'id' => $id
+        ]);
+        $data = $statement->fetch();
+        return $data;
+    }
+
+    public function GetEstablishmentByDateAsc()
+    {
+        $query = 'SELECT * FROM establishment ORDER BY asked_at ASC';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
+    }
+
+    public function GetEstablishmentByDateDesc()
+    {
+        $query = 'SELECT * FROM establishment ORDER BY asked_at DESC';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
+    }
+
+    public function GetEstablishmentByStatus($status)
+    {
+        $query = 'SELECT * FROM establishment WHERE status = :status';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute([
+            'status' => $status
+        ]);
+        $data = $statement->fetchAll();
+        return $data;
+    }
+
+    public function RefuseEstablishment($id)
+    {
+        $query = 'UPDATE establishment SET status = "Refusé" WHERE id = :id';
+        $statement = $this->pdo->prepare($query);
+        return $statement->execute([
+            'id' => $id
+        ]);
+    }
+    
+
+    public function AcceptEstablishment($id)
+    {      
+        // récupérer les informations de la demande d'établissement
+        $query = 'SELECT * FROM establishment WHERE id = :id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute([
+            'id' => $id
+        ]);
+        $data = $statement->fetch();
+
+        // insérer les informations de l'établissement dans la table "labeled"
+        $query = 'INSERT INTO labeled (owner_firstname, owner_lastname, owner_email, owner_number, establishment_name, establishment_adress)
+                    VALUES (:owner_firstname, :owner_lastname, :owner_email, :owner_number, :establishment_name, :establishment_adress)';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute([
+            'owner_firstname' => $data['owner_firstname'],
+            'owner_lastname' => $data['owner_lastname'],
+            'owner_email' => $data['owner_email'],
+            'owner_number' => $data['owner_number'],
+            'establishment_name' => $data['establishment_name'],
+            'establishment_adress' => $data['establishment_adress'],
+        ]);
+
+        // mettre à jour le statut de la demande d'établissement
+        $query = 'UPDATE establishment SET status = "Accepté" WHERE id = :id';
+        $statement = $this->pdo->prepare($query);
+        return $statement->execute([
+            'id' => $id
+        ]);
+    }
+
+    public function GetLabeledEstablishment()
+    {
+        $query = 'SELECT * FROM labeled ORDER BY id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
+    }
+
 }
