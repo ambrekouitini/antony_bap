@@ -96,6 +96,9 @@
   }
 }
 /*----------------------------------------------------*/
+footer {
+  padding-bottom: 0px;
+}
 footer section {
   width: 100%;
   height: 185px;
@@ -144,6 +147,99 @@ footer section .footerSection3 a, footer section .footerSection3 a:link, footer 
 }
 footer section .footerSectionFirstLine {
   margin-bottom: 25px;
+}
+@media screen and (max-width: 1117px) {
+  footer .footerSection1, footer .footerSection2, footer .footerSection3 {
+    width: 700px;
+  }
+}
+@media screen and (max-width: 780px) {
+  footer .footerSection1, footer .footerSection2, footer .footerSection3 {
+    width: 400px;
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.tempMarg {
+  height: 185px;
+}
+
+/*-----------------Formulaire de contact -------------------*/
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactSection .contactTitle {
+  font-family: "Euclid Flex Medium";
+  font-size: 32px;
+  margin-bottom: 35px;
+  margin-top: 70px;
+  margin-left: -600px;
+}
+.contactSection .contactForm {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;
+  margin-top: 50px;
+  align-items: center;
+}
+.contactSection .contactForm .contactFormUpperSide {
+  display: flex;
+  flex-direction: row;
+}
+.contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+.contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide input {
+  font-family: "Euclid Flex";
+  font-size: 24px;
+  width: 390px;
+  height: 55px;
+  border-radius: 10px;
+  margin-top: 25px;
+  padding-left: 20px;
+}
+.contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide input {
+  font-family: "Euclid Flex";
+  font-size: 24px;
+  width: 380px;
+  height: 55px;
+  border-radius: 10px;
+  margin-top: 25px;
+  padding-left: 20px;
+}
+.contactSection .contactForm .contactFormBottomSide textarea {
+  width: 820px;
+  height: 280px;
+  font-family: "Euclid Flex";
+  font-size: 24px;
+  border-radius: 14px;
+  margin-top: 25px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.contactSection .contactForm button {
+  margin-top: 20px;
+  width: 820px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #0952BA;
+  color: white;
+  border: none;
+  font-family: "Euclid Triangle", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .index {
@@ -218,6 +314,7 @@ footer section .footerSectionFirstLine {
   margin-top: 25px;
 }
 .contactBody .contactForm button {
+  border: none;
   margin-top: 70px;
   width: 200px;
   height: 50px;

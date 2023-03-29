@@ -103,6 +103,7 @@
 }
 /*----------------------------------------------------*/
 footer{
+    padding-bottom: 0px;
     section{
         width: 100%;
         height: 185px;
@@ -113,7 +114,6 @@ footer{
         padding: 0 50px;
         z-index: 999;
         margin-top: 85px ;
-
         color: white;
         font-family: "Euclid Triangle", sans-serif;
         font-size: 16px;
@@ -151,6 +151,20 @@ footer{
         }
         .footerSectionFirstLine {
             margin-bottom: 25px;
+        }
+    }
+
+    @media screen and (max-width: 1117px) {
+        .footerSection1, .footerSection2, .footerSection3{
+            width: 700px;
+        }
+    }
+    @media screen and (max-width: 780px) {
+        .footerSection1, .footerSection2, .footerSection3{
+            width: 400px;
+            font-size: 12px;
+            display: flex;
+            flex-wrap: wrap;
         }
     }
 }
