@@ -33,12 +33,12 @@
 <section class="partenaires">
     <h3 class="partenairesTitle">Nos partenaires</h3>
     <div class="partenairesLogos">
-        <img src="images/SNCF logo.png" alt="SNCF logo" class="partenairesImg">
-        <img src="images/RATP logo.png" alt="RATP logo" class="partenairesImg">
-        <img src="images/Anthony Voyages logo.png" alt="Anthony Voyages logo" class="partenairesImg">
-        <img src="images/Croix Rouge logo.png" alt="Croix Rouge logo" class="partenairesImg">
-        <img src="images/MONOPRIX logo.png" alt="MONOPRIX logo" class="partenairesImg">
-        <img src="images/Citya logo.png" alt="Citya logo" class="partenairesImg">
+        <img src="images/SNCF logo.png" alt="SNCF logo" class=" img1">
+        <img src="images/RATP logo.png" alt="RATP logo" class=" img2">
+        <img src="images/Anthony Voyages logo.png" alt="Anthony Voyages logo" class=" img3">
+        <img src="images/Croix Rouge logo.png" alt="Croix Rouge logo" class=" img4">
+        <img src="images/MONOPRIX logo.png" alt="MONOPRIX logo" class=" img5">
+        <img src="images/Citya logo.png" alt="Citya logo" class=" img6">
     </div>
 </section>
 

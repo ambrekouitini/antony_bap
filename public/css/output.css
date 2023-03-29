@@ -233,17 +233,45 @@ footer section .footerSectionFirstLine {
 }
 .partenaires .partenairesTitle {
   display: flex;
+  justify-content: center;
   align-items: center;
   font-family: "Euclid Flex SemiBold";
   font-size: 32px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   margin-top: 70px;
-  margin-left: -600px;
 }
 .partenaires .partenairesLogos {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 1000px;
+  gap: 10px;
 }
+.partenaires .partenairesLogos .img1 {
+  width: 100px;
+  height: 50px;
+}
+.partenaires .partenairesLogos .img2 {
+  width: 112px;
+  height: 83px;
+}
+.partenaires .partenairesLogos .img3 {
+  width: 220px;
+  height: 120px;
+}
+.partenaires .partenairesLogos .img4 {
+  width: 100px;
+  height: 100px;
+}
+.partenaires .partenairesLogos .img5 {
+  width: 240px;
+  height: 120px;
+}
+.partenaires .partenairesLogos .img6 {
+  width: 100px;
+  height: 90px;
+}
+
 /*----------------- Formulaire de contact -------------------*/
 .contactSection {
   display: flex;
