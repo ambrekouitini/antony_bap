@@ -11,4 +11,54 @@
   background-color: beige;
 }
 
+.login {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+}
+.login .containerLeft {
+  width: 45%;
+  background-color: #123B2A;
+  display: flex;
+  align-items: center;
+}
+.login .containerLeft .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login .containerLeft .title img {
+  width: 60%;
+}
+.login .containerLeft .title h1 {
+  font-family: "Kanit";
+  color: #FFFFFF;
+  font-size: 80px;
+}
+.login .containerRight {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login .containerRight .mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login .containerRight .mainContainer h2 {
+  font-family: "Kanit";
+  font-size: 36px;
+}
+.login .containerRight .mainContainer p {
+  font-family: "Euclid Flex";
+  font-size: 20px;
+  color: #434343;
+}
+
 /*# sourceMappingURL=style.css.map */
