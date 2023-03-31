@@ -225,23 +225,124 @@ footer section .footerSectionFirstLine {
   font-weight: bold;
 }
 
+/*---------------------- Carousel Avis  -------------------------------*/
+.AvisCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #F9F9F9;
+  width: 410px;
+  height: 230px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px grey;
+}
+.AvisCard .AvisName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Euclid Triangle", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  padding-top: 25px;
+  margin-bottom: 25px;
+}
+.AvisCard .AvisFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.AvisCard .AvisFlex .AvisText {
+  margin-bottom: 30px;
+  margin-right: 37px;
+  margin-left: 37px;
+}
+.AvisCard .AvisFlex .AvisText .AvisTitle {
+  font-family: "Euclid Triangle", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.AvisCard .AvisFlex .AvisText .AvisComment {
+  font-family: "Euclid Triangle", sans-serif;
+  font-size: 15px;
+}
+.AvisCard .AvisFlex .AvisDate {
+  font-family: "Euclid Triangle", sans-serif;
+  font-size: 15px;
+  padding-bottom: 70px;
+  margin-right: 15px;
+}
+
+.CarouselAvis {
+  margin-top: 113px;
+  margin-left: 112px;
+  margin-right: 112px;
+  /*  background-color: red;
+    display: flex;
+    width: 112px;*/
+}
+.CarouselAvis h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Euclid Flex SemiBold", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 70px;
+}
+.CarouselAvis .bloc {
+  display: flex;
+}
+.CarouselAvis .diapo {
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+  width: 30%;
+}
+.CarouselAvis #nav-droite, .CarouselAvis #nav-gauche {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgb(255, 0, 0);
+  font-size: 3em;
+}
+.CarouselAvis #nav-droite {
+  right: 10px;
+  opacity: 50%;
+  display: none;
+}
+.CarouselAvis #nav-gauche {
+  left: 20px;
+  opacity: 50%;
+  display: none;
+}
+.CarouselAvis .elements {
+  display: flex;
+  transition: 1s linear;
+  gap: 60px;
+}
+.CarouselAvis .element {
+  flex: 1 0 60px;
+}
+
 /*----------------- Listes des partenaires -------------------*/
 .partenaires {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 115px;
 }
 .partenaires .partenairesTitle {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Euclid Flex SemiBold";
+  font-family: "Euclid Flex SemiBold", sans-serif;
   font-size: 32px;
   margin-bottom: 20px;
   margin-top: 70px;
 }
 .partenaires .partenairesLogos {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 1000px;
