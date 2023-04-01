@@ -332,6 +332,11 @@ footer section .footerSectionFirstLine {
   margin-top: 115px;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 1118px) {
+  .partenaires {
+    display: none;
+  }
+}
 .partenaires .partenairesTitle {
   display: flex;
   justify-content: center;

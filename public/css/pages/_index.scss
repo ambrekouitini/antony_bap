@@ -176,8 +176,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 115px;    flex-wrap: wrap;
-
+  margin-top: 115px;
+  flex-wrap: wrap;
+  @media screen and (max-width: 1118px) {
+    display: none;
+  }
 
   .partenairesTitle{
     display: flex;
