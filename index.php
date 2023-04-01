@@ -106,7 +106,7 @@
 
 <section class="contactSection">
     <h3 class="contactTitle">Nous contacter</h3>
-    <form action="POST" class="contactForm">
+    <form action="" class="contactForm">
         <div class="contactFormUpperSide">
                 <div class="contactFormUpperLeftSide">
                     <input type="text" name="nom" placeholder="Nom">
