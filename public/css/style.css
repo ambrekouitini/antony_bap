@@ -175,7 +175,7 @@ footer section .footerSectionFirstLine {
 .refParticuliers .refParticuliersBox {
   background-color: #05306E;
   color: white;
-  min-height: 260px;
+  min-height: 217px;
   width: min(90%, 1200px);
   border-radius: 20px;
   margin-top: 100px;
@@ -184,6 +184,18 @@ footer section .footerSectionFirstLine {
   align-items: center;
   display: flex;
 }
+@media screen and (max-width: 840px) {
+  .refParticuliers .refParticuliersBox {
+    padding: 20px 25px;
+    min-width: 333px;
+    height: 117px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .refParticuliers .refParticuliersBox {
+    flex-direction: column;
+  }
+}
 .refParticuliers .refParticuliersBox .refParticuliersDesc {
   font-family: "Euclid Triangle", sans-serif;
   margin-right: 183px;
@@ -191,11 +203,27 @@ footer section .footerSectionFirstLine {
   flex-direction: column;
   gap: 25px;
 }
+@media screen and (max-width: 840px) {
+  .refParticuliers .refParticuliersBox .refParticuliersDesc {
+    margin-right: 0px;
+    gap: 17px;
+  }
+}
 .refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersTitle {
   font-size: 32px;
 }
+@media screen and (max-width: 840px) {
+  .refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersTitle {
+    font-size: 20.5px;
+  }
+}
 .refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersText {
   font-size: 20px;
+}
+@media screen and (max-width: 840px) {
+  .refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersText {
+    font-size: 13.5px;
+  }
 }
 .refParticuliers .refParticuliersBox .refParticuliersButtonBox {
   display: flex;
@@ -203,6 +231,13 @@ footer section .footerSectionFirstLine {
   align-items: center;
   margin-right: 35px;
   margin-top: 20px;
+}
+@media screen and (max-width: 840px) {
+  .refParticuliers .refParticuliersBox .refParticuliersButtonBox {
+    justify-content: end;
+    width: 100%;
+    margin-right: 0px;
+  }
 }
 .refParticuliers .refParticuliersBox .refParticuliersButtonBox .refParticuliersButton {
   display: flex;
@@ -219,10 +254,12 @@ footer section .footerSectionFirstLine {
   font-weight: bold;
   text-decoration: none;
 }
-.refParticuliers .refParticuliersBox .refParticuliersButtonBox .refParticuliersButton a {
-  font-family: "Euclid Flex";
-  font-size: 24px;
-  font-weight: bold;
+@media screen and (max-width: 840px) {
+  .refParticuliers .refParticuliersBox .refParticuliersButtonBox .refParticuliersButton {
+    font-size: 16.5px;
+    width: 125px;
+    height: 40px;
+  }
 }
 
 /*---------------------- Carousel Avis  -------------------------------*/
@@ -280,6 +317,11 @@ footer section .footerSectionFirstLine {
     display: flex;
     width: 112px;*/
 }
+@media screen and (max-width: 1125px) {
+  .CarouselAvis {
+    display: none;
+  }
+}
 .CarouselAvis h3 {
   display: flex;
   justify-content: center;
@@ -293,10 +335,11 @@ footer section .footerSectionFirstLine {
   display: flex;
 }
 .CarouselAvis .diapo {
-  overflow: visible;
+  overflow: hidden;
+  padding-bottom: 10px;
   position: relative;
   z-index: 1;
-  width: 30%;
+  width: 100vw;
 }
 .CarouselAvis #nav-droite, .CarouselAvis #nav-gauche {
   position: absolute;
