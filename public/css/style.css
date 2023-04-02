@@ -97,7 +97,7 @@
 }
 /*----------------------------------------------------*/
 footer {
-  padding-bottom: 0px;
+  padding-bottom: 0;
 }
 footer section {
   width: 100%;
@@ -113,6 +113,15 @@ footer section {
   font-family: "Euclid Triangle", sans-serif;
   font-size: 16px;
 }
+footer section p, footer section a, footer section a:link, footer section a:visited, footer section a:active, footer section a:hover {
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 780px) {
+  footer section p, footer section a, footer section a:link, footer section a:visited, footer section a:active, footer section a:hover {
+    font-size: 8px;
+  }
+}
 footer section .footerSection1 {
   display: flex;
   flex-direction: column;
@@ -120,20 +129,12 @@ footer section .footerSection1 {
   justify-content: space-evenly;
   width: 900px;
 }
-footer section .footerSection1 a, footer section .footerSection1 a:link, footer section .footerSection1 a:visited, footer section .footerSection1 a:active, footer section .footerSection1 a:hover {
-  text-decoration: none;
-  color: white;
-}
 footer section .footerSection2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   width: 900px;
-}
-footer section .footerSection2 a, footer section .footerSection2 a:link, footer section .footerSection2 a:visited, footer section .footerSection2 a:active, footer section .footerSection2 a:hover {
-  text-decoration: none;
-  color: white;
 }
 footer section .footerSection3 {
   display: flex;
@@ -147,19 +148,6 @@ footer section .footerSection3 a, footer section .footerSection3 a:link, footer 
 }
 footer section .footerSectionFirstLine {
   margin-bottom: 25px;
-}
-@media screen and (max-width: 1117px) {
-  footer .footerSection1, footer .footerSection2, footer .footerSection3 {
-    width: 700px;
-  }
-}
-@media screen and (max-width: 780px) {
-  footer .footerSection1, footer .footerSection2, footer .footerSection3 {
-    width: 400px;
-    font-size: 12px;
-    display: flex;
-    flex-wrap: wrap;
-  }
 }
 
 .tempMarg {

@@ -103,7 +103,7 @@
 }
 /*----------------------------------------------------*/
 footer{
-    padding-bottom: 0px;
+    padding-bottom: 0;
     section{
         width: 100%;
         height: 185px;
@@ -117,16 +117,20 @@ footer{
         color: white;
         font-family: "Euclid Triangle", sans-serif;
         font-size: 16px;
+        p, a, a:link, a:visited, a:active, a:hover{
+            text-decoration: none;
+            color: white;
+            @media screen and (max-width: 780px) {
+                font-size: 8px;
+            }
+        }
         .footerSection1{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-evenly;
             width: 900px;
-            a, a:link, a:visited, a:active, a:hover{
-                text-decoration: none;
-                color: white;
-            }
+
         }
         .footerSection2{
             display: flex;
@@ -134,10 +138,7 @@ footer{
             align-items: center;
             justify-content: space-evenly;
             width: 900px;
-            a, a:link, a:visited, a:active, a:hover{
-                text-decoration: none;
-                color: white;
-            }
+
         }
         .footerSection3{
             display: flex;
@@ -147,24 +148,11 @@ footer{
             width: 900px;
             a, a:link, a:visited, a:active, a:hover{
                 color: white;
+
             }
         }
         .footerSectionFirstLine {
             margin-bottom: 25px;
-        }
-    }
-
-    @media screen and (max-width: 1117px) {
-        .footerSection1, .footerSection2, .footerSection3{
-            width: 700px;
-        }
-    }
-    @media screen and (max-width: 780px) {
-        .footerSection1, .footerSection2, .footerSection3{
-            width: 400px;
-            font-size: 12px;
-            display: flex;
-            flex-wrap: wrap;
         }
     }
 }
