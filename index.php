@@ -1,3 +1,28 @@
+<?php
+    require_once 'object/connection.php';
+    require_once 'object/warn.php';
+
+    $connection = new Connection();
+
+    if ($_POST) {
+        $warn = new Warn(
+            $_POST['nom'],
+            $_POST['prenom'],
+            $_POST['email'],
+            $_POST['phone'],
+            $_POST['retour'],
+        );
+
+        if ($warn->verify()) {
+            $connection->InsertWarn($warn);
+            header('Location: index.php');
+        } else {
+            echo 'Veuillez remplir tous les champs';
+        }
+        
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -106,15 +131,15 @@
 
 <section class="contactSection">
     <h3 class="contactTitle">Nous contacter</h3>
-    <form action="" class="contactForm">
+    <form method="POST" class="contactForm">
         <div class="contactFormUpperSide">
                 <div class="contactFormUpperLeftSide">
                     <input type="text" name="nom" placeholder="Nom">
-                    <input type="text" name="email" placeholder="Email">
+                    <input type="text" name="prenom" placeholder="Prénom">
                 </div>
                 <div class="contactFormUpperRightSide">
-                    <input type="text" name="prenom" placeholder="Prénom">
-                    <input type="text" name="telephone" placeholder="Téléphone">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="text" name="phone" placeholder="Téléphone">
                 </div>
             </div>
         <div class="contactFormBottomSide">

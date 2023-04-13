@@ -1,7 +1,6 @@
 <?php
 
 require_once 'user.php';
-require_once 'contact.php';
 require_once 'establishment.php';
 
 class Connection
@@ -25,6 +24,22 @@ class Connection
             'etablissement' => $contact->etablissement,
             'nom' => $contact->nom,
             'retour' => $contact->retour,
+        ]);
+    }
+
+    public function InsertWarn(Warn $warn): bool
+    {
+        $query = 'INSERT INTO warn (nom, prenom, email, phone, retour)
+                    VALUES (:nom, :prenom, :email, :phone, :retour)';
+
+        $statement = $this->pdo->prepare($query);
+
+        return $statement->execute([
+            'nom' => $warn->nom,
+            'prenom' => $warn->prenom,
+            'email' => $warn->email,
+            'phone' => $warn->phone,
+            'retour' => $warn->retour,
         ]);
     }
 
