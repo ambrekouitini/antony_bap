@@ -446,6 +446,7 @@ padding-right: 147px;
   
     
 @media (max-width: 850px) {
+
   .navbar{
     padding: 0 20px;
   }
@@ -503,7 +504,7 @@ padding-right: 147px;
       font-weight: 700;
     }
     h3{
-      line-height: 56px;
+      line-height: 46px;
       padding-top: 35px;
       font-size: 20px;
       font-weight: 400;
@@ -514,16 +515,16 @@ padding-right: 147px;
     .frise {
       border-radius: 10px;
       display:block;
-      margin-left: 100px;
-      gap: 14%;
+      margin-left: 10px;
+      
       align-items: center;
       height: 9px;
-      width: 90%;
-      background-color: #05306E;
+      width: 90% ;
+      background-color: #05316e00;
       padding: 0 10px;
     
       .point {
-  
+        margin-bottom: 50px;
         font-size: 30px;
         height: 60px;
         width: 60px;
@@ -535,21 +536,19 @@ padding-right: 147px;
         align-items: center;
         .stick-bottom {
           border-radius: 10px;
-          border-radius: 10px;
-          margin-top: 90px;
+          margin-bottom: 90px;
           z-index: -1;
           position: absolute;
           height: 150px;
           width: 9px;
           background-color: #05306E;
-        
         }
         .stick-top {
           border-radius: 10px;
           margin-bottom: 90px;
           z-index: -1;
           position: absolute;
-          height: 150px;
+          height: 250px;
           width: 9px;
           background-color: #05306E;
         
@@ -562,30 +561,30 @@ padding-right: 147px;
     margin-top: 140px;
     margin-left: 100px;
     margin-right: 100px;
-    display: flex;
+    display: block;
     justify-content: right;
     gap: 7%;
     .first-text{
       width: 30%;
       h2{
-        font-size: 30px;
+        font-size: 26px;
         font-weight: 700;
       }
       h3{
         
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 400;
       }
     }
     .second-text{
       width: 30%;
       h2{
-        font-size: 30px;
+        font-size: 26px;
         font-weight: 700;
       }
       h3{
         
-        font-size: 24px;
+        font-size: 20px;
         font-weight: 400;
       }
     }
@@ -593,8 +592,48 @@ padding-right: 147px;
   .text-top-frise{
     margin-bottom: 140px;
     margin-top: 100px;
-    margin-left: 200px;
-    display: flex;
+    margin-left: 100px;
+    display: block;
+    justify-content: left;
+    gap: 8%;
+    .first-text{
+      width: 30%;
+      h2{
+        font-size: 26px;
+        font-weight: 700;
+      }
+      h3{
+        
+        font-size: 20px;
+        font-weight: 400;
+      }
+    }
+    .second-text{
+      width: 30%;
+      h2{
+        font-size: 26px;
+        font-weight: 700;
+      }
+      h3{
+        
+        font-size: 20px;
+        font-weight: 400;
+      }
+    }
+  }
+  .objectif-content{
+    padding-left: 60px;
+  padding-right: 60px;
+  }
+}
+
+@media (max-width: 550px) {
+  
+  .text-top-frise{
+    margin-bottom: 140px;
+    margin-top: 100px;
+    margin-left: 00px;
+    display: block;
     justify-content: left;
     gap: 8%;
     .first-text{
@@ -609,23 +648,8 @@ padding-right: 147px;
         font-weight: 400;
       }
     }
-    .second-text{
-      width: 30%;
-      h2{
-        font-size: 30px;
-        font-weight: 700;
-      }
-      h3{
-        
-        font-size: 24px;
-        font-weight: 400;
-      }
-    }
   }
-}
 
-@media (max-width: 550px) {
-  
   .presentation-content{
     padding-left: 30px;
     padding-right: 50px;
@@ -635,7 +659,6 @@ padding-right: 147px;
       font-weight: 700;
     }
     h3{
-      line-height: 56px;
       padding-top: 35px;
       font-size: 18px;
       font-weight: 400;
@@ -645,7 +668,7 @@ padding-right: 147px;
     margin-left: 100px;
     .frise {
       border-radius: 10px;
-      display:block;
+      display:flex;
       margin-left: 100px;
       gap: 14%;
       align-items: center;
