@@ -97,7 +97,7 @@
 }
 /*----------------------------------------------------*/
 footer {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
 footer section {
   width: 100%;
@@ -433,7 +433,7 @@ footer section .footerSectionFirstLine {
 .contactSection .contactForm {
   display: flex;
   flex-direction: column;
-  width: 1100px;
+  width: min(1100px, 100%);
   margin-top: 37px;
   align-items: center;
 }
@@ -554,56 +554,97 @@ footer section .footerSectionFirstLine {
   padding-right: 150px;
 }
 .contactBody .contactPres .contactTitle {
-  font-family: "Euclid Flex Medium";
+  font-family: "Euclid Flex Medium", sans-serif;
   font-size: 32px;
   margin-bottom: 20px;
 }
 .contactBody .contactPres .contactText {
-  font-family: "Euclid Flex";
+  font-family: "Euclid Flex", sans-serif;
   font-size: 20px;
 }
 .contactBody .contactForm {
   display: flex;
   flex-direction: column;
-  width: 1100px;
+  width: min(1100px, 100%);
   margin-top: 50px;
   align-items: center;
+}
+@media screen and (max-width: 1160px) {
+  .contactBody .contactForm {
+    margin-top: 25px;
+  }
 }
 .contactBody .contactForm .contactInputs {
   display: flex;
   flex-direction: row;
 }
-.contactBody .contactForm .contactInputs .contactFormLeftSide {
+@media screen and (max-width: 1160px) {
+  .contactBody .contactForm .contactInputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.contactBody .contactForm .contactInputs .contactFormPart1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-right: 100px;
 }
-.contactBody .contactForm .contactInputs .contactFormLeftSide label {
-  font-family: "Euclid Flex";
+@media screen and (max-width: 1160px) {
+  .contactBody .contactForm .contactInputs .contactFormPart1 {
+    justify-content: center;
+    margin-right: 0;
+    background-color: blueviolet;
+  }
+  .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_1 {
+    flex-direction: column;
+    background-color: orange;
+  }
+  .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_2 {
+    flex-direction: column;
+    background-color: red;
+  }
+}
+.contactBody .contactForm .contactInputs .contactFormPart1 label {
+  font-family: "Euclid Flex", sans-serif;
   font-size: 24px;
   margin-bottom: 25px;
 }
-.contactBody .contactForm .contactInputs .contactFormLeftSide input {
-  width: 500px;
+@media screen and (max-width: 1160px) {
+  .contactBody .contactForm .contactInputs .contactFormPart1 label {
+    display: none;
+  }
+}
+.contactBody .contactForm .contactInputs .contactFormPart1 input {
+  min-width: 500px;
   height: 55px;
   border-radius: 10px;
   margin-top: 25px;
   padding-left: 20px;
 }
-.contactBody .contactForm .contactInputs .contactFormRightSide {
+.contactBody .contactForm .contactInputs .contactFormPart2 {
   display: flex;
   flex-direction: column;
 }
-.contactBody .contactForm .contactInputs .contactFormRightSide label {
-  font-family: "Euclid Flex";
+.contactBody .contactForm .contactInputs .contactFormPart2 label {
+  font-family: "Euclid Flex", sans-serif;
   font-size: 24px;
 }
-.contactBody .contactForm .contactInputs .contactFormRightSide input {
+.contactBody .contactForm .contactInputs .contactFormPart2 textarea {
   width: 500px;
   height: 220px;
   border-radius: 10px;
   margin-top: 25px;
+}
+.contactBody .contactForm .contactInputs .contactFormPart2 textarea ::placeholder {
+  display: none;
+}
+@media screen and (min-width: 1160px) {
+  .contactBody .contactForm .contactInputs .contactFormPart2 textarea ::placeholder {
+    display: block;
+  }
 }
 .contactBody .contactForm button {
   border: none;
@@ -616,6 +657,58 @@ footer section .footerSectionFirstLine {
   font-family: "Euclid Triangle", sans-serif;
   font-size: 20px;
   font-weight: bold;
+}
+
+.tempMarg {
+  height: 100px;
+}
+
+.sectionSearchBar {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sectionSearchBar .accessSearchBar {
+  width: 660px;
+  display: flex;
+  align-items: center;
+}
+.sectionSearchBar .accessSearchBar .accessSearchInput {
+  background-color: #C1C1C1;
+  width: 660px;
+  height: 50px;
+  border-radius: 330px;
+  color: white;
+  border: none;
+  padding-left: 60px;
+}
+.sectionSearchBar .accessSearchBar .accessSearchInput ::placeholder {
+  color: white;
+}
+.sectionSearchBar .accessSearchBar img {
+  position: absolute;
+  margin-left: 15px;
+}
+
+.AccessMap {
+  display: flex;
+}
+.AccessMap .Placeholder {
+  width: 100%;
+  height: 100vh;
+}
+.AccessMap .AccessMapFilter {
+  position: absolute;
+  right: 35px;
+  width: 73px;
+  height: 73px;
+  border-radius: 48px;
+  border: none;
+}
+.AccessMap .AccessMapFilter img {
+  object-fit: contain;
 }
 
 /*# sourceMappingURL=style.css.map */

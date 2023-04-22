@@ -17,32 +17,29 @@ require_once 'header.php';
     <h1 class="contactTitle">Nous contacter</h1>
     <div class="contactText">Nous apprécions votre opinion ! N'hésitez pas à partager votre expérience avec nous !</div>
 </section>
-
     <form action="POST" class="contactForm">
         <div class="contactInputs">
-            <div class="contactFormLeftSide">
-                <div>
+            <div class="contactFormPart1">
+                <div class="contactFormPart1_1">
                     <label for="etablissement">Selectionner un établissement</label>
                     <input type="text" name="etablissement" placeholder="Nom de l’établissement ...">
                 </div>
-                <div>
+                <div class="contactFormPart1_2">
                     <label for="nom">Votre nom</label>
                     <input type="text" name="nom" placeholder="Votre nom ...">
                 </div>
             </div>
-            <div class="contactFormRightSide">
+            <div class="contactFormPart2">
                 <label for="retour">Ecrivez votre retour</label>
-                <input type="text" name="retour" >
+                <textarea rows="5" cols="33" name="retour" placeholder="Ecrivez votre retour"></textarea>
             </div>
         </div>
         <button type="submit" value="contactForm">Envoyer</button>
     </form>
 </main>
-
 <?php
 require_once 'footer.php';
 ?>
 </body>
 <script src="public/js/script.js"></script>
-
 </html>

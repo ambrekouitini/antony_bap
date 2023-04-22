@@ -1,0 +1,61 @@
+.tempMarg{
+  height: 100px;
+}
+
+.sectionSearchBar{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .accessSearchBar{
+    width: 660px;
+    display: flex;
+    align-items: center;
+    .accessSearchInput{
+      background-color: #C1C1C1;
+      width: 660px;
+      height: 50px;
+      border-radius:330px;
+      color: white;
+      border: none;
+      padding-left: 60px;
+      ::placeholder{
+        color: white;
+      }
+    }
+    img{
+      position: absolute;
+      margin-left: 15px;
+    }
+  }
+}
+
+.AccessMap{
+  display: flex;
+
+  
+  .Placeholder{
+    width: 100%;
+    height: 100vh;
+  }
+  .AccessMapFilter{
+
+    position: absolute;
+
+    right: 35px;
+    width: 73px;
+    height: 73px;
+    border-radius: 48px;
+    border: none;
+    img{
+      object-fit: contain;
+    }
+  }
+}
+
+
+
+
+
+

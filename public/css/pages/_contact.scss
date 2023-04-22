@@ -11,42 +11,68 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     margin-top: 185px;
     padding-left: 150px;
     padding-right: 150px;
     .contactTitle{
-      font-family: "Euclid Flex Medium";
+      font-family: "Euclid Flex Medium", sans-serif;
       font-size: 32px;
       margin-bottom: 20px;
     }
     .contactText{
-      font-family: "Euclid Flex";
+      font-family: "Euclid Flex", sans-serif;
       font-size: 20px;
     }
   }
+
   .contactForm{
     display: flex;
     flex-direction: column;
-    width: 1100px;
+    width: min(1100px ,100%);
     margin-top: 50px;
     align-items: center;
+    @media screen and (max-width: 1160px) {
+      margin-top: 25px;
+
+    }
 
     .contactInputs{
       display: flex;
       flex-direction: row;
-      .contactFormLeftSide{
+      @media screen and (max-width: 1160px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .contactFormPart1{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         margin-right: 100px;
+        @media screen and (max-width: 1160px) {
+          justify-content: center;
+          margin-right: 0;
+          background-color: blueviolet;
+          .contactFormPart1_1{
+            flex-direction: column;
+            background-color: orange;
+          }
+          .contactFormPart1_2{
+            flex-direction: column;
+            background-color: red;
+          }
+        }
         label{
-          font-family: "Euclid Flex";
+          font-family: "Euclid Flex", sans-serif;
           font-size: 24px;
           margin-bottom: 25px;
+          @media screen and (max-width: 1160px) {
+            display: none;
+          }
         }
         input{
-          width: 500px;
+          min-width: 500px;
           height: 55px;
           border-radius: 10px;
           margin-top: 25px;
@@ -54,18 +80,31 @@
 
         }
       }
-      .contactFormRightSide{
+
+
+
+
+
+
+
+      .contactFormPart2{
         display: flex;
         flex-direction: column;
         label{
-          font-family: "Euclid Flex";
+          font-family: "Euclid Flex", sans-serif;
           font-size: 24px;
         }
-        input{
+        textarea{
           width: 500px;
           height: 220px;
           border-radius: 10px;
           margin-top: 25px;
+          ::placeholder{
+            display: none;
+            @media screen and (min-width: 1160px){
+              display: block;
+            }
+          }
         }
       }
     }

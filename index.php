@@ -105,7 +105,7 @@
 
 
 <section class="contactSection">
-    <h3 class="contactTitle">Nous contacter</h3>
+    <h3 class="contactTitle">Signaler un problème</h3>
     <form action="" class="contactForm">
         <div class="contactFormUpperSide">
                 <div class="contactFormUpperLeftSide">
@@ -116,7 +116,7 @@
                     <input type="text" name="prenom" placeholder="Prénom">
                     <input type="text" name="telephone" placeholder="Téléphone">
                 </div>
-            </div>
+        </div>
         <div class="contactFormBottomSide">
             <textarea rows="5" cols="33" name="retour" placeholder="Description"></textarea>
         </div>
