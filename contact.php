@@ -42,4 +42,5 @@ require_once 'footer.php';
 ?>
 </body>
 <script src="public/js/script.js"></script>
+<script src="public/js/accessbilite.js"></script>
 </html>

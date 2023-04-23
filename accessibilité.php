@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <title>Accessibilité</title>
 </head>
 <body class="index">
@@ -23,11 +24,22 @@ require_once 'header.php';
 
 <section class="AccessMap">
     <img src="images/Placeholder.png" alt="placeholder" class="Placeholder">
-    <button class="AccessMapFilter">
-        <img src="images/settings.png" alt="z" class="">
-    </button>
 
+    <input type="checkbox" name="" id="Open">
+    <label for="Open" class="FilterIcon">
+        <div class="test">
+            <img src="images/settings.png" alt="z" class="">
+        </div>
+    </label>
+    <div id="FilterMap">
+    </div>
 </section>
+
+
+<button class="testLocation">
+Location
+</button>
+
 
 <?php
 require_once 'footer.php';
