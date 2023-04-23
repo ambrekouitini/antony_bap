@@ -44,10 +44,11 @@ piétons adaptés et bien plus encore.</h3>
             <div class="point">1 <div class="stick-top"></div></div>
             <div class="point">2 <div class="stick-bottom"></div></div>
             <div class="point">3 <div class="stick-top"></div></div>
-            <div class="point">4 <div class="stick-bottom"></div></div>
+            <div class="point">4</div>
         </div>
     </div>
 
+    <div class="text-frise-block">
     <div class="text-top-frise">
         <div class="first-text">
             <h2>Un problème, des solutions</h2>
@@ -75,6 +76,7 @@ piétons adaptés et bien plus encore.</h3>
             <h2>Profitez de la ville sans soucis</h2>
             <h3>La ville d’Antony n’a jamais été aussi plaisante pour se déplacer.</h3>
         </div>
+    </div>
     </div>
 </div>
 

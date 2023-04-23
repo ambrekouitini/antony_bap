@@ -454,8 +454,8 @@
     display: block;
   }
   .presentation-content {
-    padding-left: 90px;
-    padding-right: 110px;
+    padding-left: 70px;
+    padding-right: 40px;
   }
   .presentation-content h2 {
     padding-top: 90px;
@@ -470,23 +470,26 @@
   }
   .frise-content {
     display: none;
+    position: absolute;
   }
   .global-frise {
     display: flex;
+    justify-content: center;
   }
   .global-frise .frise-content-bis {
     display: block;
-    margin-left: 10%;
+    margin-left: 6%;
+    margin-right: 6%;
   }
   .global-frise .frise-content-bis .frise {
     display: block;
     background-color: rgba(5, 49, 110, 0);
   }
   .global-frise .frise-content-bis .frise .point {
-    margin-bottom: 50px;
-    font-size: 30px;
-    height: 60px;
-    width: 60px;
+    margin-bottom: 127px;
+    font-size: 24px;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
     background-color: #05306E;
     color: #fff;
@@ -496,19 +499,19 @@
   }
   .global-frise .frise-content-bis .frise .point .stick-bottom {
     border-radius: 10px;
-    margin-bottom: 0px;
+    margin-bottom: -100px;
     z-index: -1;
     position: absolute;
-    height: 150px;
+    height: 230px;
     width: 9px;
     background-color: #05306E;
   }
   .global-frise .frise-content-bis .frise .point .stick-top {
     border-radius: 10px;
-    margin-bottom: -90px;
+    margin-bottom: -170px;
     z-index: -1;
     position: absolute;
-    height: 150px;
+    height: 210px;
     width: 9px;
     background-color: #05306E;
   }
@@ -519,53 +522,62 @@
     display: block;
   }
   .text-bottom-frise .first-text {
-    width: 100%;
+    margin-bottom: 80px;
+    text-align: center;
+    width: 90%;
   }
   .text-bottom-frise .first-text h2 {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
   }
   .text-bottom-frise .first-text h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
   }
   .text-bottom-frise .second-text {
-    width: 100%;
+    text-align: center;
+    margin-bottom: 80px;
+    width: 90%;
   }
   .text-bottom-frise .second-text h2 {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
   }
   .text-bottom-frise .second-text h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
   }
   .text-top-frise {
     margin-bottom: 0px;
+    margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
     display: block;
   }
   .text-top-frise .first-text {
-    width: 100%;
+    text-align: center;
+    margin-bottom: 80px;
+    width: 90%;
   }
   .text-top-frise .first-text h2 {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
   }
   .text-top-frise .first-text h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
   }
   .text-top-frise .second-text {
-    width: 100%;
+    text-align: center;
+    margin-bottom: 80px;
+    width: 90%;
   }
   .text-top-frise .second-text h2 {
-    font-size: 26px;
+    font-size: 24px;
     font-weight: 700;
   }
   .text-top-frise .second-text h3 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
   }
   .objectif-content {
@@ -574,6 +586,9 @@
   }
 }
 @media (max-width: 550px) {
+  .accueil-content .accueil-text h1 {
+    font-size: 38px;
+  }
   .objectif-content {
     padding-left: 30px;
     padding-right: 30px;
@@ -583,13 +598,60 @@
     padding-right: 50px;
   }
   .presentation-content h2 {
-    padding-top: 90px;
-    font-size: 24px;
-    font-weight: 700;
+    font-size: 22px;
   }
   .presentation-content h3 {
-    padding-top: 35px;
     font-size: 18px;
-    font-weight: 400;
+  }
+  .objectif-content .objectif h2 {
+    font-size: 22px;
+  }
+  .objectif-content .objectif h3 {
+    font-size: 18px;
+  }
+  .objectif-content .access h2 {
+    font-size: 22px;
+  }
+  .objectif-content .access h3 {
+    font-size: 18px;
+  }
+  .objectif-content .access div > a > h3 {
+    font-size: 18px;
+  }
+  .text-frise-block .text-top-frise .first-text {
+    margin-bottom: 40px;
+  }
+  .text-frise-block .text-top-frise .first-text h2 {
+    font-size: 22px;
+  }
+  .text-frise-block .text-top-frise .first-text h3 {
+    font-size: 18px;
+  }
+  .text-frise-block .text-top-frise .second-text {
+    margin-bottom: 40px;
+  }
+  .text-frise-block .text-top-frise .second-text h2 {
+    font-size: 22px;
+  }
+  .text-frise-block .text-top-frise .second-text h3 {
+    font-size: 18px;
+  }
+  .text-frise-block .text-bottom-frise .first-text {
+    margin-bottom: 40px;
+  }
+  .text-frise-block .text-bottom-frise .first-text h2 {
+    font-size: 22px;
+  }
+  .text-frise-block .text-bottom-frise .first-text h3 {
+    font-size: 18px;
+  }
+  .text-frise-block .text-bottom-frise .second-text {
+    margin-bottom: 40px;
+  }
+  .text-frise-block .text-bottom-frise .second-text h2 {
+    font-size: 22px;
+  }
+  .text-frise-block .text-bottom-frise .second-text h3 {
+    font-size: 18px;
   }
 }/*# sourceMappingURL=output.css.map */
