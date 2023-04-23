@@ -38,6 +38,16 @@ piétons adaptés et bien plus encore.</h3>
             <div><a href="#"><h3>SIGNALER</h3></a></div>
         </div>
     </div>
+    <div class="global-frise">
+    <div class="frise-content-bis">
+        <div class="frise">
+            <div class="point">1 <div class="stick-top"></div></div>
+            <div class="point">2 <div class="stick-bottom"></div></div>
+            <div class="point">3 <div class="stick-top"></div></div>
+            <div class="point">4 <div class="stick-bottom"></div></div>
+        </div>
+    </div>
+
     <div class="text-top-frise">
         <div class="first-text">
             <h2>Un problème, des solutions</h2>
@@ -65,16 +75,8 @@ piétons adaptés et bien plus encore.</h3>
             <h2>Profitez de la ville sans soucis</h2>
             <h3>La ville d’Antony n’a jamais été aussi plaisante pour se déplacer.</h3>
         </div>
-        <div class="first-text">
-            <h2>Un problème, des solutions</h2>
-            <h3>Parcourez le site afin de trouver les solutions les plus adaptées à vos problèmes</h3>
-        </div>
-        <div class="second-text">
-            <h2>Informez-vous sur les infrastructures adaptées</h2>
-            <h3>Les infrastructures vous seront données pour vous permettre de vous adapter</h3>
-        </div>
     </div>
-    
+</div>
 
     
     <script src="public/js/script.js"></script>

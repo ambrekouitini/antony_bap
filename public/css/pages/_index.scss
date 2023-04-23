@@ -236,6 +236,9 @@ padding-right: 147px;
     }
   }
 }
+.frise-content-bis{
+  display: none;  
+}
 .text-bottom-frise{
   margin-top: 140px;
   margin-left: 100px;
@@ -511,61 +514,61 @@ padding-right: 147px;
     }
   }
   .frise-content{
-    margin-left: 100px;
-    .frise {
-      border-radius: 10px;
-      display:block;
-      margin-left: 10px;
+    display: none;
+  }
+
+  .global-frise{
+    display: flex;
+
+    .frise-content-bis{
+      display: block;
+      margin-left: 10%;
+      .frise {
+        display:block;
       
-      align-items: center;
-      height: 9px;
-      width: 90% ;
-      background-color: #05316e00;
-      padding: 0 10px;
-    
-      .point {
-        margin-bottom: 50px;
-        font-size: 30px;
-        height: 60px;
-        width: 60px;
-        border-radius: 50%;
-        background-color: #05306E;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .stick-bottom {
-          border-radius: 10px;
-          margin-bottom: 90px;
-          z-index: -1;
-          position: absolute;
-          height: 150px;
-          width: 9px;
+        background-color: #05316e00;    
+        .point {
+          margin-bottom: 50px;
+          font-size: 30px;
+          height: 60px;
+          width: 60px;
+          border-radius: 50%;
           background-color: #05306E;
+          color: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .stick-bottom {
+            border-radius: 10px;
+            margin-bottom: 0px;
+            z-index: -1;
+            position: absolute;
+            height: 150px;
+            width: 9px;
+            background-color: #05306E;
+          }
+          .stick-top {
+            border-radius: 10px;
+            margin-bottom: -90px;
+            z-index: -1;
+            position: absolute;
+            height: 150px;
+            width: 9px;
+            background-color: #05306E;
+          
+          }
+      
         }
-        .stick-top {
-          border-radius: 10px;
-          margin-bottom: 90px;
-          z-index: -1;
-          position: absolute;
-          height: 250px;
-          width: 9px;
-          background-color: #05306E;
-        
-        }
-    
       }
     }
   }
   .text-bottom-frise{
-    margin-top: 140px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
     display: block;
-    justify-content: right;
-    gap: 7%;
     .first-text{
-      width: 30%;
+      width: 100%;
       h2{
         font-size: 26px;
         font-weight: 700;
@@ -577,7 +580,7 @@ padding-right: 147px;
       }
     }
     .second-text{
-      width: 30%;
+      width: 100%;
       h2{
         font-size: 26px;
         font-weight: 700;
@@ -590,14 +593,12 @@ padding-right: 147px;
     }
   }
   .text-top-frise{
-    margin-bottom: 140px;
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
     display: block;
-    justify-content: left;
-    gap: 8%;
     .first-text{
-      width: 30%;
+      width: 100%;
       h2{
         font-size: 26px;
         font-weight: 700;
@@ -609,7 +610,7 @@ padding-right: 147px;
       }
     }
     .second-text{
-      width: 30%;
+      width: 100%;
       h2{
         font-size: 26px;
         font-weight: 700;
@@ -628,26 +629,9 @@ padding-right: 147px;
 }
 
 @media (max-width: 550px) {
-  
-  .text-top-frise{
-    margin-bottom: 140px;
-    margin-top: 100px;
-    margin-left: 00px;
-    display: block;
-    justify-content: left;
-    gap: 8%;
-    .first-text{
-      width: 30%;
-      h2{
-        font-size: 30px;
-        font-weight: 700;
-      }
-      h3{
-        
-        font-size: 24px;
-        font-weight: 400;
-      }
-    }
+  .objectif-content{
+    padding-left: 30px;
+  padding-right: 30px;
   }
 
   .presentation-content{
@@ -664,115 +648,6 @@ padding-right: 147px;
       font-weight: 400;
     }
   }
-  .frise-content{
-    margin-left: 100px;
-    .frise {
-      border-radius: 10px;
-      display:flex;
-      margin-left: 100px;
-      gap: 14%;
-      align-items: center;
-      height: 9px;
-      width: 90%;
-      background-color: #05306E;
-      padding: 0 10px;
-    
-      .point {
   
-        font-size: 30px;
-        height: 60px;
-        width: 60px;
-        border-radius: 50%;
-        background-color: #05306E;
-        color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .stick-bottom {
-          border-radius: 10px;
-          border-radius: 10px;
-          margin-top: 90px;
-          z-index: -1;
-          position: absolute;
-          height: 150px;
-          width: 9px;
-          background-color: #05306E;
-        
-        }
-        .stick-top {
-          border-radius: 10px;
-          margin-bottom: 90px;
-          z-index: -1;
-          position: absolute;
-          height: 150px;
-          width: 9px;
-          background-color: #05306E;
-        
-        }
-    
-      }
-    }
-  }
-  .text-bottom-frise{
-    margin-top: 140px;
-    margin-left: 100px;
-    margin-right: 100px;
-    display: flex;
-    justify-content: right;
-    gap: 7%;
-    .first-text{
-      width: 30%;
-      h2{
-        font-size: 30px;
-      }
-      h3{
-        
-        font-size: 24px;
-      }
-    }
-    .second-text{
-      width: 30%;
-      h2{
-        font-size: 30px;
-        font-weight: 700;
-      }
-      h3{
-        
-        font-size: 24px;
-        font-weight: 400;
-      }
-    }
-  }
-  .text-top-frise{
-    margin-bottom: 140px;
-    margin-top: 100px;
-    margin-left: 200px;
-    display: flex;
-    justify-content: left;
-    gap: 8%;
-    .first-text{
-      width: 30%;
-      h2{
-        font-size: 30px;
-        font-weight: 700;
-      }
-      h3{
-        
-        font-size: 24px;
-        font-weight: 400;
-      }
-    }
-    .second-text{
-      width: 30%;
-      h2{
-        font-size: 30px;
-        font-weight: 700;
-      }
-      h3{
-        
-        font-size: 24px;
-        font-weight: 400;
-      }
-    }
-  }
+  
 }

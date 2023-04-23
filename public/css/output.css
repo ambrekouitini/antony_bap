@@ -217,6 +217,10 @@
   background-color: #05306E;
 }
 
+.frise-content-bis {
+  display: none;
+}
+
 .text-bottom-frise {
   margin-top: 140px;
   margin-left: 100px;
@@ -465,19 +469,20 @@
     font-weight: 400;
   }
   .frise-content {
-    margin-left: 100px;
+    display: none;
   }
-  .frise-content .frise {
-    border-radius: 10px;
+  .global-frise {
+    display: flex;
+  }
+  .global-frise .frise-content-bis {
     display: block;
-    margin-left: 10px;
-    align-items: center;
-    height: 9px;
-    width: 90%;
-    background-color: rgba(5, 49, 110, 0);
-    padding: 0 10px;
+    margin-left: 10%;
   }
-  .frise-content .frise .point {
+  .global-frise .frise-content-bis .frise {
+    display: block;
+    background-color: rgba(5, 49, 110, 0);
+  }
+  .global-frise .frise-content-bis .frise .point {
     margin-bottom: 50px;
     font-size: 30px;
     height: 60px;
@@ -489,34 +494,32 @@
     justify-content: center;
     align-items: center;
   }
-  .frise-content .frise .point .stick-bottom {
+  .global-frise .frise-content-bis .frise .point .stick-bottom {
     border-radius: 10px;
-    margin-bottom: 90px;
+    margin-bottom: 0px;
     z-index: -1;
     position: absolute;
     height: 150px;
     width: 9px;
     background-color: #05306E;
   }
-  .frise-content .frise .point .stick-top {
+  .global-frise .frise-content-bis .frise .point .stick-top {
     border-radius: 10px;
-    margin-bottom: 90px;
+    margin-bottom: -90px;
     z-index: -1;
     position: absolute;
-    height: 250px;
+    height: 150px;
     width: 9px;
     background-color: #05306E;
   }
   .text-bottom-frise {
-    margin-top: 140px;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
     display: block;
-    justify-content: right;
-    gap: 7%;
   }
   .text-bottom-frise .first-text {
-    width: 30%;
+    width: 100%;
   }
   .text-bottom-frise .first-text h2 {
     font-size: 26px;
@@ -527,7 +530,7 @@
     font-weight: 400;
   }
   .text-bottom-frise .second-text {
-    width: 30%;
+    width: 100%;
   }
   .text-bottom-frise .second-text h2 {
     font-size: 26px;
@@ -538,15 +541,13 @@
     font-weight: 400;
   }
   .text-top-frise {
-    margin-bottom: 140px;
-    margin-top: 100px;
-    margin-left: 100px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
     display: block;
-    justify-content: left;
-    gap: 8%;
   }
   .text-top-frise .first-text {
-    width: 30%;
+    width: 100%;
   }
   .text-top-frise .first-text h2 {
     font-size: 26px;
@@ -557,7 +558,7 @@
     font-weight: 400;
   }
   .text-top-frise .second-text {
-    width: 30%;
+    width: 100%;
   }
   .text-top-frise .second-text h2 {
     font-size: 26px;
@@ -573,24 +574,9 @@
   }
 }
 @media (max-width: 550px) {
-  .text-top-frise {
-    margin-bottom: 140px;
-    margin-top: 100px;
-    margin-left: 0px;
-    display: block;
-    justify-content: left;
-    gap: 8%;
-  }
-  .text-top-frise .first-text {
-    width: 30%;
-  }
-  .text-top-frise .first-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-  }
-  .text-top-frise .first-text h3 {
-    font-size: 24px;
-    font-weight: 400;
+  .objectif-content {
+    padding-left: 30px;
+    padding-right: 30px;
   }
   .presentation-content {
     padding-left: 30px;
@@ -604,108 +590,6 @@
   .presentation-content h3 {
     padding-top: 35px;
     font-size: 18px;
-    font-weight: 400;
-  }
-  .frise-content {
-    margin-left: 100px;
-  }
-  .frise-content .frise {
-    border-radius: 10px;
-    display: flex;
-    margin-left: 100px;
-    gap: 14%;
-    align-items: center;
-    height: 9px;
-    width: 90%;
-    background-color: #05306E;
-    padding: 0 10px;
-  }
-  .frise-content .frise .point {
-    font-size: 30px;
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    background-color: #05306E;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .frise-content .frise .point .stick-bottom {
-    border-radius: 10px;
-    border-radius: 10px;
-    margin-top: 90px;
-    z-index: -1;
-    position: absolute;
-    height: 150px;
-    width: 9px;
-    background-color: #05306E;
-  }
-  .frise-content .frise .point .stick-top {
-    border-radius: 10px;
-    margin-bottom: 90px;
-    z-index: -1;
-    position: absolute;
-    height: 150px;
-    width: 9px;
-    background-color: #05306E;
-  }
-  .text-bottom-frise {
-    margin-top: 140px;
-    margin-left: 100px;
-    margin-right: 100px;
-    display: flex;
-    justify-content: right;
-    gap: 7%;
-  }
-  .text-bottom-frise .first-text {
-    width: 30%;
-  }
-  .text-bottom-frise .first-text h2 {
-    font-size: 30px;
-  }
-  .text-bottom-frise .first-text h3 {
-    font-size: 24px;
-  }
-  .text-bottom-frise .second-text {
-    width: 30%;
-  }
-  .text-bottom-frise .second-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-  }
-  .text-bottom-frise .second-text h3 {
-    font-size: 24px;
-    font-weight: 400;
-  }
-  .text-top-frise {
-    margin-bottom: 140px;
-    margin-top: 100px;
-    margin-left: 200px;
-    display: flex;
-    justify-content: left;
-    gap: 8%;
-  }
-  .text-top-frise .first-text {
-    width: 30%;
-  }
-  .text-top-frise .first-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-  }
-  .text-top-frise .first-text h3 {
-    font-size: 24px;
-    font-weight: 400;
-  }
-  .text-top-frise .second-text {
-    width: 30%;
-  }
-  .text-top-frise .second-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-  }
-  .text-top-frise .second-text h3 {
-    font-size: 24px;
     font-weight: 400;
   }
 }/*# sourceMappingURL=output.css.map */
