@@ -4,19 +4,85 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/style.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/leo4oek.css">
-    <title>Accueil</title>
+    <title>Accueil</title>https://github.com/ambrekouitini/antony_bap/pull/4/conflict?name=public%252Fcss%252Foutput.css&ancestor_oid=3826fb57e81f7d3d1b892e6c81b5f05c005ec199&base_oid=e265644de0d8865df4f07bd6e1ce744f45b2ddac&head_oid=6b07e920c885d53155651f2bac3ee82f025a5453
+==https://github.com/ambrekouitini/antony_bap/pull/4/conflict?name=public%252Fcss%252Foutput.css&ancestor_oid=3826fb57e81f7d3d1b892e6c81b5f05c005ec199&base_oid=e265644de0d8865df4f07bd6e1ce744f45b2ddac&head_oid=6b07e920c885d53155651f2bac3ee82f025a5453=====
+    <link rel="stylesheet" href="public/css/pages/style.css">
+    <title>Document</title>
 </head>
 <body class="index">
     <?php
     require_once 'header.php';
     ?>
-    <!--------------------- Marge de Ryan pour pouvoir coder A ENLEVER QUAND LA PAGE ACCUEIL EST FINI--------------------------->
-    <p class="tempMarg"></p>
-    <hr>
-    <!---------------------- -A ENLEVER QUAND LA PAGE ACCUEIL EST FINI---------------------------->
+    <div class ="accueil-content">
+        <img src="images/fond.png" alt="fond">
+        <div class="accueil-text">
+            <h1>Bienvenue sur Antony Accessibilité</h1>
+            <h2>La carte qui montre où tous les accès sont possibles !</h2>
+            <div>
+                <a href="#"><h3 class="button">Voir la carte</h3></a>
+            </div>
+        </div>
+    </div>
+    <div class="presentation-content">
+        <h2>Qui sommes-nous ?</h2>
+        <h3>Notre site propose un répertoire interactif, sous forme de carte,  permettant de voir quelles infrastructures de la ville d’Antony sont répertoriées comme accessibles, selon les besoins et conditions de l’utilisateur.
+Vous pourrez trouver rapidement les stations de bus et de métro, les places de parking handicapé, les passages
+piétons adaptés et bien plus encore.</h3>
+    </div>
+    <div class="objectif-content">
+        <div class="objectif">
+            <h2>Notre objectif</h2>
+            <h3>Nous voulons donner à toute personne à mobilité réduite ou autre situation, les meilleurs itinéraires et informations les plus adaptées à leur profil, dans la ville d’Antony.</h3>
+        </div>
+        <div class="access">
+            <h2>Signaler un lieu non accessible ?</h2>
+            <h3>Vous pouvez nous aider en signalant des lieux non répertoriés.</h3>
+            <div><a href="#"><h3>SIGNALER</h3></a></div>
+        </div>
+    </div>
+    <div class="global-frise">
+    <div class="frise-content-bis">
+        <div class="frise">
+            <div class="point">1 <div class="stick-top"></div></div>
+            <div class="point">2 <div class="stick-bottom"></div></div>
+            <div class="point">3 <div class="stick-top"></div></div>
+            <div class="point">4</div>
+        </div>
+    </div>
+
+    <div class="text-frise-block">
+    <div class="text-top-frise">
+        <div class="first-text">
+            <h2>Un problème, des solutions</h2>
+            <h3>Parcourez le site afin de trouver les solutions les plus adaptées à vos problèmes</h3>
+        </div>
+        <div class="second-text">
+            <h2>Informez-vous sur les infrastructures adaptées</h2>
+            <h3>Les infrastructures vous seront données pour vous permettre de vous adapter</h3>
+        </div>
+    </div>
+    <div class="frise-content">
+        <div class="frise">
+            <div class="point">1 <div class="stick-top"></div></div>
+            <div class="point">2 <div class="stick-bottom"></div></div>
+            <div class="point">3 <div class="stick-top"></div></div>
+            <div class="point">4 <div class="stick-bottom"></div></div>
+        </div>
+    </div>
+    <div class="text-bottom-frise">
+        <div class="first-text">
+            <h2>Parcourez la map</h2>
+            <h3>Notre map interactive vous permettra d’assurer la disponibilité et de faciliter vos déplacements</h3>
+        </div>
+        <div class="second-text">
+            <h2>Profitez de la ville sans soucis</h2>
+            <h3>La ville d’Antony n’a jamais été aussi plaisante pour se déplacer.</h3>
+        </div>
+    </div>
+    </div>
+</div>
 
 <section class="refParticuliers">
     <div class="refParticuliersBox">
