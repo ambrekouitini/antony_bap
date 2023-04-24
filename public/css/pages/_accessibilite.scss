@@ -30,33 +30,32 @@
     }
   }
 }
+.testLocation{
+  width: 80px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+}
+
+
 
 .AccessMap{
   display: flex;
+  --map-height: 100vh;
+  height: var(--map-height);
+  background-color: red;
+
   .Placeholder{
-    width: 100%;
-    height: 100vh;
+    width: 100vw;
   }
-  .AccessMapFilter{
-    position: absolute;
-    right: 35px;
-
-    width: 73px;
-    height: 73px;
-    border-radius: 48px;
-    border: none;
-
-  }
-
 }
-
-#FilterMap{
-  position: fixed;
+.FilterMap{
+  display: none;
+  position: relative;
   width: 250px;
-  height: 100%;
-  right: 0;
-  top: 0;
-  margin-top: 20px;
+  --filter-width: 250px;
+  --negative-filter-width: -250px;
+  height: var(--map-height);
   background-color: darkgrey;
   transform: translate(250px);
 }
@@ -69,32 +68,27 @@
   border-radius: 48px;
   border: none;
   z-index: 20;
+
   background-color: white;
-  .test{
-    width: 73px;
-    height: 73px;
-    img{
-      object-fit: contain;
-    }
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-}
-#Open{
-  display: none;
-}
-#Open:checked ~ #FilterMap{
   transform: translate(0px);
+  img{
+      object-fit: contain;
+      width: 56px;
+      height: 56px;
+    }
 }
-#Open:checked ~ .FilterIcon{
-   transform: translate(-250px);
- }
 
+.activeMap{
+  transform: translate(0px);
+  display: block;
 
-.testLocation{
-  width: 80px;
-  height: 50px;
-  background-color: blue;
-  color: white;
+}
+.activeIcon{
+  transform: translate(0px);
 }
 
 

@@ -92,3 +92,15 @@ function stopTimer(){
 function startTimer(){
     timer = setInterval(slideNext, 4000)
 }
+
+/*-----------------------Page accessibilité - Filtre de la Map-----------------------*/
+
+const FilterToggle = document.querySelector('.FilterIcon');
+const FilterMenu = document.querySelector('.FilterMap');
+
+FilterToggle.addEventListener('click', () => {
+    FilterMenu.classList.toggle('activeMap');
+    FilterToggle.classList.toggle('activeIcon');
+});
+
+

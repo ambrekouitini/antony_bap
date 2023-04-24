@@ -12,7 +12,6 @@
 <?php
 require_once 'header.php';
 ?>
-<p class="tempMarg"></p>
 
 <section class="sectionSearchBar">
     <div class="accessSearchBar">
@@ -21,17 +20,14 @@ require_once 'header.php';
     </div>
 </section>
 
-
+<div class="FilterIcon">
+    <img src="images/settings.png" alt="" class="">
+</div>
 <section class="AccessMap">
     <img src="images/Placeholder.png" alt="placeholder" class="Placeholder">
 
-    <input type="checkbox" name="" id="Open">
-    <label for="Open" class="FilterIcon">
-        <div class="test">
-            <img src="images/settings.png" alt="z" class="">
-        </div>
-    </label>
-    <div id="FilterMap">
+    <div class="FilterMap">
+        FilterMap
     </div>
 </section>
 
