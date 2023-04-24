@@ -1,5 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/euclid-flex");
-@import url("https://fonts.cdnfonts.com/css/euclid-flex");
+
 * {
   margin: 0;
   padding: 0;
@@ -1402,5 +1402,6 @@ footer section .footerSectionFirstLine {
   background-color: blue;
   color: white;
 }
+
 
 /*# sourceMappingURL=style.css.map */

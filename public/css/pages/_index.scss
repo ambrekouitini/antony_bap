@@ -1,4 +1,12 @@
 @import url('https://fonts.cdnfonts.com/css/euclid-flex');
+
+:root{
+  --main-color: #123B2A;
+  --sec-color: #DBB326;
+  --third-color: #3A4D92;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +24,7 @@
 .navbar{
   width: 100%;
   height: 100px;
-  background: #123B2A;
+  background: #05306E;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +39,7 @@
 
 .navbar>ul>li{
   list-style: none;
-  margin: 0 40px;
+  margin: 0 16px;
 }
 
 .navbar>ul>li>a{
@@ -94,7 +102,7 @@
         border-radius: 16px;
         padding: 10px 40px;
         display: inline;
-        background-color: #3A4D92;
+        background-color: #0952BA;
       }
     }
     
@@ -129,7 +137,7 @@ padding-right: 147px;
   justify-content: center;
   align-items: center;
   .refParticuliersBox{
-    background-color: #123B2A;
+    background-color: #05306E;
     color: white;
     min-height: 217px;
     width: min(90%, 1200px);
@@ -189,7 +197,7 @@ padding-right: 147px;
         height: 50px;
         border-radius: 10px;
 
-        background-color: #DBB326;
+        background-color: #0952BA;
         color: white;
         border: none;
         font-family: "Euclid Flex";
@@ -379,15 +387,11 @@ padding-right: 147px;
   flex-direction: column;
   align-items: center;
   .contactTitle{
-    font-family:"Euclid Flex SemiBold";
     font-size: 32px;
-    margin-bottom: 35px;
+    text-align: center;
     margin-top: 70px;
-    margin-left: -600px;
     @media screen and (max-width: 900px){
-      margin-left: -50px;
-      margin-right: 50px;
-      margin-bottom: 0px;
+      font-size: 24px;
     }
   }
   .contactForm{
@@ -475,7 +479,7 @@ padding-right: 147px;
       width: 820px;
       height: 50px;
       border-radius: 10px;
-      background-color: #0952BA;
+      background-color: var(--third-color);
       color: white;
       border: none;
       font-family: "Euclid Triangle", sans-serif;
@@ -498,7 +502,7 @@ padding-right: 147px;
 
     border-radius: 15px;
     width: 564px;
-    background-color: #123B2A;
+    background-color: #05306E;
     h2{
       margin-bottom: 40px;
       color: #ffffff;
@@ -540,7 +544,7 @@ padding-right: 147px;
   
         h3{  
           display: inline;
-          background-color: #DBB326;
+          background-color: #0952BA;
           color: #fff;
           padding: 10px 58px;
           border-radius: 16px;
@@ -551,7 +555,7 @@ padding-right: 147px;
     }
   }
   
-
+}
 .frise-content{
   margin-left: 100px;
   .frise {
@@ -562,7 +566,7 @@ padding-right: 147px;
     align-items: center;
     height: 9px;
     width: 90%;
-    background-color: #3A4D92;
+    background-color: #05306E;
     padding: 0 10px;
   
     .point {
@@ -571,7 +575,7 @@ padding-right: 147px;
       height: 60px;
       width: 60px;
       border-radius: 50%;
-      background-color: #3A4D92;
+      background-color: #05306E;
       color: #fff;
       display: flex;
       justify-content: center;
@@ -584,7 +588,7 @@ padding-right: 147px;
         position: absolute;
         height: 150px;
         width: 9px;
-        background-color: #3A4D92;
+        background-color: #05306E;
       
       }
       .stick-top {
@@ -594,7 +598,7 @@ padding-right: 147px;
         position: absolute;
         height: 150px;
         width: 9px;
-        background-color: #3A4D92;
+        background-color: #05306E;
       
       }
   
@@ -686,7 +690,7 @@ padding-right: 147px;
   
       border-radius: 15px;
       width: 100%;
-      
+      background-color: #05306E;
       h2{
         
         margin-bottom: 40px;
@@ -842,7 +846,6 @@ padding-right: 147px;
     top: 70px;
     left: 0;
     width: 100%;
-    background: #05306E;
     padding: 20px;
     box-sizing: border-box;
   }
@@ -891,17 +894,17 @@ padding-right: 147px;
       margin-left: 6%;
       margin-right: 6%;
       .frise {
+        height: 9px;
         display:block;
-      
-        background-color: #05316e00;    
         .point {
           margin-bottom: 127px;
           font-size: 24px;
           height: 45px;
           width: 45px;
           border-radius: 50%;
-          background-color: #3A4D92;
+          background-color: #05306E;
           color: #fff;
+          background-color: var(--third-color);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -912,7 +915,7 @@ padding-right: 147px;
             position: absolute;
             height: 230px;
             width: 9px;
-            background-color: #3A4D92;
+            background-color: #05306E;
           }
           .stick-top {
             border-radius: 10px;
@@ -921,7 +924,7 @@ padding-right: 147px;
             position: absolute;
             height: 210px;
             width: 9px;
-            background-color: #3A4D92;
+            background-color: #05306E;
           
           }
       
