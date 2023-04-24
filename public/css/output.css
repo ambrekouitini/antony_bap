@@ -167,7 +167,7 @@ footer section .footerSectionFirstLine {
 .navbar {
   width: 100%;
   height: 100px;
-  background: #05306E;
+  background: #123B2A;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -206,7 +206,8 @@ footer section .footerSectionFirstLine {
 .accueil-content img {
   z-index: -1;
   position: absolute;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 573px;
 }
@@ -243,7 +244,7 @@ footer section .footerSectionFirstLine {
   border-radius: 16px;
   padding: 10px 40px;
   display: inline;
-  background-color: #0952BA;
+  background-color: #3A4D92;
 }
 
 .presentation-content {
@@ -277,7 +278,7 @@ footer section .footerSectionFirstLine {
   align-items: center;
 }
 .refParticuliers .refParticuliersBox {
-  background-color: #05306E;
+  background-color: #123B2A;
   color: white;
   min-height: 217px;
   width: min(90%, 1200px);
@@ -350,7 +351,7 @@ footer section .footerSectionFirstLine {
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background-color: #0952BA;
+  background-color: #DBB326;
   color: white;
   border: none;
   font-family: "Euclid Flex";
@@ -654,7 +655,7 @@ footer section .footerSectionFirstLine {
   padding-bottom: 40px;
   border-radius: 15px;
   width: 564px;
-  background-color: #05306E;
+  background-color: #123B2A;
 }
 .objectif h2 {
   margin-bottom: 40px;
@@ -693,7 +694,7 @@ footer section .footerSectionFirstLine {
 }
 .access div a h3 {
   display: inline;
-  background-color: #0952BA;
+  background-color: #DBB326;
   color: #fff;
   padding: 10px 58px;
   border-radius: 16px;
@@ -712,7 +713,7 @@ footer section .footerSectionFirstLine {
   align-items: center;
   height: 9px;
   width: 90%;
-  background-color: #05306E;
+  background-color: #3A4D92;
   padding: 0 10px;
 }
 .frise-content .frise .point {
@@ -720,7 +721,7 @@ footer section .footerSectionFirstLine {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  background-color: #05306E;
+  background-color: #3A4D92;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -734,7 +735,7 @@ footer section .footerSectionFirstLine {
   position: absolute;
   height: 150px;
   width: 9px;
-  background-color: #05306E;
+  background-color: #3A4D92;
 }
 .frise-content .frise .point .stick-top {
   border-radius: 10px;
@@ -743,7 +744,7 @@ footer section .footerSectionFirstLine {
   position: absolute;
   height: 150px;
   width: 9px;
-  background-color: #05306E;
+  background-color: #3A4D92;
 }
 
 .frise-content-bis {
@@ -828,7 +829,6 @@ footer section .footerSectionFirstLine {
     padding-bottom: 40px;
     border-radius: 15px;
     width: 100%;
-    background-color: #05306E;
   }
   .objectif-content .objectif h2 {
     margin-bottom: 40px;
@@ -867,7 +867,6 @@ footer section .footerSectionFirstLine {
   }
   .objectif-content .access div a h3 {
     display: inline;
-    background-color: #0952BA;
     color: #fff;
     padding: 10px 58px;
     border-radius: 16px;
@@ -1020,7 +1019,7 @@ footer section .footerSectionFirstLine {
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    background-color: #05306E;
+    background-color: #3A4D92;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -1033,7 +1032,7 @@ footer section .footerSectionFirstLine {
     position: absolute;
     height: 230px;
     width: 9px;
-    background-color: #05306E;
+    background-color: #3A4D92;
   }
   .global-frise .frise-content-bis .frise .point .stick-top {
     border-radius: 10px;
@@ -1042,7 +1041,7 @@ footer section .footerSectionFirstLine {
     position: absolute;
     height: 210px;
     width: 9px;
-    background-color: #05306E;
+    background-color: #3A4D92;
   }
   .text-bottom-frise {
     margin-top: 0px;
@@ -1285,10 +1284,16 @@ footer section .footerSectionFirstLine {
   border-radius: 10px;
   margin-top: 25px;
 }
+.contactBody .contactForm .contactInputs .contactFormPart2 textarea ::-moz-placeholder {
+  display: none;
+}
 .contactBody .contactForm .contactInputs .contactFormPart2 textarea ::placeholder {
   display: none;
 }
 @media screen and (min-width: 1160px) {
+  .contactBody .contactForm .contactInputs .contactFormPart2 textarea ::-moz-placeholder {
+    display: block;
+  }
   .contactBody .contactForm .contactInputs .contactFormPart2 textarea ::placeholder {
     display: block;
   }
@@ -1330,6 +1335,9 @@ footer section .footerSectionFirstLine {
   color: white;
   border: none;
   padding-left: 60px;
+}
+.sectionSearchBar .accessSearchBar .accessSearchInput ::-moz-placeholder {
+  color: white;
 }
 .sectionSearchBar .accessSearchBar .accessSearchInput ::placeholder {
   color: white;
@@ -1381,7 +1389,8 @@ footer section .footerSectionFirstLine {
   height: 73px;
 }
 .FilterIcon .test img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 #Open {
@@ -1401,6 +1410,4 @@ footer section .footerSectionFirstLine {
   height: 50px;
   background-color: blue;
   color: white;
-}
-
-/*# sourceMappingURL=output.css.map */
+}/*# sourceMappingURL=output.css.map */
