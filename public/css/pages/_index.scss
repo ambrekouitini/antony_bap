@@ -1,5 +1,4 @@
 @import url('https://fonts.cdnfonts.com/css/euclid-flex');
-
 * {
   margin: 0;
   padding: 0;
@@ -118,13 +117,13 @@ padding-right: 147px;
     font-weight: 400;
   }
 }
-.objectif-content{
+.objectif-content {
   margin-top: 100px;
   margin-bottom: 100px;
   padding-left: 111px;
   padding-right: 147px;
   display: flex;
-
+}
 /*----------------- Section referencement de particulier -------------------*/
 .refParticuliers{
   display: flex;
@@ -555,7 +554,7 @@ padding-right: 147px;
     }
   }
   
-}
+
 .frise-content{
   margin-left: 100px;
   .frise {
