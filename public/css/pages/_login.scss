@@ -10,6 +10,7 @@
         display: flex;
         align-items: center;
         .title{
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -30,35 +31,59 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        .mainContainer{
+        .formContainer{
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            h2{
-                font-family: 'Kanit';
-                font-size: 36px;
+            .mainContainer{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding-bottom: 80px;
+                gap: 20px;
+                h2{
+                    font-family: 'Kanit';
+                    font-size: 36px;
+                }
+                p{
+                    font-family: 'Euclid Flex';
+                    font-size: 20px;
+                    color: #434343;
+                }
             }
-            p{
-                font-family: 'Euclid Flex';
-                font-size: 20px;
-                color: #434343;
-            }
-        }
-        .formContainer{
-            .form{
-                .input{
+            form{
+                width: 65%;    
+                gap: 30px;
+                display: flex;
+                flex-direction: column;
+                .labelContainer{
+                    border: 1px solid #000000;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    padding: 5px 15px;
                     input{
-
-                    }
-                    label{
-
+                        border: none;
+                        outline: none;
+                        font-family: 'Roboto';
+                        font-size: 20px;
+                        color: #434343;
                     }
                 }
-                .button{
-                    button{
-
-                    }
+                button{
+                    background: #3A4D92;
+                    border-radius: 23px;
+                    border: none;
+                    padding: 15px 20px;
+                    font-family: 'Roboto';
+                    font-weight: 400;
+                    font-size: 18px;
+                    color: #FFFFFF;
+                    margin: 5% 25%;
                 }
             }
         }

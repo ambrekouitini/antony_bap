@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +26,7 @@
   align-items: center;
 }
 .login .containerLeft .title {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,20 +47,163 @@
   align-items: center;
   justify-content: center;
 }
-.login .containerRight .mainContainer {
+.login .containerRight .formContainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.login .containerRight .mainContainer h2 {
+.login .containerRight .formContainer .mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+  gap: 20px;
+}
+.login .containerRight .formContainer .mainContainer h2 {
   font-family: "Kanit";
   font-size: 36px;
 }
-.login .containerRight .mainContainer p {
+.login .containerRight .formContainer .mainContainer p {
   font-family: "Euclid Flex";
   font-size: 20px;
   color: #434343;
+}
+.login .containerRight .formContainer form {
+  width: 65%;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.login .containerRight .formContainer form .labelContainer {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 15px;
+}
+.login .containerRight .formContainer form .labelContainer input {
+  border: none;
+  outline: none;
+  font-family: "Roboto";
+  font-size: 20px;
+  color: #434343;
+}
+.login .containerRight .formContainer form button {
+  background: #3A4D92;
+  border-radius: 23px;
+  border: none;
+  padding: 15px 20px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin: 5% 25%;
+}
+
+.dashboardAdmin {
+  width: 100%;
+  padding-left: 21vw;
+}
+
+.headerAdmin {
+  height: 100%;
+  position: fixed;
+  background-color: #123B2A;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2% 2%;
+}
+.headerAdmin .logoContainer a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.headerAdmin .logoContainer a img {
+  width: 25%;
+}
+.headerAdmin .logoContainer a h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  font-weight: 600;
+  font-family: Kanit;
+}
+.headerAdmin .mainContainer {
+  padding: 25% 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.headerAdmin .mainContainer nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+}
+.headerAdmin .mainContainer nav .firstSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.headerAdmin .mainContainer nav .secondSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.headerAdmin .mainContainer nav a {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+.headerAdmin .mainContainer nav h2 {
+  font-size: 16px;
+  font-family: euclid flex;
+  font-weight: 500;
+}
+.headerAdmin .mainContainer nav span {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  font-weight: 600;
+  font-family: Kanit;
+  padding-bottom: 10px;
+}
+.headerAdmin form {
+  width: 100%;
+  display: flex;
+  align-items: left;
+}
+.headerAdmin form button {
+  gap: 20px;
+  border-style: none;
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  background: none;
+  align-items: center;
+}
+.headerAdmin form button h2 {
+  font-size: 16px;
+  font-family: euclid flex;
+  font-weight: 500;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

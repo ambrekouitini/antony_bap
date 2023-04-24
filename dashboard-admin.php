@@ -3,6 +3,23 @@
     require_once 'object/connection.php';
     require_once 'object/user.php';
     require_once 'object/establishment.php';
+
+    if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
+        $autorisation = 1;
+        $connection = new Connection();
+        $establishmentsLabeled = $connection->GetLabeledEstablishment();
+    }
+
+    if(isset($_POST['logout'])){
+        session_destroy();
+        header('Location: index.php');
+    }
+
+    if($autorisation != 1){
+        header('Location: login.php');
+    }
+
+    require_once 'headerAdmin.php';
 ?>
 
 <!DOCTYPE html>
@@ -14,20 +31,10 @@
     <link rel="stylesheet" href="public/css/style.css">
     <title>Dashboard Admin</title>
 </head>
+
+
 <body>
-
-    <?php
-        if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
-            $autorisation = 1;
-            $connection = new Connection();
-            $establishmentsLabeled = $connection->GetLabeledEstablishment();
-        }
-    
-        if($autorisation != 1){
-            header('Location: login.php');
-        }
-    ?>
-
+    <main class="dashboardAdmin">
     <nav>
         <ul>
             <li><a href="dashboard-admin.php">Tous les établissement</a></li>
@@ -53,6 +60,7 @@
         <p> Adresse de l'établissement : <?= $labeled['establishment_adress'] ?></p>
     <?php endforeach; ?>
 
+    </main>
 
 
 

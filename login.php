@@ -40,8 +40,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Connexion</title>
 </head>
-<body class="login">
 
+<body>
+
+<main class="login">
     <div class="containerLeft">
         <div class="title">
             <img src="/images/antonyLogo.png" alt="logo ville antony">
@@ -49,18 +51,18 @@
         </div>
     </div>
     <div class="containerRight">
-        <div class="mainContainer">
-            <h2>Connexion</h2>
-            <p>Connectez-vous pour accéder à votre espace admin.</p>
-        </div>
         <div class="formContainer">
+            <div class="mainContainer">
+                <h2>Bienvenue</h2>
+                <p>Connectez-vous pour accéder à votre espace admin.</p>
+            </div>
             <form method="POST">
                 <div class="labelContainer">
-                    <!-- <label for="email">Email</label> -->
+                    <img src="images/mail.svg" alt="logo mail">
                     <input type="email" name="email" id="email" placeholder="adresse mail">
                 </div>
                 <div class="labelContainer">
-                    <!-- <label for="password">Mot de passe</label> -->
+                    <img src="images/password.svg" alt="logo password">
                     <input type="password" name="password" id="password" placeholder="mot de passe">
                 </div>
 
@@ -71,13 +73,11 @@
                     </div>
                 <?php } ?>
 
-                <button type="submit">Se connecter</button>
+                <button type="submit">Connexion</button>
             </form>
         </div>
     </div>
+</main>
 
-
-
-    
 </body>
 </html>

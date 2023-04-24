@@ -1,3 +1,5 @@
 @use "base/reset";
 @use "pages/index";
 @use "pages/login";
+@use "pages/dashboard-admin";
+@use "require/headerAdmin";
