@@ -178,10 +178,11 @@ footer section .footerSectionFirstLine {
 
 .navbar {
   width: 100%;
-  height: 100px;
+  height: 85px;
   background: var(--main-color);
   display: flex;
   justify-content: space-between;
+  position: fixed;
   align-items: center;
   padding: 0 50px;
 }
@@ -269,9 +270,9 @@ footer section .footerSectionFirstLine {
   font-weight: 700;
 }
 .presentation-content h3 {
-  line-height: 60px;
+  line-height: 49px;
   padding-top: 35px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -677,7 +678,7 @@ footer section .footerSectionFirstLine {
 .objectif h3 {
   color: #ffffff;
   line-height: 40px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -689,9 +690,9 @@ footer section .footerSectionFirstLine {
   font-weight: 700;
 }
 .access h3 {
-  margin-top: 30px;
+  margin-top: 24px;
   color: #000000;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 .access div {
@@ -729,8 +730,8 @@ footer section .footerSectionFirstLine {
 }
 .frise-content .frise .point {
   font-size: 30px;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   background-color: var(--third-color);
   color: #fff;
@@ -741,7 +742,7 @@ footer section .footerSectionFirstLine {
 .frise-content .frise .point .stick-bottom {
   border-radius: 10px;
   border-radius: 10px;
-  margin-top: 90px;
+  margin-top: 100px;
   z-index: -1;
   position: absolute;
   height: 150px;
@@ -750,7 +751,7 @@ footer section .footerSectionFirstLine {
 }
 .frise-content .frise .point .stick-top {
   border-radius: 10px;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
   z-index: -1;
   position: absolute;
   height: 150px;
@@ -774,22 +775,22 @@ footer section .footerSectionFirstLine {
   width: 30%;
 }
 .text-bottom-frise .first-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-bottom-frise .first-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 .text-bottom-frise .second-text {
   width: 30%;
 }
 .text-bottom-frise .second-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-bottom-frise .second-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -805,22 +806,22 @@ footer section .footerSectionFirstLine {
   width: 30%;
 }
 .text-top-frise .first-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-top-frise .first-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 .text-top-frise .second-text {
   width: 30%;
 }
 .text-top-frise .second-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-top-frise .second-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -1139,6 +1140,7 @@ footer section .footerSectionFirstLine {
     font-size: 22px;
   }
   .presentation-content h3 {
+    line-height: 37px;
     font-size: 18px;
   }
   .objectif-content .objectif h2 {

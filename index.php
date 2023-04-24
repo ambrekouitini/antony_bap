@@ -169,25 +169,33 @@ piétons adaptés et bien plus encore.</h3>
 </section>
 
 
-<section class="contactSection">
-    <h3 class="contactTitle">Signaler un problème</h3>
-    <form action="" class="contactForm">
-        <div class="contactFormUpperSide">
-                <div class="contactFormUpperLeftSide">
-                    <input type="text" name="nom" placeholder="Nom">
-                    <input type="text" name="email" placeholder="Email">
+<div class="contactBody">
+<section class="contactPres">
+    <h1 class="contactTitle">Nous contacter</h1>
+    <div class="contactText">Nous apprécions votre opinion ! N'hésitez pas à partager votre expérience avec nous !</div>
+</section>
+    <form action="POST" class="contactForm">
+        <div class="contactInputs">
+            <div class="contactFormPart1">
+                <div class="contactFormPart1_1">
+                    <label for="etablissement">Selectionner un établissement</label>
+                    <input type="text" name="etablissement" placeholder="Nom de l’établissement ...">
                 </div>
-                <div class="contactFormUpperRightSide">
-                    <input type="text" name="prenom" placeholder="Prénom">
-                    <input type="text" name="telephone" placeholder="Téléphone">
+                <div class="contactFormPart1_2">
+                    <label for="nom">Votre nom</label>
+                    <input type="text" name="nom" placeholder="Votre nom ...">
                 </div>
-        </div>
-        <div class="contactFormBottomSide">
-            <textarea rows="5" cols="33" name="retour" placeholder="Description"></textarea>
+            </div>
+            <div class="contactFormPart2">
+                <label for="retour">Ecrivez votre retour</label>
+                <textarea rows="5" cols="33" name="retour" placeholder="Ecrivez votre retour"></textarea>
+            </div>
         </div>
         <button type="submit" value="contactForm">Envoyer</button>
     </form>
-</section>
+</div>
+
+
 
 
 
