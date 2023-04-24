@@ -1,0 +1,96 @@
+.headerAdmin {
+  height: 100%;
+  position: fixed;
+  background-color: #123B2A;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2% 2%;
+}
+.headerAdmin .logoContainer a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.headerAdmin .logoContainer a img {
+  width: 25%;
+}
+.headerAdmin .logoContainer a h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  font-weight: 600;
+  font-family: Kanit;
+}
+.headerAdmin .mainContainer {
+  padding: 25% 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.headerAdmin .mainContainer nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+}
+.headerAdmin .mainContainer nav .firstSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.headerAdmin .mainContainer nav .secondSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.headerAdmin .mainContainer nav a {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+.headerAdmin .mainContainer nav h2 {
+  font-size: 16px;
+  font-family: euclid flex;
+  font-weight: 500;
+}
+.headerAdmin .mainContainer nav span {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  font-weight: 600;
+  font-family: Kanit;
+  padding-bottom: 10px;
+}
+.headerAdmin form {
+  width: 100%;
+  display: flex;
+  align-items: left;
+}
+.headerAdmin form button {
+  gap: 20px;
+  border-style: none;
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  background: none;
+  align-items: center;
+}
+.headerAdmin form button h2 {
+  font-size: 16px;
+  font-family: euclid flex;
+  font-weight: 500;
+  color: #fff;
+}/*# sourceMappingURL=headerAdmin.css.map */
