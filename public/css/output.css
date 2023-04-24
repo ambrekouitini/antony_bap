@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 @import url("https://fonts.cdnfonts.com/css/euclid-flex");
 @import url("https://fonts.cdnfonts.com/css/euclid-flex");
->>>>>>> 7a0194046be5b48498df0e7d7c74c649575d5333
 * {
   margin: 0;
   padding: 0;
@@ -420,9 +417,6 @@ footer section .footerSectionFirstLine {
   margin-top: 113px;
   margin-left: 112px;
   margin-right: 112px;
-  /*  background-color: red;
-    display: flex;
-    width: 112px;*/
 }
 @media screen and (max-width: 1125px) {
   .CarouselAvis {
@@ -1252,15 +1246,12 @@ footer section .footerSectionFirstLine {
   .contactBody .contactForm .contactInputs .contactFormPart1 {
     justify-content: center;
     margin-right: 0;
-    background-color: blueviolet;
   }
   .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_1 {
     flex-direction: column;
-    background-color: orange;
   }
   .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_2 {
     flex-direction: column;
-    background-color: red;
   }
 }
 .contactBody .contactForm .contactInputs .contactFormPart1 label {
