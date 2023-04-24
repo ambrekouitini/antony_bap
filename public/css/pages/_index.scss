@@ -118,13 +118,13 @@ padding-right: 147px;
     font-weight: 400;
   }
 }
-.objectif-content{
+.objectif-content {
   margin-top: 100px;
   margin-bottom: 100px;
   padding-left: 111px;
   padding-right: 147px;
   display: flex;
-
+}
 /*----------------- Section referencement de particulier -------------------*/
 .refParticuliers{
   display: flex;
@@ -292,7 +292,6 @@ padding-right: 147px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: rgb(255, 0, 0);
     font-size: 3em;
   }
   #nav-droite{
@@ -554,8 +553,6 @@ padding-right: 147px;
     }
     }
   }
-  
-}
 .frise-content{
   margin-left: 100px;
   .frise {

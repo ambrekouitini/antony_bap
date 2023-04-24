@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/leo4oek.css">
-    <title>Accueil</title>https://github.com/ambrekouitini/antony_bap/pull/4/conflict?name=public%252Fcss%252Foutput.css&ancestor_oid=3826fb57e81f7d3d1b892e6c81b5f05c005ec199&base_oid=e265644de0d8865df4f07bd6e1ce744f45b2ddac&head_oid=6b07e920c885d53155651f2bac3ee82f025a5453
-==https://github.com/ambrekouitini/antony_bap/pull/4/conflict?name=public%252Fcss%252Foutput.css&ancestor_oid=3826fb57e81f7d3d1b892e6c81b5f05c005ec199&base_oid=e265644de0d8865df4f07bd6e1ce744f45b2ddac&head_oid=6b07e920c885d53155651f2bac3ee82f025a5453=====
+    <title>Accueil</title>
     <link rel="stylesheet" href="public/css/pages/style.css">
     <title>Document</title>
 </head>
