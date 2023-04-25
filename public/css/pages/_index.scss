@@ -1,12 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/euclid-flex');
 
-:root{
-  --main-color: #123B2A;
-  --sec-color: #DBB326;
-  --third-color: #3A4D92;
-}
-
-
 * {
   margin: 0;
   padding: 0;
@@ -24,11 +17,10 @@
 
 .navbar{
   width: 100%;
-  height: 85px;
-  background: var(--main-color);
+  height: 100px;
+  background: #05306E;
   display: flex;
   justify-content: space-between;
-  position: fixed;
   align-items: center;
   padding: 0 50px;
 }
@@ -41,7 +33,7 @@
 
 .navbar>ul>li{
   list-style: none;
-  margin: 0 16px;
+  margin: 0 40px;
 }
 
 .navbar>ul>li>a{
@@ -104,7 +96,7 @@
         border-radius: 16px;
         padding: 10px 40px;
         display: inline;
-        background-color: var(--third-color);
+        background-color: #0952BA;
       }
     }
     
@@ -120,13 +112,13 @@ padding-right: 147px;
     font-weight: 700;
   }
   h3{
-    line-height: 49px;
+    line-height: 60px;
     padding-top: 35px;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 400;
   }
 }
-.objectif-content{
+.objectif-content {
   margin-top: 100px;
   margin-bottom: 100px;
   padding-left: 111px;
@@ -139,7 +131,7 @@ padding-right: 147px;
   justify-content: center;
   align-items: center;
   .refParticuliersBox{
-    background-color: var(--main-color);
+    background-color: #05306E;
     color: white;
     min-height: 217px;
     width: min(90%, 1200px);
@@ -199,7 +191,7 @@ padding-right: 147px;
         height: 50px;
         border-radius: 10px;
 
-        background-color: var(--sec-color);
+        background-color: #0952BA;
         color: white;
         border: none;
         font-family: "Euclid Flex";
@@ -300,7 +292,6 @@ padding-right: 147px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    color: rgb(255, 0, 0);
     font-size: 3em;
   }
   #nav-droite{
@@ -391,11 +382,15 @@ padding-right: 147px;
   flex-direction: column;
   align-items: center;
   .contactTitle{
+    font-family:"Euclid Flex SemiBold";
     font-size: 32px;
-    text-align: center;
+    margin-bottom: 35px;
     margin-top: 70px;
+    margin-left: -600px;
     @media screen and (max-width: 900px){
-      font-size: 24px;
+      margin-left: -50px;
+      margin-right: 50px;
+      margin-bottom: 0px;
     }
   }
   .contactForm{
@@ -483,7 +478,7 @@ padding-right: 147px;
       width: 820px;
       height: 50px;
       border-radius: 10px;
-      background-color: var(--third-color);
+      background-color: #0952BA;
       color: white;
       border: none;
       font-family: "Euclid Triangle", sans-serif;
@@ -506,7 +501,7 @@ padding-right: 147px;
 
     border-radius: 15px;
     width: 564px;
-    background-color: var(--main-color);
+    background-color: #05306E;
     h2{
       margin-bottom: 40px;
       color: #ffffff;
@@ -517,7 +512,7 @@ padding-right: 147px;
     h3{
       color: #ffffff;
       line-height: 40px;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 400;
 
     }
@@ -531,9 +526,9 @@ padding-right: 147px;
 
     }
     h3{
-      margin-top: 24px;
+      margin-top: 30px;
       color: #000000;
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 400;
 
     }
@@ -548,7 +543,7 @@ padding-right: 147px;
   
         h3{  
           display: inline;
-          background-color: var(--sec-color);
+          background-color: #0952BA;
           color: #fff;
           padding: 10px 58px;
           border-radius: 16px;
@@ -558,7 +553,6 @@ padding-right: 147px;
     }
     }
   }
-  
 .frise-content{
   margin-left: 100px;
   .frise {
@@ -569,16 +563,16 @@ padding-right: 147px;
     align-items: center;
     height: 9px;
     width: 90%;
-    background-color: var(--third-color);
+    background-color: #05306E;
     padding: 0 10px;
   
     .point {
 
       font-size: 30px;
-      height: 50px;
-      width: 50px;
+      height: 60px;
+      width: 60px;
       border-radius: 50%;
-      background-color: var(--third-color);
+      background-color: #05306E;
       color: #fff;
       display: flex;
       justify-content: center;
@@ -586,22 +580,22 @@ padding-right: 147px;
       .stick-bottom {
         border-radius: 10px;
         border-radius: 10px;
-        margin-top: 100px;
+        margin-top: 90px;
         z-index: -1;
         position: absolute;
         height: 150px;
         width: 9px;
-        background-color: var(--third-color);
+        background-color: #05306E;
       
       }
       .stick-top {
         border-radius: 10px;
-        margin-bottom: 100px;
+        margin-bottom: 90px;
         z-index: -1;
         position: absolute;
         height: 150px;
         width: 9px;
-        background-color: var(--third-color);
+        background-color: #05306E;
       
       }
   
@@ -621,24 +615,24 @@ padding-right: 147px;
   .first-text{
     width: 30%;
     h2{
-      font-size: 26px;
+      font-size: 30px;
       font-weight: 700;
     }
     h3{
       
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 400;
     }
   }
   .second-text{
     width: 30%;
     h2{
-      font-size: 26px;
+      font-size: 30px;
       font-weight: 700;
     }
     h3{
       
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 400;
     }
   }
@@ -653,24 +647,24 @@ padding-right: 147px;
   .first-text{
     width: 30%;
     h2{
-      font-size: 26px;
+      font-size: 30px;
       font-weight: 700;
     }
     h3{
       
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 400;
     }
   }
   .second-text{
     width: 30%;
     h2{
-      font-size: 26px;
+      font-size: 30px;
       font-weight: 700;
     }
     h3{
       
-      font-size: 20px;
+      font-size: 24px;
       font-weight: 400;
     }
   }
@@ -693,6 +687,7 @@ padding-right: 147px;
   
       border-radius: 15px;
       width: 100%;
+      background-color: #05306E;
       h2{
         
         margin-bottom: 40px;
@@ -736,6 +731,7 @@ padding-right: 147px;
     
           h3{  
             display: inline;
+            background-color: #0952BA;
             color: #fff;
             padding: 10px 58px;
             border-radius: 16px;
@@ -848,6 +844,7 @@ padding-right: 147px;
     top: 70px;
     left: 0;
     width: 100%;
+    background: #05306E;
     padding: 20px;
     box-sizing: border-box;
   }
@@ -896,16 +893,17 @@ padding-right: 147px;
       margin-left: 6%;
       margin-right: 6%;
       .frise {
-        height: 9px;
         display:block;
+      
+        background-color: #05316e00;    
         .point {
           margin-bottom: 127px;
           font-size: 24px;
           height: 45px;
           width: 45px;
           border-radius: 50%;
+          background-color: #05306E;
           color: #fff;
-          background-color: var(--third-color);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -916,8 +914,7 @@ padding-right: 147px;
             position: absolute;
             height: 230px;
             width: 9px;
-            background-color: var(--third-color);
-
+            background-color: #05306E;
           }
           .stick-top {
             border-radius: 10px;
@@ -926,7 +923,8 @@ padding-right: 147px;
             position: absolute;
             height: 210px;
             width: 9px;
-            background-color: var(--third-color);
+            background-color: #05306E;
+          
           }
       
         }
@@ -1032,9 +1030,7 @@ padding-right: 147px;
       font-size: 22px;
     }
     h3{
-      line-height: 37px;
       font-size: 18px;
-      
     }
   }
   .objectif-content{
