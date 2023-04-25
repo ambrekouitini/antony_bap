@@ -32,7 +32,7 @@ piétons adaptés et bien plus encore.</h3>
     </div>
     <div class="objectif-content">
         <div class="objectif">
-            <h2>Notre objectif</h2>
+            <h2>NOTRE OBJECTIF</h2>
             <h3>Nous voulons donner à toute personne à mobilité réduite ou autre situation, les meilleurs itinéraires et informations les plus adaptées à leur profil, dans la ville d’Antony.</h3>
         </div>
         <div class="access">

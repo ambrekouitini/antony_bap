@@ -108,7 +108,7 @@ footer {
 footer section {
   width: 100%;
   height: 185px;
-  background-color: var(--main-color);
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,9 +157,10 @@ footer section .footerSectionFirstLine {
 }
 
 :root {
-  --main-color: #123B2A;
-  --sec-color: #DBB326;
-  --third-color: #3A4D92;
+  --main-color: #222952;
+  --sec-color: #085B68;
+  --third-color: #FFB800;
+  --fourth-color: #123B2A;
 }
 
 * {
@@ -179,7 +180,7 @@ footer section .footerSectionFirstLine {
 .navbar {
   width: 100%;
   height: 85px;
-  background: var(--main-color);
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -195,7 +196,7 @@ footer section .footerSectionFirstLine {
 
 .navbar > ul > li {
   list-style: none;
-  margin: 0 16px;
+  margin: 0 23px;
 }
 
 .navbar > ul > li > a {
@@ -209,7 +210,9 @@ footer section .footerSectionFirstLine {
 }
 
 .navbar > img {
-  width: 300px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .accueil-content {
@@ -364,7 +367,7 @@ footer section .footerSectionFirstLine {
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background-color: var(--sec-color);
+  background-color: var(--third-color);
   color: white;
   border: none;
   font-family: "Euclid Flex";
@@ -542,17 +545,17 @@ footer section .footerSectionFirstLine {
 
 /*----------------- Formulaire de contact -------------------*/
 .objectif {
-  padding-left: 20px;
+  padding-left: 50px;
   padding-right: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
   border-radius: 15px;
   width: 564px;
-  background-color: var(--main-color);
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
 }
 .objectif h2 {
   margin-bottom: 40px;
-  color: #ffffff;
+  color: var(--third-color);
   font-size: 30px;
   font-weight: 700;
 }
@@ -587,7 +590,7 @@ footer section .footerSectionFirstLine {
 }
 .access div a h3 {
   display: inline;
-  background-color: var(--sec-color);
+  background-color: var(--third-color);
   color: #fff;
   padding: 10px 58px;
   border-radius: 16px;
@@ -836,7 +839,7 @@ footer section .footerSectionFirstLine {
     padding: 0 20px;
   }
   .navbar > img {
-    width: 200px;
+    width: 40px;
   }
   .navbar-toggle {
     display: block;
@@ -871,6 +874,7 @@ footer section .footerSectionFirstLine {
     display: block;
   }
   .navbar > ul.active {
+    background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
     display: block;
   }
   .presentation-content {
@@ -1078,9 +1082,10 @@ footer section .footerSectionFirstLine {
 }
 /*------------    Page Contact   ------------*/
 :root {
-  --main-color: #123B2A;
-  --sec-color: #DBB326;
-  --third-color: #3A4D92;
+  --main-color: #222952;
+  --sec-color: #085B68;
+  --third-color: #FFB800;
+  --fourth-color: #123B2A;
 }
 
 * {
@@ -1107,21 +1112,50 @@ footer section .footerSectionFirstLine {
 .contact .sectionFormLabel .formLabel {
   display: flex;
   flex-direction: column;
-  width: 600px;
 }
-.contact .sectionFormLabel .formLabel .labelForm {
+.contact .sectionFormLabel .formLabel .splitForm {
+  width: 100%;
+  gap: 10%;
+  display: flex;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part1 {
+  display: flex;
+  flex-direction: column;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part1 .labelForm {
   margin-bottom: 10px;
+  width: 300px;
 }
-.contact .sectionFormLabel .formLabel .inputForm {
+.contact .sectionFormLabel .formLabel .splitForm .part1 .inputForm {
   height: 40px;
   border: solid grey 1px;
   border-radius: 13px;
   margin-bottom: 30px;
 }
-.contact .sectionFormLabel .formLabel .otherLabelForm {
+.contact .sectionFormLabel .formLabel .splitForm .part1 .otherLabelForm {
   margin-bottom: 10px;
 }
-.contact .sectionFormLabel .formLabel .otherInputForm {
+.contact .sectionFormLabel .formLabel .splitForm .part1 .otherInputForm {
+  height: 30px;
+  margin-bottom: 30px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 {
+  display: flex;
+  flex-direction: column;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 .labelForm {
+  margin-bottom: 10px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 .inputForm {
+  height: 40px;
+  border: solid grey 1px;
+  border-radius: 13px;
+  margin-bottom: 30px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 .otherLabelForm {
+  margin-bottom: 10px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 .otherInputForm {
   height: 30px;
   margin-bottom: 30px;
 }
@@ -1162,6 +1196,10 @@ footer section .footerSectionFirstLine {
     display: flex;
     flex-direction: column;
     width: 90%;
+  }
+  .contact .sectionFormLabel .formLabel .splitForm {
+    gap: 0%;
+    display: block;
   }
 }
 .tempMarg {

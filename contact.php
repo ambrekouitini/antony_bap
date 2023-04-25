@@ -44,6 +44,8 @@ require_once 'header.php';
 
 <div class="sectionFormLabel">
         <form class="formLabel" method="POST">
+            <div class="splitForm">
+            <div class="part1">
             <label class="labelForm" for="owner_firstname">Nom du representant</label>
             <input class="inputForm" type="text" name="owner_firstname" id="owner_firstname">
 
@@ -55,7 +57,10 @@ require_once 'header.php';
 
             <label class="labelForm" for="owner_number">Numéro de télephone du representant</label>
             <input class="inputForm" type="text" name="owner_number" id="owner_number">
+            </div>
+            
 
+            <div class="part2">
             <label class="labelForm" for="establishment_name">Nom de l'établissement</label>
             <input class="inputForm" type="text" name="establishment_name" id="establishment_name">
 
@@ -64,6 +69,9 @@ require_once 'header.php';
 
             <label class="otherLabelForm" for="pictures">Sélectionner une image :</label>
             <input class="otherInputForm" type="file" id="imageInput" name="pictures" accept="image/*">
+            </div>
+
+            </div>
             <div class="checkbox">
             <label class="otherLabelForm" for="checkboxInput">J'accepte les conditions :</label>
             <input class="checkInputForm" type="checkbox" id="checkboxInput" name="checkboxInput" required>
