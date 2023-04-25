@@ -12,6 +12,7 @@
                 $_POST['owner_number'],
                 $_POST['establishment_name'],
                 $_POST['establishment_adress'],
+                $_POST['pictures'],
         );
 
         if ($establishment->verify()) {
@@ -61,8 +62,8 @@ require_once 'header.php';
             <label class="labelForm" for="establishment_adress">Adresse de l'établissement</label>
             <input class="inputForm" type="text" name="establishment_adress" id="establishment_adress">
 
-            <label class="otherLabelForm" for="imageInput">Sélectionner une image :</label>
-            <input class="otherInputForm" type="file" id="imageInput" name="imageInput" accept="image/*">
+            <label class="otherLabelForm" for="pictures">Sélectionner une image :</label>
+            <input class="otherInputForm" type="file" id="imageInput" name="pictures" accept="image/*">
             <div class="checkbox">
             <label class="otherLabelForm" for="checkboxInput">J'accepte les conditions :</label>
             <input class="checkInputForm" type="checkbox" id="checkboxInput" name="checkboxInput" required>

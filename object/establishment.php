@@ -9,6 +9,7 @@ class Establishment
         public int $owner_number,
         public string $establishment_name,
         public string $establishment_adress,
+        public string $pictures,
     )
     {
     }
@@ -17,7 +18,7 @@ class Establishment
     {
         $isValid = true;
 
-        if ($this->owner_firstname === '' || $this->owner_lastname === '' || $this->owner_email === '' || $this->owner_number === '' || $this->establishment_name === ''|| $this->establishment_adress === '') {
+        if ($this->owner_firstname === '' || $this->owner_lastname === '' || $this->owner_email === '' || $this->owner_number === '' || $this->establishment_name === ''|| $this->establishment_adress === '' || $this->pictures === '') {
             $isValid = false;
         }
         return $isValid;
