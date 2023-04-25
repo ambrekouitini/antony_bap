@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/main.css">
     <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <title>Accessibilité</title>
 </head>
@@ -23,7 +23,6 @@ require_once 'header.php';
 <button class="FilterIcon">
     <img src="images/settings.png" alt="" class="">
 </button>
-
 <section class="AccessMap">
     <div>
         <img src="images/Placeholder.png" alt="placeholder" class="Placeholder">
@@ -34,6 +33,7 @@ require_once 'header.php';
                 >
             </button>
             <h2 class="">
+
                 Options
             </h2>
         </div>
@@ -92,7 +92,7 @@ require_once 'header.php';
 <?php
 require_once 'footer.php';
 ?>
+<script src="maps.js"></script>
+<script src='http://www.bing.com/api/maps/mapcontrol?callback=getMap' async></script>
 </body>
-<script src="public/js/script.js"></script>
-
 </html>
