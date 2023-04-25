@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <title>Accessibilité</title>
 </head>
-<body class="index">
+<body class="index accessibilite">
 <?php
 require_once 'header.php';
 ?>
@@ -23,14 +23,17 @@ require_once 'header.php';
 <button class="FilterIcon">
     <img src="images/settings.png" alt="" class="">
 </button>
+
 <section class="AccessMap">
     <div>
         <img src="images/Placeholder.png" alt="placeholder" class="Placeholder">
     </div>
-
     <div class="FilterMap">
         <div class="FilterMapTitle">
-            <h2 class="options">
+            <button class="CloseFilter">
+                >
+            </button>
+            <h2 class="">
                 Options
             </h2>
         </div>
