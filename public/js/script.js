@@ -92,30 +92,3 @@ function stopTimer(){
 function startTimer(){
     timer = setInterval(slideNext, 4000)
 }
-
-/*-----------------------Page accessibilité - Filtre de la Map-----------------------*/
-
-const FilterToggle = document.querySelector('.FilterIcon');
-const FilterMenu = document.querySelector('.FilterMap');
-const CloseFilter = document.querySelector('.CloseFilter');
-
-FilterToggle.addEventListener('click', () => {
-    FilterMenu.style.display = 'flex';
-    FilterToggle.style.display = 'none';
-});
-CloseFilter.addEventListener('click', () => {
-    FilterToggle.style.display = 'block';
-    FilterMenu.style.display = 'none';
-});
-
-
-/*-----------------------Page accessibilité - test - endroit sur la Map-----------------------*/
-
-const LocationToggle = document.querySelector('.LocationBtn');
-const LocationMenu = document.querySelector('.Location');
-
-LocationToggle.addEventListener('click', () => {
-    LocationMenu.classList.toggle('activeLocation');
-});
-
-

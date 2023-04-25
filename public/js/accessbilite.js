@@ -8,11 +8,6 @@ window.onload = function() {
     getMap();
 };
 
-searchBtn.addEventListener("click", ()=>{
-    map.entities.clear();
-    geocodeQuery(searchInput.value);
-});
-
 function addCircle(center, radius){
     // Create a Circle
     var circle = new Microsoft.Maps.Circle(center, radius, {

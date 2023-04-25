@@ -1,121 +1,150 @@
-.index{
-  width: 100%;
-  height: 100%;
-}
+
 /*------------    Page Contact   ------------*/
-.contactBody{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .contactPres{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 105px;
-    padding-left: 150px;
-    padding-right: 150px;
-    .contactTitle{
-      font-family: "Euclid Flex Medium", sans-serif;
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    .contactText{
-      font-family: "Euclid Flex", sans-serif;
-      font-size: 20px;
-    }
+
+
+:root{
+  --main-color: #222952;
+  --sec-color: #085B68;
+  --third-color: #FFB800;
+  --fourth-color: #123B2A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Euclid Triangle', sans-serif;
+}
+
+
+.contact{
+  padding-top: 200px;
+  h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
   }
 
-  .contactForm{
+
+  .sectionFormLabel{
     display: flex;
-    flex-direction: column;
-    width: min(1100px ,100%);
-    margin-top: 50px;
-    align-items: center;
-    @media screen and (max-width: 1160px) {
-      margin-top: 25px;
+    justify-content: center;
 
-    }
 
-    .contactInputs{
+
+    .formLabel{
       display: flex;
-      flex-direction: row;
-      @media screen and (max-width: 1160px) {
+      flex-direction: column;
+
+      .splitForm{
+        width: 100%;
+
+        gap: 10%;
         display: flex;
+        .part1{
+          display: flex;
         flex-direction: column;
+          .labelForm{
+            margin-bottom: 10px;
+            width: 300px;
+    
+          }
+          .inputForm{
+            height: 40px;
+            border: solid grey 1px;
+            border-radius: 13px;
+            margin-bottom: 30px;
+    
+          }
+          .otherLabelForm{
+            margin-bottom: 10px;
+    
+          }
+          .otherInputForm{
+            height: 30px;
+            margin-bottom: 30px;
+          }
+        }
+        .part2{
+          display: flex;
+        flex-direction: column;
+          .labelForm{
+            margin-bottom: 10px;
+    
+          }
+          .inputForm{
+            height: 40px;
+            border: solid grey 1px;
+            border-radius: 13px;
+            margin-bottom: 30px;
+    
+          }
+          .otherLabelForm{
+            margin-bottom: 10px;
+    
+          }
+          .otherInputForm{
+            height: 30px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      .checkbox{
+        display: flex;
+        .checkInputForm{
+          margin-left: 10px;
+          transform: translateY(-25px);
+          margin-top: 30px;
+        }
+      }
+
+      .labelBtn{
+        width: 170px;
+        color: #fff;
+        border: none;
+        border-radius: 16px;
+        padding: 10px 40px;
+        display: inline;
         justify-content: center;
-        align-items: center;
+        background-color: var(--third-color);
       }
-      .contactFormPart1{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-right: 100px;
-        @media screen and (max-width: 1160px) {
-          justify-content: center;
-          margin-right: 0;
-          .contactFormPart1_1{
-            flex-direction: column;
-          }
-          .contactFormPart1_2{
-            flex-direction: column;
-          }
-        }
-        label{
-          font-family: "Euclid Flex", sans-serif;
-          font-size: 24px;
-          margin-bottom: 25px;
-          @media screen and (max-width: 1160px) {
-            display: none;
-          }
-        }
-        input{
-          min-width: 500px;
-          height: 55px;
-          border-radius: 10px;
-          margin-top: 25px;
-          padding-left: 20px;
-
-        }
-      }
-
-
-
-
-
-
-
-      .contactFormPart2{
-        display: flex;
-        flex-direction: column;
-        label{
-          font-family: "Euclid Flex", sans-serif;
-          font-size: 24px;
-        }
-        textarea{
-          width: 500px;
-          height: 220px;
-          border-radius: 10px;
-          margin-top: 25px;
-          ::placeholder{
-            display: none;
-            @media screen and (min-width: 1160px){
-              display: block;
-            }
-          }
-        }
-      }
-    }
-    button{
-      border: none;
-      margin-top: 70px;
-      width: 200px;
-      height: 50px;
-      border-radius: 23px;
-      background-color: #0952BA;
-      color: white;
-      font-family: "Euclid Triangle", sans-serif;
-      font-size: 20px;
-      font-weight: bold;
     }
   }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .contact{
+    padding-top: 200px;
+    h1{
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+  
+  
+    .sectionFormLabel{
+      display: flex;
+      justify-content: center;
+
+      .formLabel{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+
+        .splitForm{
+          gap: 0%;
+          display: block;
+        }
+      }
+    }
+  }
+  
+  
+  
+  
 }

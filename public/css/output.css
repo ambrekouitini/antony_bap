@@ -1,4 +1,10 @@
 @import url("https://fonts.cdnfonts.com/css/euclid-flex");
+@import url("https://fonts.cdnfonts.com/css/euclid-flex");
+:root {
+  --main-color: #123B2A;
+  --sec-color: #DBB326;
+  --third-color: #3A4D92;
+}
 
 * {
   margin: 0;
@@ -12,12 +18,13 @@
 .index {
   width: 100%;
   height: 100%;
+  background: #ffffff;
 }
 
 .navbar {
   width: 100%;
   height: 100px;
-  background: #05306E;
+  background: var(--main-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,6 +45,7 @@
 
 .navbar > ul > li > a {
   text-decoration: none;
+  color: #ffffff;
   font-size: 20px;
 }
 
@@ -75,7 +83,7 @@
     top: 70px;
     left: 0;
     width: 100%;
-    background: #05306E;
+    background: var(--main-color);
     padding: 20px;
     box-sizing: border-box;
   }
@@ -95,12 +103,12 @@
 }
 /*----------------------------------------------------*/
 footer {
-  bottom: 0;
+  margin-bottom: 0;
 }
 footer section {
   width: 100%;
   height: 185px;
-  background-color: #05306E;
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -148,6 +156,13 @@ footer section .footerSectionFirstLine {
   margin-bottom: 25px;
 }
 
+:root {
+  --main-color: #222952;
+  --sec-color: #085B68;
+  --third-color: #FFB800;
+  --fourth-color: #123B2A;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -164,10 +179,11 @@ footer section .footerSectionFirstLine {
 
 .navbar {
   width: 100%;
-  height: 100px;
-  background: #05306E;
+  height: 85px;
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
   display: flex;
   justify-content: space-between;
+  position: fixed;
   align-items: center;
   padding: 0 50px;
 }
@@ -180,7 +196,7 @@ footer section .footerSectionFirstLine {
 
 .navbar > ul > li {
   list-style: none;
-  margin: 0 40px;
+  margin: 0 23px;
 }
 
 .navbar > ul > li > a {
@@ -194,7 +210,9 @@ footer section .footerSectionFirstLine {
 }
 
 .navbar > img {
-  width: 300px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .accueil-content {
@@ -204,8 +222,8 @@ footer section .footerSectionFirstLine {
 .accueil-content img {
   z-index: -1;
   position: absolute;
-  object-fit: cover;
-
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
   height: 573px;
 }
@@ -242,7 +260,7 @@ footer section .footerSectionFirstLine {
   border-radius: 16px;
   padding: 10px 40px;
   display: inline;
-  background-color: #0952BA;
+  background-color: var(--third-color);
 }
 
 .presentation-content {
@@ -255,9 +273,9 @@ footer section .footerSectionFirstLine {
   font-weight: 700;
 }
 .presentation-content h3 {
-  line-height: 60px;
+  line-height: 49px;
   padding-top: 35px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -276,7 +294,7 @@ footer section .footerSectionFirstLine {
   align-items: center;
 }
 .refParticuliers .refParticuliersBox {
-  background-color: #05306E;
+  background-color: var(--main-color);
   color: white;
   min-height: 217px;
   width: min(90%, 1200px);
@@ -349,7 +367,7 @@ footer section .footerSectionFirstLine {
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background-color: #0952BA;
+  background-color: var(--third-color);
   color: white;
   border: none;
   font-family: "Euclid Flex";
@@ -448,6 +466,7 @@ footer section .footerSectionFirstLine {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  color: rgb(255, 0, 0);
   font-size: 3em;
 }
 .CarouselAvis #nav-droite {
@@ -525,148 +544,25 @@ footer section .footerSectionFirstLine {
 }
 
 /*----------------- Formulaire de contact -------------------*/
-.contactSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.contactSection .contactTitle {
-  font-family: "Euclid Flex SemiBold";
-  font-size: 32px;
-  margin-bottom: 35px;
-  margin-top: 70px;
-  margin-left: -600px;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactTitle {
-    margin-left: -50px;
-    margin-right: 50px;
-    margin-bottom: 0px;
-  }
-}
-.contactSection .contactForm {
-  display: flex;
-  flex-direction: column;
-  width: min(1100px, 100%);
-  margin-top: 37px;
-  align-items: center;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm {
-    margin-top: 23px;
-  }
-}
-.contactSection .contactForm .contactFormUpperSide {
-  display: flex;
-  flex-direction: row;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm .contactFormUpperSide {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-right: 50px;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide {
-    margin-right: 0px;
-  }
-}
-.contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide input {
-  font-family: "Euclid Flex";
-  font-size: 24px;
-  width: 390px;
-  height: 55px;
-  border-radius: 10px;
-  margin-top: 25px;
-  padding-left: 20px;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide input {
-    width: 333px;
-    margin-top: 15px;
-  }
-}
-.contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide input {
-  font-family: "Euclid Flex";
-  font-size: 24px;
-  width: 380px;
-  height: 55px;
-  border-radius: 10px;
-  margin-top: 25px;
-  padding-left: 20px;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide input {
-    width: 333px;
-    margin-top: 15px;
-  }
-}
-.contactSection .contactForm .contactFormBottomSide textarea {
-  width: 820px;
-  height: 280px;
-  font-family: "Euclid Flex";
-  font-size: 24px;
-  border-radius: 14px;
-  margin-top: 25px;
-  padding-top: 20px;
-  padding-left: 20px;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm .contactFormBottomSide textarea {
-    width: 333px;
-    margin-top: 15px;
-  }
-}
-.contactSection .contactForm button {
-  margin-top: 20px;
-  width: 820px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: #0952BA;
-  color: white;
-  border: none;
-  font-family: "Euclid Triangle", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm button {
-    width: 333px;
-    margin-top: 15px;
-  }
-}
-
 .objectif {
-  padding-left: 20px;
+  padding-left: 50px;
   padding-right: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
   border-radius: 15px;
   width: 564px;
-  background-color: #05306E;
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
 }
 .objectif h2 {
   margin-bottom: 40px;
-  color: #ffffff;
+  color: var(--third-color);
   font-size: 30px;
   font-weight: 700;
 }
 .objectif h3 {
   color: #ffffff;
   line-height: 40px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -678,9 +574,9 @@ footer section .footerSectionFirstLine {
   font-weight: 700;
 }
 .access h3 {
-  margin-top: 30px;
+  margin-top: 24px;
   color: #000000;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 .access div {
@@ -694,7 +590,7 @@ footer section .footerSectionFirstLine {
 }
 .access div a h3 {
   display: inline;
-  background-color: #0952BA;
+  background-color: var(--third-color);
   color: #fff;
   padding: 10px 58px;
   border-radius: 16px;
@@ -713,15 +609,15 @@ footer section .footerSectionFirstLine {
   align-items: center;
   height: 9px;
   width: 90%;
-  background-color: #05306E;
+  background-color: var(--third-color);
   padding: 0 10px;
 }
 .frise-content .frise .point {
   font-size: 30px;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  background-color: #05306E;
+  background-color: var(--third-color);
   color: #fff;
   display: flex;
   justify-content: center;
@@ -730,21 +626,21 @@ footer section .footerSectionFirstLine {
 .frise-content .frise .point .stick-bottom {
   border-radius: 10px;
   border-radius: 10px;
-  margin-top: 90px;
+  margin-top: 100px;
   z-index: -1;
   position: absolute;
   height: 150px;
   width: 9px;
-  background-color: #05306E;
+  background-color: var(--third-color);
 }
 .frise-content .frise .point .stick-top {
   border-radius: 10px;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
   z-index: -1;
   position: absolute;
   height: 150px;
   width: 9px;
-  background-color: #05306E;
+  background-color: var(--third-color);
 }
 
 .frise-content-bis {
@@ -763,22 +659,22 @@ footer section .footerSectionFirstLine {
   width: 30%;
 }
 .text-bottom-frise .first-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-bottom-frise .first-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 .text-bottom-frise .second-text {
   width: 30%;
 }
 .text-bottom-frise .second-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-bottom-frise .second-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -794,22 +690,22 @@ footer section .footerSectionFirstLine {
   width: 30%;
 }
 .text-top-frise .first-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-top-frise .first-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 .text-top-frise .second-text {
   width: 30%;
 }
 .text-top-frise .second-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-top-frise .second-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -829,7 +725,6 @@ footer section .footerSectionFirstLine {
     padding-bottom: 40px;
     border-radius: 15px;
     width: 100%;
-    background-color: #05306E;
   }
   .objectif-content .objectif h2 {
     margin-bottom: 40px;
@@ -868,7 +763,6 @@ footer section .footerSectionFirstLine {
   }
   .objectif-content .access div a h3 {
     display: inline;
-    background-color: #0952BA;
     color: #fff;
     padding: 10px 58px;
     border-radius: 16px;
@@ -945,7 +839,7 @@ footer section .footerSectionFirstLine {
     padding: 0 20px;
   }
   .navbar > img {
-    width: 200px;
+    width: 40px;
   }
   .navbar-toggle {
     display: block;
@@ -966,7 +860,6 @@ footer section .footerSectionFirstLine {
     top: 70px;
     left: 0;
     width: 100%;
-    background: #05306E;
     padding: 20px;
     box-sizing: border-box;
   }
@@ -981,6 +874,7 @@ footer section .footerSectionFirstLine {
     display: block;
   }
   .navbar > ul.active {
+    background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
     display: block;
   }
   .presentation-content {
@@ -1012,8 +906,8 @@ footer section .footerSectionFirstLine {
     margin-right: 6%;
   }
   .global-frise .frise-content-bis .frise {
+    height: 9px;
     display: block;
-    background-color: rgba(5, 49, 110, 0);
   }
   .global-frise .frise-content-bis .frise .point {
     margin-bottom: 127px;
@@ -1021,8 +915,8 @@ footer section .footerSectionFirstLine {
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    background-color: #05306E;
     color: #fff;
+    background-color: var(--third-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1034,7 +928,7 @@ footer section .footerSectionFirstLine {
     position: absolute;
     height: 230px;
     width: 9px;
-    background-color: #05306E;
+    background-color: var(--third-color);
   }
   .global-frise .frise-content-bis .frise .point .stick-top {
     border-radius: 10px;
@@ -1043,7 +937,7 @@ footer section .footerSectionFirstLine {
     position: absolute;
     height: 210px;
     width: 9px;
-    background-color: #05306E;
+    background-color: var(--third-color);
   }
   .text-bottom-frise {
     margin-top: 0px;
@@ -1131,6 +1025,7 @@ footer section .footerSectionFirstLine {
     font-size: 22px;
   }
   .presentation-content h3 {
+    line-height: 37px;
     font-size: 18px;
   }
   .objectif-content .objectif h2 {
@@ -1185,133 +1080,130 @@ footer section .footerSectionFirstLine {
     font-size: 18px;
   }
 }
-.index {
-  width: 100%;
-  height: 100%;
+/*------------    Page Contact   ------------*/
+:root {
+  --main-color: #222952;
+  --sec-color: #085B68;
+  --third-color: #FFB800;
+  --fourth-color: #123B2A;
 }
 
-/*------------    Page Contact   ------------*/
-.contactBody {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Euclid Triangle", sans-serif;
+}
+
+.contact {
+  padding-top: 200px;
+}
+.contact h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.contact .sectionFormLabel {
+  display: flex;
+  justify-content: center;
+}
+.contact .sectionFormLabel .formLabel {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-.contactBody .contactPres {
+.contact .sectionFormLabel .formLabel .splitForm {
+  width: 100%;
+  gap: 10%;
+  display: flex;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part1 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 105px;
-  padding-left: 150px;
-  padding-right: 150px;
 }
-.contactBody .contactPres .contactTitle {
-  font-family: "Euclid Flex Medium", sans-serif;
-  font-size: 32px;
-  margin-bottom: 20px;
+.contact .sectionFormLabel .formLabel .splitForm .part1 .labelForm {
+  margin-bottom: 10px;
+  width: 300px;
 }
-.contactBody .contactPres .contactText {
-  font-family: "Euclid Flex", sans-serif;
-  font-size: 20px;
+.contact .sectionFormLabel .formLabel .splitForm .part1 .inputForm {
+  height: 40px;
+  border: solid grey 1px;
+  border-radius: 13px;
+  margin-bottom: 30px;
 }
-.contactBody .contactForm {
+.contact .sectionFormLabel .formLabel .splitForm .part1 .otherLabelForm {
+  margin-bottom: 10px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part1 .otherInputForm {
+  height: 30px;
+  margin-bottom: 30px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 {
   display: flex;
   flex-direction: column;
-  width: min(1100px, 100%);
-  margin-top: 50px;
-  align-items: center;
 }
-@media screen and (max-width: 1160px) {
-  .contactBody .contactForm {
-    margin-top: 25px;
+.contact .sectionFormLabel .formLabel .splitForm .part2 .labelForm {
+  margin-bottom: 10px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 .inputForm {
+  height: 40px;
+  border: solid grey 1px;
+  border-radius: 13px;
+  margin-bottom: 30px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 .otherLabelForm {
+  margin-bottom: 10px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 .otherInputForm {
+  height: 30px;
+  margin-bottom: 30px;
+}
+.contact .sectionFormLabel .formLabel .checkbox {
+  display: flex;
+}
+.contact .sectionFormLabel .formLabel .checkbox .checkInputForm {
+  margin-left: 10px;
+  transform: translateY(-25px);
+  margin-top: 30px;
+}
+.contact .sectionFormLabel .formLabel .labelBtn {
+  width: 170px;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 10px 40px;
+  display: inline;
+  justify-content: center;
+  background-color: var(--third-color);
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    padding-top: 200px;
   }
-}
-.contactBody .contactForm .contactInputs {
-  display: flex;
-  flex-direction: row;
-}
-@media screen and (max-width: 1160px) {
-  .contactBody .contactForm .contactInputs {
+  .contact h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  .contact .sectionFormLabel {
+    display: flex;
+    justify-content: center;
+  }
+  .contact .sectionFormLabel .formLabel {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 90%;
   }
-}
-.contactBody .contactForm .contactInputs .contactFormPart1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-right: 100px;
-}
-@media screen and (max-width: 1160px) {
-  .contactBody .contactForm .contactInputs .contactFormPart1 {
-    justify-content: center;
-    margin-right: 0;
-  }
-  .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_1 {
-    flex-direction: column;
-  }
-  .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_2 {
-    flex-direction: column;
-  }
-}
-.contactBody .contactForm .contactInputs .contactFormPart1 label {
-  font-family: "Euclid Flex", sans-serif;
-  font-size: 24px;
-  margin-bottom: 25px;
-}
-@media screen and (max-width: 1160px) {
-  .contactBody .contactForm .contactInputs .contactFormPart1 label {
-    display: none;
-  }
-}
-.contactBody .contactForm .contactInputs .contactFormPart1 input {
-  min-width: 500px;
-  height: 55px;
-  border-radius: 10px;
-  margin-top: 25px;
-  padding-left: 20px;
-}
-.contactBody .contactForm .contactInputs .contactFormPart2 {
-  display: flex;
-  flex-direction: column;
-}
-.contactBody .contactForm .contactInputs .contactFormPart2 label {
-  font-family: "Euclid Flex", sans-serif;
-  font-size: 24px;
-}
-.contactBody .contactForm .contactInputs .contactFormPart2 textarea {
-  width: 500px;
-  height: 220px;
-  border-radius: 10px;
-  margin-top: 25px;
-}
-
-.contactBody .contactForm .contactInputs .contactFormPart2 textarea ::-moz-placeholder ::placeholder{
-  display: none;
-}
-
-@media screen and (min-width: 1160px) {
-  .contactBody .contactForm .contactInputs .contactFormPart2 textarea ::-moz-placeholder ::placeholder{
+  .contact .sectionFormLabel .formLabel .splitForm {
+    gap: 0%;
     display: block;
   }
-
 }
-.contactBody .contactForm button {
-  border: none;
-  margin-top: 70px;
-  width: 200px;
-  height: 50px;
-  border-radius: 23px;
-  background-color: #0952BA;
-  color: white;
-  font-family: "Euclid Triangle", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.accessibilite {
-  overflow-x: hidden;
+.tempMarg {
+  height: 100px;
 }
 
 .sectionSearchBar {
@@ -1335,11 +1227,12 @@ footer section .footerSectionFirstLine {
   border: none;
   padding-left: 60px;
 }
-
-.sectionSearchBar .accessSearchBar .accessSearchInput ::-moz-placeholder ::placeholder {
+.sectionSearchBar .accessSearchBar .accessSearchInput ::-moz-placeholder {
   color: white;
 }
-
+.sectionSearchBar .accessSearchBar .accessSearchInput ::placeholder {
+  color: white;
+}
 .sectionSearchBar .accessSearchBar img {
   position: absolute;
   margin-left: 15px;
@@ -1349,222 +1242,257 @@ footer section .footerSectionFirstLine {
   display: flex;
 }
 .AccessMap .Placeholder {
-  width: 100vw;
-  height: 780px;
-  z-index: -100;
-  overflow: visible;
+  width: 100%;
+  height: 100vh;
 }
-
-.FilterMap {
-  display: none;
-  flex-direction: column;
-  position: relative;
-  height: 780px;
-  width: 370px;
-  --filter-width: 370px;
-  --negative-filter-width: -370px;
-  transform: translate(var(--negative-filter-width));
-  z-index: 100;
-  padding: 37px;
-  background-color: white;
-}
-.FilterMap .FilterMapTitle {
-  overflow-y: hidden;
-
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
-}
-.FilterMap .FilterMapTitle h2 {
-
-  display: flex;
-  justify-content: center;
-
-  font-family: "Euclid Triangle";
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.FilterMap .FilterMapTitle .CloseFilter {
-  left: 40px;
-  margin-right: 90px;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
+.AccessMap .AccessMapFilter {
   position: absolute;
-  font-family: Inter, serif;
-  font-size: 34px;
-  font-weight: bolder;
-  background-color: white;
+  right: 35px;
+  width: 73px;
+  height: 73px;
+  border-radius: 48px;
+  border: none;
 }
 
-.FilterMap .FilterMapSectionTitle {
-  margin-bottom: 35px;
-}
-.FilterMap .FilterMapSectionTitle h3 {
-  font-family: "Euclid Triangle";
-  font-size: 24px;
-}
-.FilterMap .FilterMapSection {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 35px;
-}
-.FilterMap .FilterMapSection .FilterMapFilterSectionIcons {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.FilterMap .FilterMapSection .FilterMapFilterSectionIcons .FilterMapFilterSectionIcon {
-  width: 57px;
-  height: 57px;
-
-  border-radius: 30px;
-  border: 1px black solid;
-}
-.FilterMap .FilterMapSection .FilterMapRadiusSectionSlider .progress {
-  background: white;
-  border: solid 1px black;
-  border-radius: 8px;
-  height: 7px;
-  width: 266px;
-  outline: none;
-  transition: background 450ms ease-in;
-  -webkit-appearance: none;
+#FilterMap {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  margin-top: 20px;
+  background-color: darkgrey;
+  transform: translate(250px);
 }
 
 .FilterIcon {
   position: absolute;
   right: 35px;
-  top: 290px;
   width: 73px;
   height: 73px;
   border-radius: 48px;
   border: none;
-
-  cursor: pointer;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translate(0px);
-}
-.FilterIcon img {
-  object-fit: contain;
-
-  width: 56px;
-  height: 56px;
-}
-
-.activeMap {
-  transform: translate(0px);
-  display: flex;
-}
-
-.activeIcon {
-  transform: translate(0px);
-}
-
-.LocationBtn {
-  background-color: #ffffff;
-  border: none;
-  cursor: pointer;
-  width: 50px;
-  height: 80px;
-  overflow: visible;
-}
-.LocationBtn img {
-  width: 50px;
-  height: 80px;
-
-}
-
-.Location {
-  width: 100%;
-  height: 575px;
-  padding: 85px 110px;
-  display: none;
-  background-color: white;
-
-}
-.Location img {
-  margin-right: 73px;
-}
-.Location .LocationPres {
-  font-family: "Euclid Flex Medium";
-}
-.Location .LocationPres .LocationTitle {
-  font-weight: normal;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-.Location .LocationPres .LocationTabs {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 40px;
-}
-.Location .LocationPres .LocationTabs .Tab {
-  font-family: "Euclid Triangle";
-  font-weight: normal;
-  font-size: 32px;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 60px;
-  background-color: darkgrey;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 10px;
-}
-.Location .LocationPres .LocationTabs .activeTab {
-  background-color: #DBB326;
-}
-.Location .LocationPres .LocationText {
-  margin-left: 30px;
-}
-.Location .LocationPres .LocationText li {
-  counter-increment: my-awesome-counter;
-  font-size: 24px;
-  gap: 10px;
-}
-.Location .LocationPres .LocationText ol li::before {
-  content: counter(my-awesome-counter) ". ";
-}
-
-.activeLocation {
-  display: flex;
-}
-
-.options {
-
-  transform: translateX(-20px);
   z-index: 20;
-  height: 50px;
-  width: 150px;
-  position: relative;
-}
-
-options::before {
-
-  content: "<ezaeazezae";
-  display: inline;
-  position: relative;
-  width: 50px;
-  height: 50px;
-
-  top: 0;
-  left: 30px;
-  color: red;
-  background-color: yellow;
-}
-
-.FilterIcon {
   background-color: white;
 }
+.FilterIcon .test {
+  width: 73px;
+  height: 73px;
+}
+.FilterIcon .test img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
-/*# sourceMappingURL=output.css.map */
+#Open {
+  display: none;
+}
 
+#Open:checked ~ #FilterMap {
+  transform: translate(0px);
+}
+
+#Open:checked ~ .FilterIcon {
+  transform: translate(-250px);
+}
+
+.testLocation {
+  width: 80px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+}
+.login .containerLeft {
+  width: 45%;
+  background-color: #123B2A;
+  display: flex;
+  align-items: center;
+}
+.login .containerLeft .title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login .containerLeft .title img {
+  width: 60%;
+}
+.login .containerLeft .title h1 {
+  font-family: "Kanit";
+  color: #FFFFFF;
+  font-size: 80px;
+}
+.login .containerRight {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login .containerRight .formContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login .containerRight .formContainer .mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+  gap: 20px;
+}
+.login .containerRight .formContainer .mainContainer h2 {
+  font-family: "Kanit";
+  font-size: 36px;
+}
+.login .containerRight .formContainer .mainContainer p {
+  font-family: "Euclid Flex";
+  font-size: 20px;
+  color: #434343;
+}
+.login .containerRight .formContainer form {
+  width: 65%;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.login .containerRight .formContainer form .labelContainer {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 15px;
+}
+.login .containerRight .formContainer form .labelContainer input {
+  border: none;
+  outline: none;
+  font-family: "Roboto";
+  font-size: 20px;
+  color: #434343;
+}
+.login .containerRight .formContainer form button {
+  background: #3A4D92;
+  border-radius: 23px;
+  border: none;
+  padding: 15px 20px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin: 5% 25%;
+}
+
+.dashboardAdmin {
+  width: 100%;
+  padding-left: 21vw;
+}
+
+.headerAdmin {
+  height: 100%;
+  position: fixed;
+  background-color: #123B2A;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2% 2%;
+}
+.headerAdmin .logoContainer a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.headerAdmin .logoContainer a img {
+  width: 25%;
+}
+.headerAdmin .logoContainer a h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  font-weight: 600;
+  font-family: Kanit;
+}
+.headerAdmin .mainContainer {
+  padding: 25% 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.headerAdmin .mainContainer nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+}
+.headerAdmin .mainContainer nav .firstSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.headerAdmin .mainContainer nav .secondSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.headerAdmin .mainContainer nav a {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+.headerAdmin .mainContainer nav h2 {
+  font-size: 16px;
+  font-family: euclid flex;
+  font-weight: 500;
+}
+.headerAdmin .mainContainer nav span {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  font-weight: 600;
+  font-family: Kanit;
+  padding-bottom: 10px;
+}
+.headerAdmin form {
+  width: 100%;
+  display: flex;
+  align-items: left;
+}
+.headerAdmin form button {
+  gap: 20px;
+  border-style: none;
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  background: none;
+  align-items: center;
+}
+.headerAdmin form button h2 {
+  font-size: 16px;
+  font-family: euclid flex;
+  font-weight: 500;
+  color: #fff;
+}/*# sourceMappingURL=output.css.map */

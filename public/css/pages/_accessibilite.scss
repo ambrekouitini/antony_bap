@@ -1,5 +1,5 @@
-.accessibilite{
-  overflow-x: hidden;
+.tempMarg{
+  height: 100px;
 }
 
 .sectionSearchBar{
@@ -30,234 +30,77 @@
     }
   }
 }
+
 .AccessMap{
   display: flex;
   .Placeholder{
-    width: 100vw;
-    height: 780px;
-    z-index: -100;
-    overflow: visible;
+    width: 100%;
+    height: 100vh;
+  }
+  .AccessMapFilter{
+    position: absolute;
+    right: 35px;
+
+    width: 73px;
+    height: 73px;
+    border-radius: 48px;
+    border: none;
 
   }
+
 }
 
-
-.FilterMap{
-  display: none;
-  flex-direction: column;
+#map{
+  width: 10000px;
   position: relative;
-
-  height: 780px;
-  width: 370px;
-  --filter-width: 370px;
-  --negative-filter-width: -370px;
-  transform: translate(var(--negative-filter-width));
-
-  z-index: 100;
-  padding: 37px;
-  background-color: white;
-  .FilterMapTitle{
-    overflow-y: hidden;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 60px;
-    h2{
-      display: flex;
-      justify-content: center;
-
-      font-family: "Euclid Triangle";
-      font-size: 24px;
-      font-weight: bold;
-    }
-    .CloseFilter{
-      left: 40px;
-      margin-right: 90px;
-
-      border: none;
-      cursor: pointer;
-
-      display: flex;
-      justify-content: center;
-      position: absolute;
-
-      font-family: Inter, serif;
-      font-size: 34px;
-      font-weight: bolder;
-      background-color: white;
-    }
-  }
-  .FilterMapSectionTitle{
-    margin-bottom: 35px;
-    h3{
-      font-family: "Euclid Triangle";
-      font-size: 24px;
-    }
-  }
-  .FilterMapSection{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 35px;
-    .FilterMapFilterSectionIcons{
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      .FilterMapFilterSectionIcon{
-        width: 57px;
-        height: 57px;
-        border-radius: 30px;
-        border: 1px black solid;
-      }
-    }
-    .FilterMapRadiusSectionSlider{
-      .progress {
-        background: white;
-        border: solid 1px black;
-        border-radius: 8px;
-        height: 7px;
-        width: 266px;
-
-        outline: none;
-        transition: background 450ms ease-in;
-        -webkit-appearance: none;
-      }
-    }
-  }
-
+  height: 1000px;
 }
 
+#FilterMap{
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  margin-top: 20px;
+  background-color: darkgrey;
+  transform: translate(250px);
+}
 .FilterIcon{
   position: absolute;
   right: 35px;
-  top: 290px;
 
   width: 73px;
   height: 73px;
   border-radius: 48px;
   border: none;
-  cursor: pointer;
-
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  transform: translate(0px);
-  img{
-      object-fit: contain;
-      width: 56px;
-      height: 56px;
-    }
-}
-
-.activeMap{
-  transform: translate(0px);
-  display: flex;
-
-}
-.activeIcon{
-  transform: translate(0px);
-}
-
-.LocationBtn{
-  background-color: #ffffff;
-  border: none;
-  cursor: pointer;
-  width: 50px;
-  height: 80px;
-  overflow: visible;
-  img{
-    width: 50px;
-    height: 80px;
-  }
-}
-
-.Location{
-  width: 100%;
-  height: 575px;
-  padding: 85px 110px;
-  display: none;
-  background-color: white;
-  img{
-    margin-right: 73px;
-  }
-  .LocationPres{
-    font-family: "Euclid Flex Medium";
-    .LocationTitle{
-      font-weight: normal;
-      font-size: 32px;
-      margin-bottom: 20px;
-
-    }
-    .LocationTabs{
-      display: flex;
-      gap: 20px;
-      margin-bottom: 40px;
-      .Tab{
-        font-family: "Euclid Triangle";
-        font-weight: normal;
-        font-size: 32px;
-        color: white;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-
-        height: 60px;
-        background-color: darkgrey;
-        padding-left: 20px;
-        padding-right: 20px;
-        border-radius: 10px;
-      }
-      .activeTab{
-        background-color: #DBB326;
-
-      }
-    }
-    .LocationText{
-      margin-left: 30px;
-      li {
-        counter-increment: my-awesome-counter;
-        font-size: 24px;
-        gap: 10px;
-      }
-      ol li::before {
-        content: counter(my-awesome-counter) ". ";
-      }
-    }
-  }
-}
-
-.activeLocation{
-  display: flex;
-}
-
-.options{
-  transform: translateX(-20px);
   z-index: 20;
-  height: 50px;
-  width: 150px;
-  position:relative;
-}
-
-options::before{
-  content:"<ezaeazezae" ;
-  display: inline ;
-  position: relative ;
-  width: 50px ;
-  height: 50px ;
-  top:0;
-  left: 30px;
-  color: red;
-  background-color: yellow;
-}
-
-.FilterIcon{
   background-color: white;
-}
+  .test{
+    width: 73px;
+    height: 73px;
+    img{
+      object-fit: contain;
+    }
+  }
 
-.FilterMapTitle{
+}
+#Open{
+  display: none;
+}
+#Open:checked ~ #FilterMap{
+  transform: translate(0px);
+}
+#Open:checked ~ .FilterIcon{
+   transform: translate(-250px);
+ }
+
+
+.testLocation{
+  width: 80px;
+  height: 50px;
+  background-color: blue;
+  color: white;
 }
 
 

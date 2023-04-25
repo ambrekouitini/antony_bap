@@ -1,42 +1,87 @@
+<?php 
+    require_once 'object/connection.php';
+    require_once 'object/user.php';
+
+    $connection = new Connection();
+
+    if ($_POST) {
+        $establishment = new Establishment(
+                $_POST['owner_firstname'],
+                $_POST['owner_lastname'],
+                $_POST['owner_email'],
+                $_POST['owner_number'],
+                $_POST['establishment_name'],
+                $_POST['establishment_adress'],
+                $_POST['pictures'],
+        );
+
+        if ($establishment->verify()) {
+            $connection->InsertEstablishment($establishment);
+            header('Location: label_request.php');
+        } else {
+            echo 'Veuillez remplir tous les champs';
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
+    
     <title>Contact</title>
 </head>
-<body class="index ">
+<body>
 <?php
 require_once 'header.php';
 ?>
+<main class="contact">
+<h1>Demande de label</h1>
 
-<main class="contactBody">
-<section class="contactPres">
-    <h1 class="contactTitle">Nous contacter</h1>
-    <div class="contactText">Nous apprécions votre opinion ! N'hésitez pas à partager votre expérience avec nous !</div>
-</section>
-    <form action="POST" class="contactForm">
-        <div class="contactInputs">
-            <div class="contactFormPart1">
-                <div class="contactFormPart1_1">
-                    <label for="etablissement">Selectionner un établissement</label>
-                    <input type="text" name="etablissement" placeholder="Nom de l’établissement ...">
-                </div>
-                <div class="contactFormPart1_2">
-                    <label for="nom">Votre nom</label>
-                    <input type="text" name="nom" placeholder="Votre nom ...">
-                </div>
+<div class="sectionFormLabel">
+        <form class="formLabel" method="POST">
+            <div class="splitForm">
+            <div class="part1">
+            <label class="labelForm" for="owner_firstname">Nom du representant</label>
+            <input class="inputForm" type="text" name="owner_firstname" id="owner_firstname">
+
+            <label class="labelForm" for="owner_lastname">Prénom du representant</label>
+            <input class="inputForm" type="text" name="owner_lastname" id="owner_lastname">
+
+            <label class="labelForm" for="owner_email">Email du representant</label>
+            <input class="inputForm" type="text" name="owner_email" id="owner_email">
+
+            <label class="labelForm" for="owner_number">Numéro de télephone du representant</label>
+            <input class="inputForm" type="text" name="owner_number" id="owner_number">
             </div>
-            <div class="contactFormPart2">
-                <label for="retour">Ecrivez votre retour</label>
-                <textarea rows="5" cols="33" name="retour" placeholder="Ecrivez votre retour"></textarea>
+            
+
+            <div class="part2">
+            <label class="labelForm" for="establishment_name">Nom de l'établissement</label>
+            <input class="inputForm" type="text" name="establishment_name" id="establishment_name">
+
+            <label class="labelForm" for="establishment_adress">Adresse de l'établissement</label>
+            <input class="inputForm" type="text" name="establishment_adress" id="establishment_adress">
+
+            <label class="otherLabelForm" for="pictures">Sélectionner une image :</label>
+            <input class="otherInputForm" type="file" id="imageInput" name="pictures" accept="image/*">
             </div>
-        </div>
-        <button type="submit" value="contactForm">Envoyer</button>
-    </form>
+
+            </div>
+            <div class="checkbox">
+            <label class="otherLabelForm" for="checkboxInput">J'accepte les conditions :</label>
+            <input class="checkInputForm" type="checkbox" id="checkboxInput" name="checkboxInput" required>
+            </div>
+            
+            <button class="labelBtn" type="submit">Envoyer</button>
+        </form>
+</div>
 </main>
+
 <?php
 require_once 'footer.php';
 ?>

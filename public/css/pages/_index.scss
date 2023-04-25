@@ -1,5 +1,13 @@
 @import url('https://fonts.cdnfonts.com/css/euclid-flex');
 
+:root{
+  --main-color: #222952;
+  --sec-color: #085B68;
+  --third-color: #FFB800;
+  --fourth-color: #123B2A;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -17,10 +25,11 @@
 
 .navbar{
   width: 100%;
-  height: 100px;
-  background: #05306E;
+  height: 85px;
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
   display: flex;
   justify-content: space-between;
+  position: fixed;
   align-items: center;
   padding: 0 50px;
 }
@@ -33,7 +42,7 @@
 
 .navbar>ul>li{
   list-style: none;
-  margin: 0 40px;
+  margin: 0 23px;
 }
 
 .navbar>ul>li>a{
@@ -47,7 +56,8 @@
 }
 
 .navbar>img{
-  width: 300px;
+  width: 50px;
+  object-fit: cover;
 }
 
 .accueil-content{
@@ -96,7 +106,7 @@
         border-radius: 16px;
         padding: 10px 40px;
         display: inline;
-        background-color: #0952BA;
+        background-color: var(--third-color);
       }
     }
     
@@ -112,13 +122,13 @@ padding-right: 147px;
     font-weight: 700;
   }
   h3{
-    line-height: 60px;
+    line-height: 49px;
     padding-top: 35px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
   }
 }
-.objectif-content {
+.objectif-content{
   margin-top: 100px;
   margin-bottom: 100px;
   padding-left: 111px;
@@ -131,7 +141,7 @@ padding-right: 147px;
   justify-content: center;
   align-items: center;
   .refParticuliersBox{
-    background-color: #05306E;
+    background-color: var(--main-color);
     color: white;
     min-height: 217px;
     width: min(90%, 1200px);
@@ -191,7 +201,7 @@ padding-right: 147px;
         height: 50px;
         border-radius: 10px;
 
-        background-color: #0952BA;
+        background-color: var(--third-color);
         color: white;
         border: none;
         font-family: "Euclid Flex";
@@ -208,6 +218,8 @@ padding-right: 147px;
 
   }
 }
+
+
 /*---------------------- Carousel Avis  -------------------------------*/
 
 .AvisCard{
@@ -292,6 +304,7 @@ padding-right: 147px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    color: rgb(255, 0, 0);
     font-size: 3em;
   }
   #nav-droite{
@@ -377,134 +390,20 @@ padding-right: 147px;
 
 /*----------------- Formulaire de contact -------------------*/
 
-.contactSection{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  .contactTitle{
-    font-family:"Euclid Flex SemiBold";
-    font-size: 32px;
-    margin-bottom: 35px;
-    margin-top: 70px;
-    margin-left: -600px;
-    @media screen and (max-width: 900px){
-      margin-left: -50px;
-      margin-right: 50px;
-      margin-bottom: 0px;
-    }
-  }
-  .contactForm{
-    display: flex;
-    flex-direction: column;
-    width: min(1100px ,100%);
-    margin-top: 37px;
-    align-items: center;
-    @media screen and (max-width: 900px) {
-      margin-top: 23px;
-    }
-      .contactFormUpperSide{
-      display: flex;
-      flex-direction: row;
-      @media screen and (max-width: 900px){
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-
-      }
-      .contactFormUpperLeftSide{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-right: 50px;
-        @media screen and (max-width: 900px){
-          margin-right: 0px;
-
-        }
-        input{
-          font-family: "Euclid Flex";
-          font-size: 24px;
-          width: 390px;
-          height: 55px;
-          border-radius: 10px;
-          margin-top: 25px;
-          padding-left: 20px;
-          @media screen and (max-width: 900px){
-            width: 333px;
-            margin-top: 15px;
-          }
-        }
-      }
-      .contactFormUpperRightSide{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        input{
-          font-family: "Euclid Flex";
-          font-size: 24px;
-          width: 380px;
-          height: 55px;
-          border-radius: 10px;
-          margin-top: 25px;
-          padding-left: 20px;
-          @media screen and (max-width: 900px){
-            width: 333px;
-            margin-top: 15px;
-
-          }
-        }
-      }
-    }
-    .contactFormBottomSide{
-      textarea{
-        width: 820px;
-        height: 280px;
-        font-family: "Euclid Flex";
-        font-size: 24px;
-        border-radius: 14px;
-        margin-top: 25px;
-        padding-top: 20px;
-
-        padding-left: 20px;
-        @media screen and (max-width: 900px){
-          width: 333px;
-          margin-top: 15px;
-        }
-
-      }
-    }
-    button{
-      margin-top: 20px;
-      width: 820px;
-      height: 50px;
-      border-radius: 10px;
-      background-color: #0952BA;
-      color: white;
-      border: none;
-      font-family: "Euclid Triangle", sans-serif;
-      font-size: 20px;
-      font-weight: bold;
-      @media screen and (max-width: 900px){
-        width: 333px;
-        margin-top: 15px;
-      }
-    }
-  }
-}
 
 
   .objectif{
-    padding-left: 20px;
+    padding-left: 50px;
     padding-right: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
 
     border-radius: 15px;
     width: 564px;
-    background-color: #05306E;
+    background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
     h2{
       margin-bottom: 40px;
-      color: #ffffff;
+      color: var(--third-color);
     font-size: 30px;
     font-weight: 700;
 
@@ -512,7 +411,7 @@ padding-right: 147px;
     h3{
       color: #ffffff;
       line-height: 40px;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
 
     }
@@ -526,9 +425,9 @@ padding-right: 147px;
 
     }
     h3{
-      margin-top: 30px;
+      margin-top: 24px;
       color: #000000;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
 
     }
@@ -543,7 +442,7 @@ padding-right: 147px;
   
         h3{  
           display: inline;
-          background-color: #0952BA;
+          background-color: var(--third-color);
           color: #fff;
           padding: 10px 58px;
           border-radius: 16px;
@@ -553,6 +452,7 @@ padding-right: 147px;
     }
     }
   }
+  
 .frise-content{
   margin-left: 100px;
   .frise {
@@ -563,16 +463,16 @@ padding-right: 147px;
     align-items: center;
     height: 9px;
     width: 90%;
-    background-color: #05306E;
+    background-color: var(--third-color);
     padding: 0 10px;
   
     .point {
 
       font-size: 30px;
-      height: 60px;
-      width: 60px;
+      height: 50px;
+      width: 50px;
       border-radius: 50%;
-      background-color: #05306E;
+      background-color: var(--third-color);
       color: #fff;
       display: flex;
       justify-content: center;
@@ -580,22 +480,22 @@ padding-right: 147px;
       .stick-bottom {
         border-radius: 10px;
         border-radius: 10px;
-        margin-top: 90px;
+        margin-top: 100px;
         z-index: -1;
         position: absolute;
         height: 150px;
         width: 9px;
-        background-color: #05306E;
+        background-color: var(--third-color);
       
       }
       .stick-top {
         border-radius: 10px;
-        margin-bottom: 90px;
+        margin-bottom: 100px;
         z-index: -1;
         position: absolute;
         height: 150px;
         width: 9px;
-        background-color: #05306E;
+        background-color: var(--third-color);
       
       }
   
@@ -615,24 +515,24 @@ padding-right: 147px;
   .first-text{
     width: 30%;
     h2{
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 700;
     }
     h3{
       
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
     }
   }
   .second-text{
     width: 30%;
     h2{
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 700;
     }
     h3{
       
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
     }
   }
@@ -647,24 +547,24 @@ padding-right: 147px;
   .first-text{
     width: 30%;
     h2{
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 700;
     }
     h3{
       
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
     }
   }
   .second-text{
     width: 30%;
     h2{
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 700;
     }
     h3{
       
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 400;
     }
   }
@@ -687,7 +587,6 @@ padding-right: 147px;
   
       border-radius: 15px;
       width: 100%;
-      background-color: #05306E;
       h2{
         
         margin-bottom: 40px;
@@ -731,7 +630,6 @@ padding-right: 147px;
     
           h3{  
             display: inline;
-            background-color: #0952BA;
             color: #fff;
             padding: 10px 58px;
             border-radius: 16px;
@@ -821,7 +719,7 @@ padding-right: 147px;
   }
 
   .navbar>img{
-    width: 200px;
+    width: 40px;
   }
 
   .navbar-toggle {
@@ -844,7 +742,6 @@ padding-right: 147px;
     top: 70px;
     left: 0;
     width: 100%;
-    background: #05306E;
     padding: 20px;
     box-sizing: border-box;
   }
@@ -862,6 +759,7 @@ padding-right: 147px;
     display: block;
   }
   .navbar>ul.active {
+    background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
     display: block;
   }
   .presentation-content{
@@ -893,17 +791,16 @@ padding-right: 147px;
       margin-left: 6%;
       margin-right: 6%;
       .frise {
+        height: 9px;
         display:block;
-      
-        background-color: #05316e00;    
         .point {
           margin-bottom: 127px;
           font-size: 24px;
           height: 45px;
           width: 45px;
           border-radius: 50%;
-          background-color: #05306E;
           color: #fff;
+          background-color: var(--third-color);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -914,7 +811,8 @@ padding-right: 147px;
             position: absolute;
             height: 230px;
             width: 9px;
-            background-color: #05306E;
+            background-color: var(--third-color);
+
           }
           .stick-top {
             border-radius: 10px;
@@ -923,8 +821,7 @@ padding-right: 147px;
             position: absolute;
             height: 210px;
             width: 9px;
-            background-color: #05306E;
-          
+            background-color: var(--third-color);
           }
       
         }
@@ -1030,7 +927,9 @@ padding-right: 147px;
       font-size: 22px;
     }
     h3{
+      line-height: 37px;
       font-size: 18px;
+      
     }
   }
   .objectif-content{
