@@ -21,86 +21,6 @@
   background: #ffffff;
 }
 
-.navbar {
-  width: 100%;
-  height: 100px;
-  background: var(--main-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
-  z-index: 999;
-}
-
-.navbar > ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar > ul > li {
-  list-style: none;
-  margin: 0 40px;
-}
-
-.navbar > ul > li > a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 20px;
-}
-
-.navbar-toggle {
-  display: none;
-}
-
-.navbar > img {
-  width: 300px;
-}
-
-@media (max-width: 850px) {
-  .navbar {
-    padding: 0 20px;
-  }
-  .navbar > img {
-    width: 200px;
-  }
-  .navbar-toggle {
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    font-size: 30px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  .navbar > ul {
-    text-align: center;
-    align-items: center;
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: var(--main-color);
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  .navbar > ul > li {
-    display: block;
-    margin-bottom: 10px;
-  }
-  .navbar > ul > li > a {
-    font-size: 18px;
-  }
-  .navbar-toggle.active {
-    display: block;
-  }
-  .navbar > ul.active {
-    display: block;
-  }
-}
 /*----------------------------------------------------*/
 footer {
   margin-bottom: 0;
@@ -709,6 +629,170 @@ footer section .footerSectionFirstLine {
   font-weight: 400;
 }
 
+/*------------    Page Contact   ------------*/
+.contactBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactBody .contactPres {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 105px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+@media screen and (max-width: 1160px) {
+  .contactBody .contactPres {
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.contactBody .contactPres .contactTitle {
+  font-family: "Euclid Flex Medium", sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 750px) {
+  .contactBody .contactPres .contactTitle {
+    font-size: 22px;
+  }
+}
+.contactBody .contactText {
+  font-family: "Euclid Flex", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+}
+@media screen and (max-width: 1160px) {
+  .contactForm {
+    margin-top: 25px;
+  }
+}
+.contactForm .contactInputs {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 1160px) {
+  .contactForm .contactInputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.contactForm .contactInputs .contactFormPart1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 100px;
+}
+@media screen and (max-width: 1160px) {
+  .contactForm .contactInputs .contactFormPart1 {
+    justify-content: center;
+    margin-right: 0;
+  }
+  .contactForm .contactInputs .contactFormPart1 .contactFormPart1_1 {
+    flex-direction: column;
+  }
+  .contactForm .contactInputs .contactFormPart1 .contactFormPart1_2 {
+    flex-direction: column;
+  }
+}
+.contactForm .contactInputs .contactFormPart1 label {
+  font-family: "Euclid Flex", sans-serif;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 1160px) {
+  .contactForm .contactInputs .contactFormPart1 label {
+    display: none;
+  }
+}
+.contactForm .contactInputs .contactFormPart1 input {
+  width: 100%;
+  border: solid gray 1px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 25px;
+  padding-left: 20px;
+}
+@media screen and (max-width: 1160px) {
+  .contactForm .contactInputs .contactFormPart1 input {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .contactForm .contactInputs .contactFormPart1 input {
+    width: 350px;
+  }
+}
+
+.contactFormPart2 {
+  display: flex;
+  flex-direction: column;
+}
+.contactFormPart2 label {
+  font-family: "Euclid Flex", sans-serif;
+  font-size: 24px;
+}
+@media screen and (max-width: 1160px) {
+  .contactFormPart2 label {
+    margin-top: 30px;
+  }
+}
+
+textarea {
+  resize: none;
+  width: 500px;
+  height: 220px;
+  border: solid gray 1px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+@media screen and (max-width: 550px) {
+  textarea {
+    width: 350px;
+  }
+}
+
+::-moz-placeholder {
+  display: none;
+}
+
+::placeholder {
+  display: none;
+}
+@media screen and (min-width: 1160px) {
+  ::-moz-placeholder {
+    display: block;
+  }
+  ::placeholder {
+    display: block;
+  }
+}
+
+button {
+  border: none;
+  margin-top: 70px;
+  width: 200px;
+  height: 50px;
+  border-radius: 23px;
+  background-color: var(--third-color);
+  color: white;
+  font-family: "Euclid Triangle", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 @media (max-width: 1200px) {
   .objectif-content {
     text-align: center;
@@ -842,10 +926,9 @@ footer section .footerSectionFirstLine {
     width: 40px;
   }
   .navbar-toggle {
+    width: 40px;
     display: block;
-    position: absolute;
-    top: 30px;
-    right: 20px;
+    transform: translateY(-32px);
     font-size: 30px;
     color: #fff;
     background: none;
