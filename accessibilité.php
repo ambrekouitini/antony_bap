@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,13 +24,16 @@ require_once 'header.php';
     <img src="images/settings.png" alt="" class="">
 </button>
 <section class="AccessMap">
-    <div id=divMap>
-        <div id="map"></div>
+    <div>
+        <img src="images/Placeholder.png" alt="placeholder" class="Placeholder">
     </div>
-
     <div class="FilterMap">
         <div class="FilterMapTitle">
-            <h2 class="options">
+            <button class="CloseFilter">
+                >
+            </button>
+            <h2 class="">
+
                 Options
             </h2>
         </div>
