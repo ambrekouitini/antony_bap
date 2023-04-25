@@ -1308,8 +1308,8 @@ footer section .footerSectionFirstLine {
   font-weight: bold;
 }
 
-.tempMarg {
-  height: 100px;
+* {
+  overflow-x: hidden;
 }
 
 .sectionSearchBar {
@@ -1341,42 +1341,81 @@ footer section .footerSectionFirstLine {
   margin-left: 15px;
 }
 
-.testLocation {
-  width: 80px;
-  height: 50px;
-  background-color: blue;
-  color: white;
-}
-
 .AccessMap {
   display: flex;
   --map-height: 100vh;
   height: var(--map-height);
-  background-color: red;
 }
 .AccessMap .Placeholder {
   width: 100vw;
 }
 
 .FilterMap {
+  background-color: white;
   display: none;
   position: relative;
-  width: 250px;
+  width: 370px;
   --filter-width: 250px;
   --negative-filter-width: -250px;
   height: var(--map-height);
-  background-color: darkgrey;
   transform: translate(250px);
+  padding: 37px;
+}
+.FilterMap .FilterMapTitle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.FilterMap .FilterMapTitle h2 {
+  font-family: "Euclid Triangle";
+  font-size: 24px;
+  font-weight: bold;
+}
+.FilterMap .FilterMapSectionTitle {
+  margin-bottom: 35px;
+}
+.FilterMap .FilterMapSectionTitle h3 {
+  font-family: "Euclid Triangle";
+  font-size: 24px;
+}
+.FilterMap .FilterMapSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+.FilterMap .FilterMapSection .FilterMapFilterSectionIcons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.FilterMap .FilterMapSection .FilterMapFilterSectionIcons .FilterMapFilterSectionIcon {
+  width: 45px;
+  height: 45px;
+  border-radius: 30px;
+  border: 1px black solid;
+}
+.FilterMap .FilterMapSection .FilterMapRadiusSectionSlider .progress {
+  background: white;
+  border: solid 1px black;
+  border-radius: 8px;
+  height: 7px;
+  width: 266px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
 }
 
 .FilterIcon {
   position: absolute;
   right: 35px;
+  top: 290px;
   width: 73px;
   height: 73px;
   border-radius: 48px;
   border: none;
   z-index: 20;
+  cursor: pointer;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -1396,6 +1435,104 @@ footer section .footerSectionFirstLine {
 
 .activeIcon {
   transform: translate(0px);
+}
+
+.LocationBtn {
+  background-color: transparent;
+  width: 80px;
+  height: 115px;
+  border: none;
+  cursor: pointer;
+}
+.LocationBtn img {
+  width: 80px;
+  height: 115px;
+}
+
+.Location {
+  width: 100%;
+  height: 575px;
+  padding: 85px 110px;
+  display: none;
+  background-color: transparent;
+}
+.Location img {
+  margin-right: 73px;
+}
+.Location .LocationPres {
+  font-family: "Euclid Flex Medium";
+}
+.Location .LocationPres .LocationTitle {
+  font-weight: normal;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.Location .LocationPres .LocationTabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.Location .LocationPres .LocationTabs .Tab {
+  font-family: "Euclid Triangle";
+  font-weight: normal;
+  font-size: 32px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 60px;
+  background-color: darkgrey;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+.Location .LocationPres .LocationTabs .activeTab {
+  background-color: #DBB326;
+}
+.Location .LocationPres .LocationText {
+  margin-left: 30px;
+}
+.Location .LocationPres .LocationText li {
+  counter-increment: my-awesome-counter;
+  font-size: 24px;
+  gap: 10px;
+}
+.Location .LocationPres .LocationText ol li::before {
+  content: counter(my-awesome-counter) ". ";
+}
+
+.activeLocation {
+  display: flex;
+}
+
+.options {
+  transform: translateX(-40px);
+  transform: translateY(20px);
+  z-index: 20;
+  height: 50px;
+  width: 150px;
+  position: relative;
+}
+
+options::before {
+  content: "<ezaeazezae" !important;
+  display: inline !important;
+  position: relative !important;
+  width: 50px !important;
+  height: 50px !important;
+  top: 0;
+  left: 30px;
+  color: red;
+  background-color: yellow;
+}
+
+.FilterIcon {
+  background-color: transparent;
+}
+
+.FilterMapTitle {
+  overflow-y: hidden;
 }
 
 /*# sourceMappingURL=output.css.map */

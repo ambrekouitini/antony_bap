@@ -20,22 +20,71 @@ require_once 'header.php';
     </div>
 </section>
 
-<div class="FilterIcon">
+<button class="FilterIcon">
     <img src="images/settings.png" alt="" class="">
-</div>
+</button>
 <section class="AccessMap">
-    <img src="images/Placeholder.png" alt="placeholder" class="Placeholder">
+    <div>
+        <img src="images/Placeholder.png" alt="placeholder" class="Placeholder">
+    </div>
 
     <div class="FilterMap">
-        FilterMap
+        <div class="FilterMapTitle">
+            <h2 class="options">
+                Options
+            </h2>
+        </div>
+        <div class="FilterMapSection">
+            <div class="FilterMapSectionTitle">
+                <h3>Filtre</h3>
+            </div>
+            <div class="FilterMapFilterSectionIcons">
+                <div class="FilterMapFilterSectionIcon"></div>
+                <div class="FilterMapFilterSectionIcon"></div>
+                <div class="FilterMapFilterSectionIcon"></div>
+                <div class="FilterMapFilterSectionIcon"></div>
+                <div class="FilterMapFilterSectionIcon"></div>
+                <div class="FilterMapFilterSectionIcon"></div>
+                <div class="FilterMapFilterSectionIcon"></div>
+                <div class="FilterMapFilterSectionIcon"></div>
+            </div>
+        </div>
+
+        <div class="FilterMapSection">
+            <div class="FilterMapSectionTitle">
+                <h3>Rayon</h3>
+            </div>
+            <div class="FilterMapRadiusSectionSlider">
+                <input type="range" id="cowbell" name="cowbell"
+                       min="0" max="300" value="90" step="10" class="progress">
+            </div>
+        </div>
+
     </div>
 </section>
 
 
-<button class="testLocation">
-Location
+<button class="LocationBtn">
+    <img src="images/Google_Maps_Pin.png" alt="">
 </button>
-
+<div class="Location">
+    <img src="images/AuchanLocation.png" alt="Auchan">
+    <div class="LocationPres">
+        <div class="LocationTitle">
+            Auchan
+        </div>
+        <div class="LocationTabs">
+            <div class="Tab activeTab">Accessibilité</div>
+            <div class="Tab">Contact</div>
+            <div class="Tab">Informations</div>
+        </div>
+        <ol class="LocationText">
+            <li>Les magasins Auchan sont généralement accessibles aux personnes à mobilité réduite grâce à des rampes d'accès et des ascenseurs.</li>
+            <li>Les parkings des magasins Auchan sont souvent équipés de places de parking réservées aux personnes à mobilité réduite.</li>
+            <li>Les allées du magasin sont larges et bien éclairées pour faciliter la circulation des clients.</li>
+        </ol>
+    </div>
+</div>
 
 <?php
 require_once 'footer.php';

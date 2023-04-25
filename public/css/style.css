@@ -1308,10 +1308,6 @@ footer section .footerSectionFirstLine {
   font-weight: bold;
 }
 
-.tempMarg {
-  height: 100px;
-}
-
 .sectionSearchBar {
   width: 100%;
   height: 150px;
@@ -1341,18 +1337,10 @@ footer section .footerSectionFirstLine {
   margin-left: 15px;
 }
 
-.testLocation {
-  width: 80px;
-  height: 50px;
-  background-color: blue;
-  color: white;
-}
-
 .AccessMap {
   display: flex;
   --map-height: 100vh;
   height: var(--map-height);
-  background-color: red;
 }
 .AccessMap .Placeholder {
   width: 100vw;
@@ -1396,6 +1384,62 @@ footer section .footerSectionFirstLine {
 
 .activeIcon {
   transform: translate(0px);
+}
+
+.LocationBtn {
+  width: 80px;
+  height: 50px;
+  background-color: blue;
+  color: white;
+}
+
+.Location {
+  background-color: deeppink;
+  width: 100%;
+  height: 575px;
+  padding: 85px 110px;
+  display: flex;
+}
+.Location img {
+  margin-right: 73px;
+}
+.Location .LocationPres {
+  font-family: "Euclid Flex Medium";
+}
+.Location .LocationPres .LocationTitle {
+  font-weight: normal;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.Location .LocationPres .LocationTabs {
+  display: flex;
+  gap: 20px;
+}
+.Location .LocationPres .LocationTabs .Tab {
+  font-family: "Euclid Triangle";
+  font-weight: normal;
+  font-size: 32px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 60px;
+  background-color: darkgrey;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+.Location .LocationPres .LocationTabs .activeTab {
+  background-color: #DBB326;
+}
+.Location .LocationPres .LocationText {
+  font-size: 24px;
+  gap: 10px;
+}
+
+.activeLocation {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
