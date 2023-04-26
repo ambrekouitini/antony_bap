@@ -1,11 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;600&display=swap');
+:root{
+    --main-color: #123B2A;
+    --sec-color: #DBB326;
+    --third-color: #3A4D92;
+}
 
+@import url('https://fonts.cdnfonts.com/css/euclid-flex');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
+    font-family: "Koho", sans-serif;
+    font-family: 'Euclid Triangle', sans-serif;
+}
+.index {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
 }
 
-// Colors
-$background-color: #123B2A;
+/*----------------------------------------------------*/
+footer{
+    margin-bottom: 0;
+    section{
+        width: 100%;
+        height: 185px;
+        background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 50px;
+        z-index: 999;
+        margin-top: 85px ;
+        color: white;
+        font-family: "Euclid Triangle", sans-serif;
+        font-size: 16px;
+        p, a, a:link, a:visited, a:active, a:hover{
+            text-decoration: none;
+            color: white;
+            @media screen and (max-width: 780px) {
+                font-size: 8px;
+            }
+        }
+        .footerSection1{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 900px;
+
+        }
+        .footerSection2{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 900px;
+
+        }
+        .footerSection3{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 900px;
+            a, a:link, a:visited, a:active, a:hover{
+                color: white;
+
+            }
+        }
+        .footerSectionFirstLine {
+            margin-bottom: 25px;
+        }
+    }
+}
+

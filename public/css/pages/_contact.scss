@@ -1,0 +1,150 @@
+
+/*------------    Page Contact   ------------*/
+
+
+:root{
+  --main-color: #222952;
+  --sec-color: #085B68;
+  --third-color: #FFB800;
+  --fourth-color: #123B2A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Euclid Triangle', sans-serif;
+}
+
+
+.contact{
+  padding-top: 200px;
+  h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+
+
+  .sectionFormLabel{
+    display: flex;
+    justify-content: center;
+
+
+
+    .formLabel{
+      display: flex;
+      flex-direction: column;
+
+      .splitForm{
+        width: 100%;
+
+        gap: 10%;
+        display: flex;
+        .part1{
+          display: flex;
+        flex-direction: column;
+          .labelForm{
+            margin-bottom: 10px;
+            width: 300px;
+    
+          }
+          .inputForm{
+            height: 40px;
+            border: solid grey 1px;
+            border-radius: 13px;
+            margin-bottom: 30px;
+    
+          }
+          .otherLabelForm{
+            margin-bottom: 10px;
+    
+          }
+          .otherInputForm{
+            height: 30px;
+            margin-bottom: 30px;
+          }
+        }
+        .part2{
+          display: flex;
+        flex-direction: column;
+          .labelForm{
+            margin-bottom: 10px;
+    
+          }
+          .inputForm{
+            height: 40px;
+            border: solid grey 1px;
+            border-radius: 13px;
+            margin-bottom: 30px;
+    
+          }
+          .otherLabelForm{
+            margin-bottom: 10px;
+    
+          }
+          .otherInputForm{
+            height: 30px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+
+      .checkbox{
+        display: flex;
+        .checkInputForm{
+          margin-left: 10px;
+          transform: translateY(-25px);
+          margin-top: 30px;
+        }
+      }
+
+      .labelBtn{
+        width: 170px;
+        color: #fff;
+        border: none;
+        border-radius: 16px;
+        padding: 10px 40px;
+        display: inline;
+        justify-content: center;
+        background-color: var(--third-color);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  
+  .contact{
+    padding-top: 200px;
+    h1{
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+  
+  
+    .sectionFormLabel{
+      display: flex;
+      justify-content: center;
+
+      .formLabel{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+
+        .splitForm{
+          gap: 0%;
+          display: block;
+        }
+      }
+    }
+  }
+  
+  
+  
+  
+}
