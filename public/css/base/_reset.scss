@@ -110,49 +110,96 @@ footer{
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
         padding: 0 50px;
         z-index: 999;
         margin-top: 85px ;
         color: white;
         font-family: "Euclid Triangle", sans-serif;
         font-size: 16px;
-        p, a, a:link, a:visited, a:active, a:hover{
-            text-decoration: none;
-            color: white;
+        @media screen and (max-width: 780px) {
+            height: 285px;
+        }
+        .footerClient{
+            display: flex;
+            justify-content: center;
+            align-items: center;
             @media screen and (max-width: 780px) {
-                font-size: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
             }
-        }
-        .footerSection1{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            width: 900px;
-
-        }
-        .footerSection2{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            width: 900px;
-
-        }
-        .footerSection3{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-evenly;
-            width: 900px;
-            a, a:link, a:visited, a:active, a:hover{
+            p, a, a:link, a:visited, a:active, a:hover{
+                text-decoration: none;
                 color: white;
-
+                @media screen and (max-width: 780px) {
+                    font-size: 16px;
+                }
             }
-        }
-        .footerSectionFirstLine {
-            margin-bottom: 25px;
+            .footerSection1{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 250px;
+                @media screen and (max-width: 780px) {
+                    gap: 20px;
+                    margin-bottom: 20px;
+                }
+            }
+            .footerSection2{
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 250px;
+                @media screen and (max-width: 780px) {
+                    gap: 20px;
+                    margin-bottom: 20px;
+
+                }
+            }
+            .footerSection3{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-evenly;
+                width: 250px;
+                a, a:link, a:visited, a:active, a:hover{
+                    color: white;
+                    text-decoration: underline;
+                }
+                @media screen and (max-width: 780px) {
+                    gap: 20px;
+                    margin-bottom: 20px;
+
+                }
+            }
+            .footerSectionFirstLine {
+                margin-bottom: 25px;
+                @media screen and (max-width: 780px) {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
 }
+.AdminAccess{
+    position: absolute;
+    margin-bottom: 0;
+    margin-left: 0;
+    transform: translateY(80px);
+    a{
+        font-size: 16px;
+    }
 
+    @media screen and (max-width: 780px) {
+        transform: translateY(130px);
+        a{
+            font-size: 16px;
+        }
+    }
+}
