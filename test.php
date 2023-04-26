@@ -23,7 +23,8 @@ require_once 'header.php';
 
 
 <section class="AccessMap">
-    <div class="map" id="map"></div>
+    <div id="map"></div>
+
     <input type="checkbox" name="" id="Open">
     <label for="Open" class="FilterIcon">
         <div class="test">
@@ -32,15 +33,20 @@ require_once 'header.php';
     </label>
     <div id="FilterMap">
     </div>
-    <div id="map"></div>
 </section>
+
+
+<button class="testLocation">
+Location
+</button>
+
 
 <?php
 require_once 'footer.php';
 ?>
-<script src="public/js/script.js"></script>
-<script src="public/js/accessbilite.js"></script>
-<script src='http://www.bing.com/api/maps/mapcontrol?callback=getMap' async></script>
 </body>
+<script src="public/js/script.js"></script>
+<script src="public/js/accessibilite.js"></script>
+<script src='http://www.bing.com/api/maps/mapcontrol?callback=getMap' async></script>
 
 </html>
