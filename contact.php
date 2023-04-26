@@ -17,7 +17,7 @@
 
         if ($establishment->verify()) {
             $connection->InsertEstablishment($establishment);
-            header('Location: label_request.php');
+            header('Location: contact.php');
         } else {
             echo 'Veuillez remplir tous les champs';
         }

@@ -1,3 +1,27 @@
+<?php
+    require_once 'object/connection.php';
+    require_once 'object/user.php';
+
+    $connection = new Connection();
+
+    if ($_POST){
+        $feedback = new Feedback(
+            $_POST['establishment'],
+            $_POST['name'],
+            $_POST['mail'],
+            $_POST['comment'],
+        );
+
+        if ($feedback->verify()){
+            $connection->InsertFeedback($feedback);
+            header('Location: index.php');
+        } else {
+            echo 'Veuillez remplir tous les champs';
+        }
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -178,26 +202,26 @@ piétons adaptés et bien plus encore.</h3>
         <div class="contactInputs">
             <div class="contactFormPart1">
                 <div class="contactFormPart1_1">
-                    <label for="etablissement">Selectionner un établissement</label>
-                    <input type="text" name="etablissement" placeholder="Nom de l’établissement ...">
+                    <label for="establishment">Selectionner un établissement</label>
+                    <input type="text" name="establishment" placeholder="Nom de l’établissement ...">
                 </div>
                 <div class="contactFormPart1_2">
-                    <label for="nom">Votre nom</label>
-                    <input type="text" name="nom" placeholder="Votre nom ...">
+                    <label for="name">Votre nom</label>
+                    <input type="text" name="name" placeholder="Votre nom ...">
+                </div>
+                <div class="contactFormPart1_1">
+                    <label for="mail">Votre adresse mail</label>
+                    <input type="text" name="mail" placeholder="Votre adresse mail...">
                 </div>
             </div>
             <div class="contactFormPart2">
-                <label for="retour">Ecrivez votre retour</label>
-                <textarea rows="5" cols="33" name="retour" placeholder="Ecrivez votre retour"></textarea>
+                <label for="comment">Ecrivez votre retour</label>
+                <textarea rows="5" cols="33" name="comment" placeholder="Ecrivez votre retour"></textarea>
             </div>
         </div>
         <button type="submit" value="contactForm">Envoyer</button>
     </form>
 </div>
-
-
-
-
 
     <?php
     require_once 'footer.php';

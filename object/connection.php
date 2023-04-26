@@ -2,6 +2,7 @@
 
 require_once 'user.php';
 require_once 'establishment.php';
+require_once 'feedback.php';
 
 class Connection
 {
@@ -9,8 +10,8 @@ class Connection
 
     public function __construct()
     {
-        // $this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', 'root');
-        $this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', '');
+        $this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', 'root');
+        //$this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', '');
     }
 
     // USER'S FUNCTION
@@ -178,5 +179,16 @@ class Connection
         $statement->execute();
         $establishments = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $establishments;
+    }
+
+    public function InsertFeedback(Feedback $feedback) : bool {
+        $query = 'INSERT INTO feedback (establishment, name, mail, comment) VALUES (:establishment, :name, :mail, :comment)';
+        $statement = $this->pdo->prepare($query);
+        return $statement->execute([
+            'establishment' => $feedback->establishment,
+            'name' => $feedback->name,
+            'mail' => $feedback->mail,
+            'comment' => $feedback->comment
+        ]);
     }
 }
