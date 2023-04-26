@@ -171,4 +171,12 @@ class Connection
         return $data;
     }
 
+    public function searchEstablishment($searchTerm){
+        $query = "SELECT * FROM establishment WHERE status = 'Accepté' AND (owner_firstname LIKE :search OR owner_lastname LIKE :search OR owner_email LIKE :search OR establishment_name LIKE :search OR establishment_adress LIKE :search)";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue(':search', '%'.$searchTerm.'%', PDO::PARAM_STR);
+        $statement->execute();
+        $establishments = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $establishments;
+    }
 }

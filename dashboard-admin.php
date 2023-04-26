@@ -19,6 +19,11 @@
         header('Location: login.php');
     }
 
+    if(isset($_GET['searchTerm'])) {
+        $searchTerm = $_GET['searchTerm'];
+        $orders = $connection->searchEstablishment($searchTerm);
+    }
+
     require_once 'headerAdmin.php';
 ?>
 
@@ -34,36 +39,45 @@
 
 
 <body>
-    <main class="dashboardAdmin">
-    <nav>
-        <ul>
-            <li><a href="dashboard-admin.php">Tous les établissement</a></li>
-            <li><a href="dashboard-request.php">Demandes de label</a></li>
-        </ul>
-    </nav>
+<main class="dashboardAdmin">
+    <h1>Dashboard liste des établissements labelisés</h1>
+    <div class="optionBar">
+        <form method="get">
+            <div class="search">
+                <img src="images/search.svg" alt="">
+                <input type="text" name="searchTerm" placeholder="Rechercher un nom d'établissement...">
+            </div>
+            <button type="submit">Rechercher</button>
+        </form>
+    </div>
 
-    <form method="POST">
-        <input type="hidden" name="deconnection" ?>
-        <input type="submit" name="deconnection" value="Se deconnecter">
-    </form>
-    <?php 
-        if(isset($_POST["deconnection"])){
-            session_destroy();
-            header('Location: login.php');
-        }
-    ?>
-
-    <h1>Tous les établissements labelisés</h1>
-
-    <?php foreach ($establishmentsLabeled as $labeled): ?>
-        <p> Nom de l'établissement : <?= $labeled['establishment_name'] ?></p>
-        <p> Adresse de l'établissement : <?= $labeled['establishment_adress'] ?></p>
-    <?php endforeach; ?>
-
-    </main>
-
-
-
-
+    <div class="allcard">
+        <?php foreach ($establishmentsLabeled as $labeled): ?>
+            <div class="card">
+                <div class="card-header">
+                    <?php if($labeled['pictures'] != null): ?>
+                        <img src="<?= $labeled['pictures']?>" alt="">
+                    <?php endif; ?>
+                </div>
+                <div class="card-body">
+                    <div class="name">
+                        <h2><?= $labeled['establishment_name'] ?></h2>
+                        <p><?= $labeled['establishment_adress'] ?></p>
+                    </div>
+                    <div class="info">
+                        <div class="tel">
+                            <img src="images/phone.svg" alt="">
+                            <p>: <?= $labeled['owner_number'] ?></p>
+                        </div>
+                        <div class="button">
+                            <a href="dashboard-admin.php?id=<?= $labeled['id'] ?>">Afficher Plus
+                            <img src="images/arrow.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</main>
 </body>
 </html>

@@ -91,6 +91,7 @@
   font-family: "Roboto";
   font-size: 20px;
   color: #434343;
+  width: 100%;
 }
 .login .containerRight .formContainer form button {
   background: #3A4D92;
@@ -106,7 +107,321 @@
 
 .dashboardAdmin {
   width: 100%;
-  padding-left: 21vw;
+  padding-left: 20vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Euclid Flex";
+  gap: 20px;
+}
+.dashboardAdmin h1 {
+  font-weight: 600;
+  font-size: 26px;
+  text-transform: uppercase;
+  padding: 50px 50px 20px 50px;
+}
+.dashboardAdmin .optionBar {
+  width: 100%;
+  padding: 0px 50px 20px 50px;
+}
+.dashboardAdmin .optionBar form {
+  background-color: #C9C9C9;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.dashboardAdmin .optionBar form .search {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+}
+.dashboardAdmin .optionBar form .search input {
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background: none;
+  color: white;
+}
+.dashboardAdmin .optionBar form .search input::placeholder {
+  color: white;
+}
+.dashboardAdmin .optionBar form .search input:focus {
+  outline: none;
+}
+.dashboardAdmin .optionBar form input {
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  background: none;
+}
+.dashboardAdmin .optionBar form input::placeholder {
+  color: white;
+}
+.dashboardAdmin .optionBar form button {
+  background-color: #3A4D92;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 35px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.dashboardAdmin .allcard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0px 50px 20px 50px;
+}
+@media screen and (max-width: 1300px) {
+  .dashboardAdmin .allcard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 750px) {
+  .dashboardAdmin .allcard {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.dashboardAdmin .allcard .card {
+  background: #D9D9D9;
+  border-radius: 20px;
+}
+.dashboardAdmin .allcard .card .card-header {
+  width: 100%;
+}
+.dashboardAdmin .allcard .card .card-header img {
+  width: 100%;
+  max-height: 130px;
+  object-fit: fill;
+  border-radius: 20px 20px 0 0;
+}
+.dashboardAdmin .allcard .card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 10px;
+}
+.dashboardAdmin .allcard .card .card-body .name {
+  display: flex;
+  flex-direction: column;
+}
+.dashboardAdmin .allcard .card .card-body .name h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+.dashboardAdmin .allcard .card .card-body .name p {
+  color: #707070;
+  font-size: 14px;
+}
+.dashboardAdmin .allcard .card .card-body .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboardAdmin .allcard .card .card-body .info .tel {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.dashboardAdmin .allcard .card .card-body .info .tel p {
+  color: #434343;
+}
+.dashboardAdmin .allcard .card .card-body .info .button {
+  background: #3A4D92;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 15px;
+}
+.dashboardAdmin .allcard .card .card-body .info .button a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboardRequest {
+  width: 100%;
+  padding-left: 20vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Euclid Flex";
+}
+.dashboardRequest h1 {
+  font-weight: 600;
+  font-size: 26px;
+  text-transform: uppercase;
+  padding: 50px 50px 20px 50px;
+}
+.dashboardRequest .option {
+  width: 100%;
+  display: flex;
+  gap: 100px;
+  padding: 0 50px 35px;
+  align-items: center;
+}
+.dashboardRequest .option .sort {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.dashboardRequest .option .sort input {
+  background: #aeadad;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  color: white;
+}
+.dashboardRequest .option .sort input:hover {
+  cursor: pointer;
+}
+.dashboardRequest .option .filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background: #aeadad;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.dashboardRequest .option .filter select {
+  background: none;
+  border: none;
+  color: white;
+}
+.dashboardRequest .option .filter select:hover {
+  cursor: pointer;
+}
+.dashboardRequest .option .filter select:focus {
+  outline: none;
+}
+.dashboardRequest .option .filter input {
+  background: none;
+  border: none;
+  color: white;
+}
+.dashboardRequest .option .filter input:hover {
+  cursor: pointer;
+}
+.dashboardRequest .allcard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0px 50px 20px 50px;
+}
+@media screen and (max-width: 1300px) {
+  .dashboardRequest .allcard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 750px) {
+  .dashboardRequest .allcard {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.dashboardRequest .allcard .card {
+  background: #D9D9D9;
+  border-radius: 20px;
+}
+.dashboardRequest .allcard .card .card-header {
+  width: 100%;
+}
+.dashboardRequest .allcard .card .card-header img {
+  width: 100%;
+  max-height: 130px;
+  object-fit: fill;
+  border-radius: 20px 20px 0 0;
+}
+.dashboardRequest .allcard .card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 10px;
+}
+.dashboardRequest .allcard .card .card-body .firstRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .name {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .name span {
+  font-style: italic;
+  font-size: 12px;
+  color: #707070;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .name .space h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .name .space p {
+  color: #707070;
+  font-size: 14px;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 10px;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .status p {
+  color: #434343;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .status img {
+  width: 40%;
+}
+.dashboardRequest .allcard .card .card-body .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboardRequest .allcard .card .card-body .info .tel {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.dashboardRequest .allcard .card .card-body .info .tel p {
+  color: #434343;
+}
+.dashboardRequest .allcard .card .card-body .info .button {
+  background: #3A4D92;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 15px;
+  gap: 10px;
+}
+.dashboardRequest .allcard .card .card-body .info .button a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.manageEstablishment {
+  width: 100%;
+  padding-left: 20vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Euclid Flex";
 }
 
 .headerAdmin {
@@ -125,6 +440,7 @@
   align-items: center;
   gap: 10px;
   width: 100%;
+  text-decoration: none;
 }
 .headerAdmin .logoContainer a img {
   width: 25%;
