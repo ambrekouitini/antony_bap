@@ -1,5 +1,4 @@
 <?php
-
 require_once 'user.php';
 require_once 'establishment.php';
 require_once 'feedback.php';
@@ -190,5 +189,14 @@ class Connection
             'mail' => $feedback->mail,
             'comment' => $feedback->comment
         ]);
+    }
+
+    public function GetAllFeedbacks()
+    {
+        $query = 'SELECT * FROM feedback ORDER BY id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
     }
 }

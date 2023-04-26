@@ -10,7 +10,7 @@
             <nav>
                 <div class="firstSection">
                     <span> Navigation </span>
-                    <a href="">
+                    <a href="dashboard-feedback.php">
                         <img src="images/chat.svg" alt="Feedbacks">
                         <h2>Feedbacks</h2>
                     </a>

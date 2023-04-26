@@ -1,6 +1,7 @@
 <?php
     require_once 'object/connection.php';
     require_once 'object/user.php';
+    require_once 'object/feedback.php';
 
     $connection = new Connection();
 
@@ -198,7 +199,7 @@ piétons adaptés et bien plus encore.</h3>
     <h1 class="contactTitle">Nous contacter</h1>
     <div class="contactText">Nous apprécions votre opinion ! N'hésitez pas à partager votre expérience avec nous !</div>
 </section>
-    <form action="POST" class="contactForm">
+    <form method="POST" class="contactForm">
         <div class="contactInputs">
             <div class="contactFormPart1">
                 <div class="contactFormPart1_1">
