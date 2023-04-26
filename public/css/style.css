@@ -1326,6 +1326,12 @@ button {
   border: none;
 }
 
+#map {
+  width: 10000px;
+  position: relative;
+  height: 1000px;
+}
+
 #FilterMap {
   position: fixed;
   width: 250px;
@@ -1534,6 +1540,7 @@ button {
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
+  margin: 0;
 }
 .dashboardAdmin .allcard {
   display: grid;
