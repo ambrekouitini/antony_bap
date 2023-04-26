@@ -1,67 +1,63 @@
-.dashboardAdmin {
+.dashboardRequest {
     width: 100%;
     padding-left: 20vw;
     display: flex;
     flex-direction: column;
     font-family: 'Euclid Flex';
-    gap: 20px;
     h1{
         font-weight: 600;
         font-size: 26px;
         text-transform: uppercase;
         padding: 50px 50px 20px 50px;
     }
-    .optionBar{
+    .option{
         width: 100%;
-        padding: 0px 50px 20px 50px;
-        form{
-            background-color: #C9C9C9;
-            border-radius: 30px;
+        display: flex;
+        gap: 100px;
+        padding: 0 50px 35px;
+        align-items: center;
+        .sort{
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
-            padding: 10px;
-            .search{
-                width: 100%;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                padding-left: 10px;
-                input{
-                    width: 100%;
-                    border: none;
-                    border-radius: 25px;
-                    padding: 10px 15px;
-                    background: none;
-                    color: white;
-                    &::placeholder{
-                        color: white;
-                    }
-                    &:focus{
-                        outline: none;
-                    }
+            align-items: center;
+            gap: 10px;
+            input{
+                background: #aeadad;
+                border-radius: 10px;
+                padding: 10px 15px;
+                border: none;
+                color: white;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+        .filter{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 10px;
+            background: #aeadad;
+            border-radius: 10px;
+            padding: 10px 15px;
+            select{
+                background: none;
+                border: none;
+                color: white;
+                &:hover{
+                    cursor: pointer;
+                }
+                &:focus{
+                    outline: none;
                 }
             }
             input{
-                border: none;
-                border-radius: 25px;
-                padding: 10px 15px;
-                font-size: 14px;
-                font-weight: 600;
                 background: none;
-                &::placeholder{
-                    color: white;
-                }
-            }
-            button{
-                background-color: #3A4D92;
-                color: white;
-                border-radius: 25px;
-                padding: 10px 35px;
                 border: none;
-                font-weight: 600;
-                font-size: 14px;
-                cursor: pointer;
+                color: white;
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -94,18 +90,45 @@
                 flex-direction: column;
                 gap: 10px;
                 padding: 15px 10px;
-                .name{
+                .firstRow{
                     display: flex;
-                    flex-direction: column;
-                    h2{
-                        font-weight: 400;
-                        font-size: 18px
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    .name{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        span{
+                            font-style: italic;
+                            font-size: 12px;
+                            color: #707070;
+                        }
+                        .space{
+                            h2{
+                                font-weight: 400;
+                                font-size: 18px
+                            }
+                            p{
+                                color: #707070;
+                                font-size: 14px;
+                            }
+                        }
                     }
-                    p{
-                        color: #707070;
-                        font-size: 14px;
+                    .status{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-right: 10px;
+                        p{
+                            color: #434343;
+                        }
+                        img{
+                            width: 40%;
+                        }
                     }
                 }
+                
                 .info{
                     display: flex;
                     flex-direction: row;
@@ -126,6 +149,7 @@
                         align-items: center;
                         flex-direction: row;
                         padding: 10px 15px;
+                        gap: 10px;
                         a{
                             color: white;
                             text-decoration: none;
