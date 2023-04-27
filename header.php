@@ -9,7 +9,7 @@
 </head>
 <header>
         <nav class="navbar">
-            <img src="images/logo_antony.png" alt="">
+            <img src="images/antonyNewLogo.png" alt="">
             <button class="navbar-toggle">&#9776;</button>
             <ul>
                 <li><a href="index.php">Accueil</a></li>

@@ -21,86 +21,6 @@
   background: #ffffff;
 }
 
-.navbar {
-  width: 100%;
-  height: 100px;
-  background: var(--main-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
-  z-index: 999;
-}
-
-.navbar > ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar > ul > li {
-  list-style: none;
-  margin: 0 40px;
-}
-
-.navbar > ul > li > a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 20px;
-}
-
-.navbar-toggle {
-  display: none;
-}
-
-.navbar > img {
-  width: 300px;
-}
-
-@media (max-width: 850px) {
-  .navbar {
-    padding: 0 20px;
-  }
-  .navbar > img {
-    width: 200px;
-  }
-  .navbar-toggle {
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    font-size: 30px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  .navbar > ul {
-    text-align: center;
-    align-items: center;
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: var(--main-color);
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  .navbar > ul > li {
-    display: block;
-    margin-bottom: 10px;
-  }
-  .navbar > ul > li > a {
-    font-size: 18px;
-  }
-  .navbar-toggle.active {
-    display: block;
-  }
-  .navbar > ul.active {
-    display: block;
-  }
-}
 /*----------------------------------------------------*/
 footer {
   margin-bottom: 0;
@@ -108,7 +28,7 @@ footer {
 footer section {
   width: 100%;
   height: 185px;
-  background-color: var(--main-color);
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,9 +77,10 @@ footer section .footerSectionFirstLine {
 }
 
 :root {
-  --main-color: #123B2A;
-  --sec-color: #DBB326;
-  --third-color: #3A4D92;
+  --main-color: #222952;
+  --sec-color: #085B68;
+  --third-color: #FFB800;
+  --fourth-color: #123B2A;
 }
 
 * {
@@ -177,9 +98,10 @@ footer section .footerSectionFirstLine {
 }
 
 .navbar {
+  z-index: 99;
   width: 100%;
   height: 85px;
-  background: var(--main-color);
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -195,7 +117,7 @@ footer section .footerSectionFirstLine {
 
 .navbar > ul > li {
   list-style: none;
-  margin: 0 16px;
+  margin: 0 23px;
 }
 
 .navbar > ul > li > a {
@@ -209,7 +131,9 @@ footer section .footerSectionFirstLine {
 }
 
 .navbar > img {
-  width: 300px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .accueil-content {
@@ -364,7 +288,7 @@ footer section .footerSectionFirstLine {
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background-color: var(--sec-color);
+  background-color: var(--third-color);
   color: white;
   border: none;
   font-family: "Euclid Flex";
@@ -541,137 +465,18 @@ footer section .footerSectionFirstLine {
 }
 
 /*----------------- Formulaire de contact -------------------*/
-.contactSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.contactSection .contactTitle {
-  font-size: 32px;
-  text-align: center;
-  margin-top: 70px;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactTitle {
-    font-size: 24px;
-  }
-}
-.contactSection .contactForm {
-  display: flex;
-  flex-direction: column;
-  width: min(1100px, 100%);
-  margin-top: 37px;
-  align-items: center;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm {
-    margin-top: 23px;
-  }
-}
-.contactSection .contactForm .contactFormUpperSide {
-  display: flex;
-  flex-direction: row;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm .contactFormUpperSide {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-right: 50px;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide {
-    margin-right: 0px;
-  }
-}
-.contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide input {
-  font-family: "Euclid Flex";
-  font-size: 24px;
-  width: 390px;
-  height: 55px;
-  border-radius: 10px;
-  margin-top: 25px;
-  padding-left: 20px;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide input {
-    width: 333px;
-    margin-top: 15px;
-  }
-}
-.contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide input {
-  font-family: "Euclid Flex";
-  font-size: 24px;
-  width: 380px;
-  height: 55px;
-  border-radius: 10px;
-  margin-top: 25px;
-  padding-left: 20px;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide input {
-    width: 333px;
-    margin-top: 15px;
-  }
-}
-.contactSection .contactForm .contactFormBottomSide textarea {
-  width: 820px;
-  height: 280px;
-  font-family: "Euclid Flex";
-  font-size: 24px;
-  border-radius: 14px;
-  margin-top: 25px;
-  padding-top: 20px;
-  padding-left: 20px;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm .contactFormBottomSide textarea {
-    width: 333px;
-    margin-top: 15px;
-  }
-}
-.contactSection .contactForm button {
-  margin-top: 20px;
-  width: 820px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: var(--third-color);
-  color: white;
-  border: none;
-  font-family: "Euclid Triangle", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-}
-@media screen and (max-width: 900px) {
-  .contactSection .contactForm button {
-    width: 333px;
-    margin-top: 15px;
-  }
-}
-
 .objectif {
-  padding-left: 20px;
+  padding-left: 50px;
   padding-right: 20px;
   padding-top: 40px;
   padding-bottom: 40px;
   border-radius: 15px;
   width: 564px;
-  background-color: var(--main-color);
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
 }
 .objectif h2 {
   margin-bottom: 40px;
-  color: #ffffff;
+  color: var(--third-color);
   font-size: 30px;
   font-weight: 700;
 }
@@ -698,7 +503,7 @@ footer section .footerSectionFirstLine {
 .access div {
   display: flex;
   justify-content: right;
-  margin-top: 30px;
+  margin-top: 100px;
   margin-right: 100px;
 }
 .access div a {
@@ -706,7 +511,7 @@ footer section .footerSectionFirstLine {
 }
 .access div a h3 {
   display: inline;
-  background-color: var(--sec-color);
+  background-color: var(--third-color);
   color: #fff;
   padding: 10px 58px;
   border-radius: 16px;
@@ -823,6 +628,170 @@ footer section .footerSectionFirstLine {
 .text-top-frise .second-text h3 {
   font-size: 20px;
   font-weight: 400;
+}
+
+/*------------    Page Contact   ------------*/
+.contactBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactBody .contactPres {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 105px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+@media screen and (max-width: 1160px) {
+  .contactBody .contactPres {
+    margin-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+.contactBody .contactPres .contactTitle {
+  font-family: "Euclid Flex Medium", sans-serif;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 750px) {
+  .contactBody .contactPres .contactTitle {
+    font-size: 22px;
+  }
+}
+.contactBody .contactText {
+  font-family: "Euclid Flex", sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: center;
+}
+@media screen and (max-width: 1160px) {
+  .contactForm {
+    margin-top: 25px;
+  }
+}
+.contactForm .contactInputs {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 1160px) {
+  .contactForm .contactInputs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.contactForm .contactInputs .contactFormPart1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-right: 100px;
+}
+@media screen and (max-width: 1160px) {
+  .contactForm .contactInputs .contactFormPart1 {
+    justify-content: center;
+    margin-right: 0;
+  }
+  .contactForm .contactInputs .contactFormPart1 .contactFormPart1_1 {
+    flex-direction: column;
+  }
+  .contactForm .contactInputs .contactFormPart1 .contactFormPart1_2 {
+    flex-direction: column;
+  }
+}
+.contactForm .contactInputs .contactFormPart1 label {
+  font-family: "Euclid Flex", sans-serif;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 1160px) {
+  .contactForm .contactInputs .contactFormPart1 label {
+    display: none;
+  }
+}
+.contactForm .contactInputs .contactFormPart1 input {
+  width: 100%;
+  border: solid gray 1px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 25px;
+  padding-left: 20px;
+}
+@media screen and (max-width: 1160px) {
+  .contactForm .contactInputs .contactFormPart1 input {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .contactForm .contactInputs .contactFormPart1 input {
+    width: 350px;
+  }
+}
+
+.contactFormPart2 {
+  display: flex;
+  flex-direction: column;
+}
+.contactFormPart2 label {
+  font-family: "Euclid Flex", sans-serif;
+  font-size: 24px;
+}
+@media screen and (max-width: 1160px) {
+  .contactFormPart2 label {
+    margin-top: 30px;
+  }
+}
+
+textarea {
+  resize: none;
+  width: 500px;
+  height: 220px;
+  border: solid gray 1px;
+  border-radius: 10px;
+  margin-top: 25px;
+}
+@media screen and (max-width: 550px) {
+  textarea {
+    width: 350px;
+  }
+}
+
+::-moz-placeholder {
+  display: none;
+}
+
+::placeholder {
+  display: none;
+}
+@media screen and (min-width: 1160px) {
+  ::-moz-placeholder {
+    display: block;
+  }
+  ::placeholder {
+    display: block;
+  }
+}
+
+button {
+  border: none;
+  margin-top: 70px;
+  width: 200px;
+  height: 50px;
+  border-radius: 23px;
+  background-color: var(--third-color);
+  color: white;
+  font-family: "Euclid Triangle", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 @media (max-width: 1200px) {
@@ -955,13 +924,12 @@ footer section .footerSectionFirstLine {
     padding: 0 20px;
   }
   .navbar > img {
-    width: 200px;
+    width: 40px;
   }
   .navbar-toggle {
+    width: 40px;
     display: block;
-    position: absolute;
-    top: 30px;
-    right: 20px;
+    transform: translateY(-32px);
     font-size: 30px;
     color: #fff;
     background: none;
@@ -990,6 +958,7 @@ footer section .footerSectionFirstLine {
     display: block;
   }
   .navbar > ul.active {
+    background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
     display: block;
   }
   .presentation-content {
@@ -1195,137 +1164,128 @@ footer section .footerSectionFirstLine {
     font-size: 18px;
   }
 }
-.index {
-  width: 100%;
-  height: 100%;
+/*------------    Page Contact   ------------*/
+:root {
+  --main-color: #222952;
+  --sec-color: #085B68;
+  --third-color: #FFB800;
+  --fourth-color: #123B2A;
 }
 
-/*------------    Page Contact   ------------*/
-.contactBody {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Euclid Triangle", sans-serif;
+}
+
+.contact {
+  padding-top: 200px;
+}
+.contact h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.contact .sectionFormLabel {
+  display: flex;
+  justify-content: center;
+}
+.contact .sectionFormLabel .formLabel {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
-.contactBody .contactPres {
+.contact .sectionFormLabel .formLabel .splitForm {
+  width: 100%;
+  gap: 10%;
+  display: flex;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part1 {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-top: 185px;
-  padding-left: 150px;
-  padding-right: 150px;
 }
-.contactBody .contactPres .contactTitle {
-  font-family: "Euclid Flex Medium", sans-serif;
-  font-size: 32px;
-  margin-bottom: 20px;
+.contact .sectionFormLabel .formLabel .splitForm .part1 .labelForm {
+  margin-bottom: 10px;
+  width: 300px;
 }
-.contactBody .contactPres .contactText {
-  font-family: "Euclid Flex", sans-serif;
-  font-size: 20px;
+.contact .sectionFormLabel .formLabel .splitForm .part1 .inputForm {
+  height: 40px;
+  border: solid grey 1px;
+  border-radius: 13px;
+  margin-bottom: 30px;
 }
-.contactBody .contactForm {
+.contact .sectionFormLabel .formLabel .splitForm .part1 .otherLabelForm {
+  margin-bottom: 10px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part1 .otherInputForm {
+  height: 30px;
+  margin-bottom: 30px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 {
   display: flex;
   flex-direction: column;
-  width: min(1100px, 100%);
-  margin-top: 50px;
-  align-items: center;
 }
-@media screen and (max-width: 1160px) {
-  .contactBody .contactForm {
-    margin-top: 25px;
+.contact .sectionFormLabel .formLabel .splitForm .part2 .labelForm {
+  margin-bottom: 10px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 .inputForm {
+  height: 40px;
+  border: solid grey 1px;
+  border-radius: 13px;
+  margin-bottom: 30px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 .otherLabelForm {
+  margin-bottom: 10px;
+}
+.contact .sectionFormLabel .formLabel .splitForm .part2 .otherInputForm {
+  height: 30px;
+  margin-bottom: 30px;
+}
+.contact .sectionFormLabel .formLabel .checkbox {
+  display: flex;
+}
+.contact .sectionFormLabel .formLabel .checkbox .checkInputForm {
+  margin-left: 10px;
+  transform: translateY(-25px);
+  margin-top: 30px;
+}
+.contact .sectionFormLabel .formLabel .labelBtn {
+  width: 170px;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 10px 40px;
+  display: inline;
+  justify-content: center;
+  background-color: var(--third-color);
+}
+
+@media screen and (max-width: 768px) {
+  .contact {
+    padding-top: 200px;
   }
-}
-.contactBody .contactForm .contactInputs {
-  display: flex;
-  flex-direction: row;
-}
-@media screen and (max-width: 1160px) {
-  .contactBody .contactForm .contactInputs {
+  .contact h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  .contact .sectionFormLabel {
+    display: flex;
+    justify-content: center;
+  }
+  .contact .sectionFormLabel .formLabel {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 90%;
   }
-}
-.contactBody .contactForm .contactInputs .contactFormPart1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-right: 100px;
-}
-@media screen and (max-width: 1160px) {
-  .contactBody .contactForm .contactInputs .contactFormPart1 {
-    justify-content: center;
-    margin-right: 0;
-    background-color: blueviolet;
-  }
-  .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_1 {
-    flex-direction: column;
-    background-color: orange;
-  }
-  .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_2 {
-    flex-direction: column;
-    background-color: red;
-  }
-}
-.contactBody .contactForm .contactInputs .contactFormPart1 label {
-  font-family: "Euclid Flex", sans-serif;
-  font-size: 24px;
-  margin-bottom: 25px;
-}
-@media screen and (max-width: 1160px) {
-  .contactBody .contactForm .contactInputs .contactFormPart1 label {
-    display: none;
-  }
-}
-.contactBody .contactForm .contactInputs .contactFormPart1 input {
-  min-width: 500px;
-  height: 55px;
-  border-radius: 10px;
-  margin-top: 25px;
-  padding-left: 20px;
-}
-.contactBody .contactForm .contactInputs .contactFormPart2 {
-  display: flex;
-  flex-direction: column;
-}
-.contactBody .contactForm .contactInputs .contactFormPart2 label {
-  font-family: "Euclid Flex", sans-serif;
-  font-size: 24px;
-}
-.contactBody .contactForm .contactInputs .contactFormPart2 textarea {
-  width: 500px;
-  height: 220px;
-  border-radius: 10px;
-  margin-top: 25px;
-}
-.contactBody .contactForm .contactInputs .contactFormPart2 textarea ::-moz-placeholder {
-  display: none;
-}
-.contactBody .contactForm .contactInputs .contactFormPart2 textarea ::placeholder {
-  display: none;
-}
-@media screen and (min-width: 1160px) {
-  .contactBody .contactForm .contactInputs .contactFormPart2 textarea ::-moz-placeholder {
-    display: block;
-  }
-  .contactBody .contactForm .contactInputs .contactFormPart2 textarea ::placeholder {
+  .contact .sectionFormLabel .formLabel .splitForm {
+    gap: 0%;
     display: block;
   }
 }
-.contactBody .contactForm button {
-  border: none;
-  margin-top: 70px;
-  width: 200px;
-  height: 50px;
-  border-radius: 23px;
-  background-color: #0952BA;
-  color: white;
-  font-family: "Euclid Triangle", sans-serif;
-  font-size: 20px;
-  font-weight: bold;
-}
-
 .tempMarg {
   height: 100px;
 }
@@ -1506,6 +1466,7 @@ footer section .footerSectionFirstLine {
   font-family: "Roboto";
   font-size: 20px;
   color: #434343;
+  width: 100%;
 }
 .login .containerRight .formContainer form button {
   background: #3A4D92;
@@ -1521,7 +1482,329 @@ footer section .footerSectionFirstLine {
 
 .dashboardAdmin {
   width: 100%;
-  padding-left: 21vw;
+  padding-left: 20vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Euclid Flex";
+  gap: 20px;
+}
+.dashboardAdmin h1 {
+  font-weight: 600;
+  font-size: 26px;
+  text-transform: uppercase;
+  padding: 50px 50px 20px 50px;
+}
+.dashboardAdmin .optionBar {
+  width: 100%;
+  padding: 0px 50px 20px 50px;
+}
+.dashboardAdmin .optionBar form {
+  background-color: #C9C9C9;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+.dashboardAdmin .optionBar form .search {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 10px;
+}
+.dashboardAdmin .optionBar form .search input {
+  width: 100%;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background: none;
+  color: white;
+}
+.dashboardAdmin .optionBar form .search input::-moz-placeholder {
+  color: white;
+}
+.dashboardAdmin .optionBar form .search input::placeholder {
+  color: white;
+}
+.dashboardAdmin .optionBar form .search input:focus {
+  outline: none;
+}
+.dashboardAdmin .optionBar form input {
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  background: none;
+}
+.dashboardAdmin .optionBar form input::-moz-placeholder {
+  color: white;
+}
+.dashboardAdmin .optionBar form input::placeholder {
+  color: white;
+}
+.dashboardAdmin .optionBar form button {
+  background-color: #3A4D92;
+  color: white;
+  border-radius: 25px;
+  padding: 10px 35px;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+}
+.dashboardAdmin .allcard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0px 50px 20px 50px;
+}
+@media screen and (max-width: 1300px) {
+  .dashboardAdmin .allcard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 750px) {
+  .dashboardAdmin .allcard {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.dashboardAdmin .allcard .card {
+  background: #D9D9D9;
+  border-radius: 20px;
+}
+.dashboardAdmin .allcard .card .card-header {
+  width: 100%;
+}
+.dashboardAdmin .allcard .card .card-header img {
+  width: 100%;
+  max-height: 130px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 20px 20px 0 0;
+}
+.dashboardAdmin .allcard .card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 10px;
+}
+.dashboardAdmin .allcard .card .card-body .name {
+  display: flex;
+  flex-direction: column;
+}
+.dashboardAdmin .allcard .card .card-body .name h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+.dashboardAdmin .allcard .card .card-body .name p {
+  color: #707070;
+  font-size: 14px;
+}
+.dashboardAdmin .allcard .card .card-body .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboardAdmin .allcard .card .card-body .info .tel {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.dashboardAdmin .allcard .card .card-body .info .tel p {
+  color: #434343;
+}
+.dashboardAdmin .allcard .card .card-body .info .button {
+  background: #3A4D92;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 15px;
+}
+.dashboardAdmin .allcard .card .card-body .info .button a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboardRequest {
+  width: 100%;
+  padding-left: 20vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Euclid Flex";
+}
+.dashboardRequest h1 {
+  font-weight: 600;
+  font-size: 26px;
+  text-transform: uppercase;
+  padding: 50px 50px 20px 50px;
+}
+.dashboardRequest .option {
+  width: 100%;
+  display: flex;
+  gap: 100px;
+  padding: 0 50px 35px;
+  align-items: center;
+}
+.dashboardRequest .option .sort {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.dashboardRequest .option .sort input {
+  background: #aeadad;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  color: white;
+}
+.dashboardRequest .option .sort input:hover {
+  cursor: pointer;
+}
+.dashboardRequest .option .filter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background: #aeadad;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.dashboardRequest .option .filter select {
+  background: none;
+  border: none;
+  color: white;
+}
+.dashboardRequest .option .filter select:hover {
+  cursor: pointer;
+}
+.dashboardRequest .option .filter select:focus {
+  outline: none;
+}
+.dashboardRequest .option .filter input {
+  background: none;
+  border: none;
+  color: white;
+}
+.dashboardRequest .option .filter input:hover {
+  cursor: pointer;
+}
+.dashboardRequest .allcard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 0px 50px 20px 50px;
+}
+@media screen and (max-width: 1300px) {
+  .dashboardRequest .allcard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 750px) {
+  .dashboardRequest .allcard {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.dashboardRequest .allcard .card {
+  background: #D9D9D9;
+  border-radius: 20px;
+}
+.dashboardRequest .allcard .card .card-header {
+  width: 100%;
+}
+.dashboardRequest .allcard .card .card-header img {
+  width: 100%;
+  max-height: 130px;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 20px 20px 0 0;
+}
+.dashboardRequest .allcard .card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 10px;
+}
+.dashboardRequest .allcard .card .card-body .firstRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .name {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .name span {
+  font-style: italic;
+  font-size: 12px;
+  color: #707070;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .name .space h2 {
+  font-weight: 400;
+  font-size: 18px;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .name .space p {
+  color: #707070;
+  font-size: 14px;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 10px;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .status p {
+  color: #434343;
+}
+.dashboardRequest .allcard .card .card-body .firstRow .status img {
+  width: 40%;
+}
+.dashboardRequest .allcard .card .card-body .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.dashboardRequest .allcard .card .card-body .info .tel {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.dashboardRequest .allcard .card .card-body .info .tel p {
+  color: #434343;
+}
+.dashboardRequest .allcard .card .card-body .info .button {
+  background: #3A4D92;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 15px;
+  gap: 10px;
+}
+.dashboardRequest .allcard .card .card-body .info .button a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.manageEstablishment {
+  width: 100%;
+  padding-left: 20vw;
+  display: flex;
+  flex-direction: column;
+  font-family: "Euclid Flex";
 }
 
 .headerAdmin {
@@ -1540,6 +1823,7 @@ footer section .footerSectionFirstLine {
   align-items: center;
   gap: 10px;
   width: 100%;
+  text-decoration: none;
 }
 .headerAdmin .logoContainer a img {
   width: 25%;

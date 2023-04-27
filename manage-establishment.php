@@ -12,6 +12,21 @@
     } else {
         $found = false;
     }
+
+    if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
+        $autorisation = 1;
+    }
+    
+    if($autorisation != 1){
+        header('Location: login.php');
+    }
+
+    if(isset($_POST['logout'])){
+        session_destroy();
+        header('Location: index.php');
+    }
+
+    require_once 'headerAdmin.php';
 ?>
 
 <!DOCTYPE html>
@@ -25,36 +40,9 @@
 </head>
 <body>
 
-    <?php
-        if (isset($_SESSION['role']) && $_SESSION['role'] === 'admin') {
-            $autorisation = 1;
-        }
-        
-        if($autorisation != 1){
-            header('Location: login.php');
-        }
-    ?>
-
+<main class="manageEstablishment">
     <h1>Afficher Etablissement</h1>
 
-    <nav>
-        <ul>
-            <li><a href="dashboard-admin.php">Tous les établissement</a></li>
-            <li><a href="dashboard-request.php">Demandes de label</a></li>
-        </ul>
-    </nav>
-
-    <form method="POST">
-        <input type="hidden" name="deconnection" ?>
-        <input type="submit" name="deconnection" value="Se deconnecter">
-    </form>
-    <?php 
-        if(isset($_POST["deconnection"])){
-            session_destroy();
-            header('Location: login.php');
-        }
-    ?>
-    
     <h2> Information de l'établissement </h2>
     <p> Nom de l'établissement : <?= $establishment['establishment_name'] ?></p>
     <p> Adresse de l'établissement : <?= $establishment['establishment_adress'] ?></p>
@@ -84,8 +72,6 @@
             header('Location: dashboard-request.php');
         }
     ?>
-
-
-
+</main>
 </body>
 </html>

@@ -2,6 +2,7 @@
 
 require_once 'user.php';
 require_once 'establishment.php';
+require_once 'feedback.php';
 
 class Connection
 {
@@ -9,7 +10,7 @@ class Connection
 
     public function __construct()
     {
-        // $this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', 'root');
+        //$this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', 'root');
         $this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', '');
     }
 
@@ -171,4 +172,23 @@ class Connection
         return $data;
     }
 
+    public function searchEstablishment($searchTerm){
+        $query = "SELECT * FROM establishment WHERE status = 'Accepté' AND (owner_firstname LIKE :search OR owner_lastname LIKE :search OR owner_email LIKE :search OR establishment_name LIKE :search OR establishment_adress LIKE :search)";
+        $statement = $this->pdo->prepare($query);
+        $statement->bindValue(':search', '%'.$searchTerm.'%', PDO::PARAM_STR);
+        $statement->execute();
+        $establishments = $statement->fetchAll(PDO::FETCH_ASSOC);
+        return $establishments;
+    }
+
+    public function InsertFeedback(Feedback $feedback) : bool {
+        $query = 'INSERT INTO feedback (establishment, name, mail, comment) VALUES (:establishment, :name, :mail, :comment)';
+        $statement = $this->pdo->prepare($query);
+        return $statement->execute([
+            'establishment' => $feedback->establishment,
+            'name' => $feedback->name,
+            'mail' => $feedback->mail,
+            'comment' => $feedback->comment
+        ]);
+    }
 }
