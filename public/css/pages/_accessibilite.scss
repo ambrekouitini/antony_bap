@@ -54,53 +54,122 @@
   width: 10000px;
   position: relative;
   height: 1000px;
+  z-index: -20;
 }
 
-#FilterMap{
-  position: fixed;
-  width: 250px;
-  height: 100%;
-  right: 0;
-  top: 0;
-  margin-top: 20px;
-  background-color: darkgrey;
-  transform: translate(250px);
+.FilterMap{
+  display: none;
+  flex-direction: column;
+  position: relative;
+
+  height: 780px;
+  width: 370px;
+  --filter-width: 370px;
+  --negative-filter-width: -370px;
+  transform: translate(var(--negative-filter-width));
+
+  z-index: 100;
+  padding: 37px;
+  background-color: white;
+  .FilterMapTitle{
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    h2{
+      display: flex;
+      justify-content: center;
+
+      font-family: "Euclid Triangle";
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .CloseFilter{
+      left: 40px;
+      margin-right: 90px;
+
+      border: none;
+      cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+      position: absolute;
+
+      font-family: Inter, serif;
+      font-size: 34px;
+      font-weight: bolder;
+      background-color: white;
+    }
+  }
+  .FilterMapSectionTitle{
+    margin-bottom: 35px;
+    h3{
+      font-family: "Euclid Triangle";
+      font-size: 24px;
+    }
+  }
+  .FilterMapSection{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 35px;
+    .FilterMapFilterSectionIcons{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+      .FilterMapFilterSectionIcon{
+        width: 57px;
+        height: 57px;
+        border-radius: 30px;
+        border: 1px black solid;
+      }
+    }
+    .FilterMapRadiusSectionSlider{
+      .progress {
+        background: white;
+        border: solid 1px black;
+        border-radius: 8px;
+        height: 7px;
+        width: 266px;
+
+        outline: none;
+        transition: background 450ms ease-in;
+        -webkit-appearance: none;
+      }
+    }
+  }
+
 }
+
 .FilterIcon{
   position: absolute;
   right: 35px;
+  top: 290px;
 
   width: 73px;
   height: 73px;
   border-radius: 48px;
   border: none;
-  z-index: 20;
+  cursor: pointer;
+
   background-color: white;
-  .test{
-    width: 73px;
-    height: 73px;
-    img{
-      object-fit: contain;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translate(0px);
+  img{
+    object-fit: contain;
+    width: 56px;
+    height: 56px;
   }
+}
+
+.activeMap{
+  transform: translate(0px);
+  display: flex;
 
 }
-#Open{
-  display: none;
-}
-#Open:checked ~ #FilterMap{
+.activeIcon{
   transform: translate(0px);
 }
-#Open:checked ~ .FilterIcon{
-   transform: translate(-250px);
- }
-
-
-.testLocation{
-  width: 80px;
-  height: 50px;
-  background-color: blue;
-  color: white;
-}
-
-

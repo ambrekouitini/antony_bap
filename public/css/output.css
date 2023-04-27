@@ -132,8 +132,7 @@ footer section .footerSectionFirstLine {
 
 .navbar > img {
   width: 50px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .accueil-content {
@@ -143,8 +142,7 @@ footer section .footerSectionFirstLine {
 .accueil-content img {
   z-index: -1;
   position: absolute;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 573px;
 }
@@ -765,17 +763,10 @@ textarea {
   }
 }
 
-::-moz-placeholder {
-  display: none;
-}
-
 ::placeholder {
   display: none;
 }
 @media screen and (min-width: 1160px) {
-  ::-moz-placeholder {
-    display: block;
-  }
   ::placeholder {
     display: block;
   }
@@ -1311,9 +1302,6 @@ button {
   border: none;
   padding-left: 60px;
 }
-.sectionSearchBar .accessSearchBar .accessSearchInput ::-moz-placeholder {
-  color: white;
-}
 .sectionSearchBar .accessSearchBar .accessSearchInput ::placeholder {
   color: white;
 }
@@ -1338,53 +1326,115 @@ button {
   border: none;
 }
 
-#FilterMap {
-  position: fixed;
-  width: 250px;
-  height: 100%;
-  right: 0;
-  top: 0;
-  margin-top: 20px;
-  background-color: darkgrey;
-  transform: translate(250px);
+#map {
+  width: 10000px;
+  position: relative;
+  height: 1000px;
+  z-index: -20;
+}
+
+.FilterMap {
+  display: none;
+  flex-direction: column;
+  position: relative;
+  height: 780px;
+  width: 370px;
+  --filter-width: 370px;
+  --negative-filter-width: -370px;
+  transform: translate(var(--negative-filter-width));
+  z-index: 100;
+  padding: 37px;
+  background-color: white;
+}
+.FilterMap .FilterMapTitle {
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.FilterMap .FilterMapTitle h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Euclid Triangle";
+  font-size: 24px;
+  font-weight: bold;
+}
+.FilterMap .FilterMapTitle .CloseFilter {
+  left: 40px;
+  margin-right: 90px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  font-family: Inter, serif;
+  font-size: 34px;
+  font-weight: bolder;
+  background-color: white;
+}
+.FilterMap .FilterMapSectionTitle {
+  margin-bottom: 35px;
+}
+.FilterMap .FilterMapSectionTitle h3 {
+  font-family: "Euclid Triangle";
+  font-size: 24px;
+}
+.FilterMap .FilterMapSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+.FilterMap .FilterMapSection .FilterMapFilterSectionIcons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.FilterMap .FilterMapSection .FilterMapFilterSectionIcons .FilterMapFilterSectionIcon {
+  width: 57px;
+  height: 57px;
+  border-radius: 30px;
+  border: 1px black solid;
+}
+.FilterMap .FilterMapSection .FilterMapRadiusSectionSlider .progress {
+  background: white;
+  border: solid 1px black;
+  border-radius: 8px;
+  height: 7px;
+  width: 266px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
 }
 
 .FilterIcon {
   position: absolute;
   right: 35px;
+  top: 290px;
   width: 73px;
   height: 73px;
   border-radius: 48px;
   border: none;
-  z-index: 20;
+  cursor: pointer;
   background-color: white;
-}
-.FilterIcon .test {
-  width: 73px;
-  height: 73px;
-}
-.FilterIcon .test img {
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-#Open {
-  display: none;
-}
-
-#Open:checked ~ #FilterMap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: translate(0px);
 }
-
-#Open:checked ~ .FilterIcon {
-  transform: translate(-250px);
+.FilterIcon img {
+  object-fit: contain;
+  width: 56px;
+  height: 56px;
 }
 
-.testLocation {
-  width: 80px;
-  height: 50px;
-  background-color: blue;
-  color: white;
+.activeMap {
+  transform: translate(0px);
+  display: flex;
+}
+
+.activeIcon {
+  transform: translate(0px);
 }
 
 .login {
@@ -1521,9 +1571,6 @@ button {
   background: none;
   color: white;
 }
-.dashboardAdmin .optionBar form .search input::-moz-placeholder {
-  color: white;
-}
 .dashboardAdmin .optionBar form .search input::placeholder {
   color: white;
 }
@@ -1538,9 +1585,6 @@ button {
   font-weight: 600;
   background: none;
 }
-.dashboardAdmin .optionBar form input::-moz-placeholder {
-  color: white;
-}
 .dashboardAdmin .optionBar form input::placeholder {
   color: white;
 }
@@ -1553,6 +1597,7 @@ button {
   font-weight: 600;
   font-size: 14px;
   cursor: pointer;
+  margin: 0;
 }
 .dashboardAdmin .allcard {
   display: grid;
@@ -1580,8 +1625,7 @@ button {
 .dashboardAdmin .allcard .card .card-header img {
   width: 100%;
   max-height: 130px;
-  -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
   border-radius: 20px 20px 0 0;
 }
 .dashboardAdmin .allcard .card .card-body {
@@ -1722,8 +1766,7 @@ button {
 .dashboardRequest .allcard .card .card-header img {
   width: 100%;
   max-height: 130px;
-  -o-object-fit: fill;
-     object-fit: fill;
+  object-fit: fill;
   border-radius: 20px 20px 0 0;
 }
 .dashboardRequest .allcard .card .card-body {

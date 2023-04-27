@@ -22,18 +22,49 @@
             <input type="text" placeholder="Rechercher..." class="accessSearchInput">
         </div>
     </section>
-
+    <button class="FilterIcon">
+        <img src="images/settings.png" alt="" class="">
+    </button>
 
     <section class="AccessMap">
         <div class="map" id="map"></div>
-        <input type="checkbox" name="" id="Open">
-        <label for="Open" class="FilterIcon">
-            <div class="test">
-                <img src="images/settings.png" alt="z" class="">
+
+            <div class="FilterMap">
+                <div class="FilterMapTitle">
+                    <button class="CloseFilter">
+                        >
+                    </button>
+                    <h2 class="">
+                        Options
+                    </h2>
+                </div>
+                <div class="FilterMapSection">
+                    <div class="FilterMapSectionTitle">
+                        <h3>Filtre</h3>
+                    </div>
+                    <div class="FilterMapFilterSectionIcons">
+                        <div class="FilterMapFilterSectionIcon"></div>
+                        <div class="FilterMapFilterSectionIcon"></div>
+                        <div class="FilterMapFilterSectionIcon"></div>
+                        <div class="FilterMapFilterSectionIcon"></div>
+                        <div class="FilterMapFilterSectionIcon"></div>
+                        <div class="FilterMapFilterSectionIcon"></div>
+                        <div class="FilterMapFilterSectionIcon"></div>
+                        <div class="FilterMapFilterSectionIcon"></div>
+                    </div>
+                </div>
+
+                <div class="FilterMapSection">
+                    <div class="FilterMapSectionTitle">
+                        <h3>Rayon</h3>
+                    </div>
+                    <div class="FilterMapRadiusSectionSlider">
+                        <input type="range" id="cowbell" name="cowbell"
+                               min="0" max="300" value="90" step="10" class="progress">
+                    </div>
+                </div>
+
             </div>
-        </label>
-        <div id="FilterMap">
-        </div>
         <div id="map"></div>
     </section>
 
