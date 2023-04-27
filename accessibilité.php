@@ -68,6 +68,30 @@
         <div id="map"></div>
     </section>
 
+
+
+
+    <button class="LocationBtn">
+        <img src="images/Google_Maps_Pin.png" alt="">
+    </button>
+    <div class="Location">
+        <img src="images/AuchanLocation.png" alt="Auchan">
+        <div class="LocationPres">
+            <div class="LocationTitle">
+                Auchan
+            </div>
+            <div class="LocationTabs">
+                <div class="Tab activeTab">Accessibilité</div>
+                <div class="Tab">Contact</div>
+                <div class="Tab">Informations</div>
+            </div>
+            <ol class="LocationText">
+                <li>Les magasins Auchan sont généralement accessibles aux personnes à mobilité réduite grâce à des rampes d'accès et des ascenseurs.</li>
+                <li>Les parkings des magasins Auchan sont souvent équipés de places de parking réservées aux personnes à mobilité réduite.</li>
+                <li>Les allées du magasin sont larges et bien éclairées pour faciliter la circulation des clients.</li>
+            </ol>
+        </div>
+    </div>
     <?php
     require_once 'footer.php';
     ?>

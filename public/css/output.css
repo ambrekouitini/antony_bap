@@ -1427,6 +1427,72 @@ button {
   transform: translate(0px);
 }
 
+.LocationBtn {
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 80px;
+  overflow: visible;
+}
+.LocationBtn img {
+  width: 50px;
+  height: 80px;
+}
+
+.Location {
+  width: 100%;
+  height: 575px;
+  padding: 85px 110px;
+  display: none;
+  background-color: white;
+}
+.Location img {
+  margin-right: 73px;
+}
+.Location .LocationPres {
+  font-family: "Euclid Flex Medium";
+}
+.Location .LocationPres .LocationTitle {
+  font-weight: normal;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.Location .LocationPres .LocationTabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+.Location .LocationPres .LocationTabs .Tab {
+  font-family: "Euclid Triangle";
+  font-weight: normal;
+  font-size: 32px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 60px;
+  background-color: darkgrey;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+.Location .LocationPres .LocationTabs .activeTab {
+  background-color: #DBB326;
+}
+.Location .LocationPres .LocationText {
+  margin-left: 30px;
+}
+.Location .LocationPres .LocationText li {
+  counter-increment: my-awesome-counter;
+  font-size: 24px;
+  gap: 10px;
+}
+.Location .LocationPres .LocationText ol li::before {
+  content: counter(my-awesome-counter) ". ";
+}
+
 .login {
   width: 100%;
   height: 100vh;
