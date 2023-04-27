@@ -23,7 +23,6 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 50px;
-  position: fixed;
   z-index: 999;
 }
 
@@ -269,17 +268,15 @@ footer section .footerSectionFirstLine {
   padding-left: 111px;
   padding-right: 147px;
   display: flex;
-  /*----------------- Section referencement de particulier -------------------*/
-  /*---------------------- Carousel Avis  -------------------------------*/
-  /*----------------- Listes des partenaires -------------------*/
-  /*----------------- Formulaire de contact -------------------*/
 }
-.objectif-content .refParticuliers {
+
+/*----------------- Section referencement de particulier -------------------*/
+.refParticuliers {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.objectif-content .refParticuliers .refParticuliersBox {
+.refParticuliers .refParticuliersBox {
   background-color: #05306E;
   color: white;
   min-height: 217px;
@@ -292,18 +289,18 @@ footer section .footerSectionFirstLine {
   display: flex;
 }
 @media screen and (max-width: 840px) {
-  .objectif-content .refParticuliers .refParticuliersBox {
+  .refParticuliers .refParticuliersBox {
     padding: 20px 25px;
     min-width: 333px;
     height: 117px;
   }
 }
 @media screen and (max-width: 840px) {
-  .objectif-content .refParticuliers .refParticuliersBox {
+  .refParticuliers .refParticuliersBox {
     flex-direction: column;
   }
 }
-.objectif-content .refParticuliers .refParticuliersBox .refParticuliersDesc {
+.refParticuliers .refParticuliersBox .refParticuliersDesc {
   font-family: "Euclid Triangle", sans-serif;
   margin-right: 183px;
   display: flex;
@@ -311,28 +308,28 @@ footer section .footerSectionFirstLine {
   gap: 25px;
 }
 @media screen and (max-width: 840px) {
-  .objectif-content .refParticuliers .refParticuliersBox .refParticuliersDesc {
+  .refParticuliers .refParticuliersBox .refParticuliersDesc {
     margin-right: 0px;
     gap: 17px;
   }
 }
-.objectif-content .refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersTitle {
+.refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersTitle {
   font-size: 32px;
 }
 @media screen and (max-width: 840px) {
-  .objectif-content .refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersTitle {
+  .refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersTitle {
     font-size: 20.5px;
   }
 }
-.objectif-content .refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersText {
+.refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersText {
   font-size: 20px;
 }
 @media screen and (max-width: 840px) {
-  .objectif-content .refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersText {
+  .refParticuliers .refParticuliersBox .refParticuliersDesc .refParticuliersText {
     font-size: 13.5px;
   }
 }
-.objectif-content .refParticuliers .refParticuliersBox .refParticuliersButtonBox {
+.refParticuliers .refParticuliersBox .refParticuliersButtonBox {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -340,13 +337,13 @@ footer section .footerSectionFirstLine {
   margin-top: 20px;
 }
 @media screen and (max-width: 840px) {
-  .objectif-content .refParticuliers .refParticuliersBox .refParticuliersButtonBox {
+  .refParticuliers .refParticuliersBox .refParticuliersButtonBox {
     justify-content: end;
     width: 100%;
     margin-right: 0px;
   }
 }
-.objectif-content .refParticuliers .refParticuliersBox .refParticuliersButtonBox .refParticuliersButton {
+.refParticuliers .refParticuliersBox .refParticuliersButtonBox .refParticuliersButton {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -362,13 +359,15 @@ footer section .footerSectionFirstLine {
   text-decoration: none;
 }
 @media screen and (max-width: 840px) {
-  .objectif-content .refParticuliers .refParticuliersBox .refParticuliersButtonBox .refParticuliersButton {
+  .refParticuliers .refParticuliersBox .refParticuliersButtonBox .refParticuliersButton {
     font-size: 16.5px;
     width: 125px;
     height: 40px;
   }
 }
-.objectif-content .AvisCard {
+
+/*---------------------- Carousel Avis  -------------------------------*/
+.AvisCard {
   display: flex;
   flex-direction: column;
   background-color: #F9F9F9;
@@ -377,7 +376,7 @@ footer section .footerSectionFirstLine {
   border-radius: 10px;
   box-shadow: 5px 5px 5px grey;
 }
-.objectif-content .AvisCard .AvisName {
+.AvisCard .AvisName {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -387,46 +386,44 @@ footer section .footerSectionFirstLine {
   padding-top: 25px;
   margin-bottom: 25px;
 }
-.objectif-content .AvisCard .AvisFlex {
+.AvisCard .AvisFlex {
   display: flex;
   flex-direction: column;
   align-items: end;
 }
-.objectif-content .AvisCard .AvisFlex .AvisText {
+.AvisCard .AvisFlex .AvisText {
   margin-bottom: 30px;
   margin-right: 37px;
   margin-left: 37px;
 }
-.objectif-content .AvisCard .AvisFlex .AvisText .AvisTitle {
+.AvisCard .AvisFlex .AvisText .AvisTitle {
   font-family: "Euclid Triangle", sans-serif;
   font-weight: bold;
   font-size: 24px;
   margin-bottom: 10px;
 }
-.objectif-content .AvisCard .AvisFlex .AvisText .AvisComment {
+.AvisCard .AvisFlex .AvisText .AvisComment {
   font-family: "Euclid Triangle", sans-serif;
   font-size: 15px;
 }
-.objectif-content .AvisCard .AvisFlex .AvisDate {
+.AvisCard .AvisFlex .AvisDate {
   font-family: "Euclid Triangle", sans-serif;
   font-size: 15px;
   padding-bottom: 70px;
   margin-right: 15px;
 }
-.objectif-content .CarouselAvis {
+
+.CarouselAvis {
   margin-top: 113px;
   margin-left: 112px;
   margin-right: 112px;
-  /*  background-color: red;
-    display: flex;
-    width: 112px;*/
 }
 @media screen and (max-width: 1125px) {
-  .objectif-content .CarouselAvis {
+  .CarouselAvis {
     display: none;
   }
 }
-.objectif-content .CarouselAvis h3 {
+.CarouselAvis h3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -435,42 +432,44 @@ footer section .footerSectionFirstLine {
   font-size: 32px;
   margin-bottom: 70px;
 }
-.objectif-content .CarouselAvis .bloc {
+.CarouselAvis .bloc {
   display: flex;
 }
-.objectif-content .CarouselAvis .diapo {
+.CarouselAvis .diapo {
   overflow: hidden;
   padding-bottom: 10px;
   position: relative;
   z-index: 1;
   width: 100vw;
 }
-.objectif-content .CarouselAvis #nav-droite, .objectif-content .CarouselAvis #nav-gauche {
+.CarouselAvis #nav-droite, .CarouselAvis #nav-gauche {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   color: rgb(255, 0, 0);
   font-size: 3em;
 }
-.objectif-content .CarouselAvis #nav-droite {
+.CarouselAvis #nav-droite {
   right: 10px;
   opacity: 50%;
   display: none;
 }
-.objectif-content .CarouselAvis #nav-gauche {
+.CarouselAvis #nav-gauche {
   left: 20px;
   opacity: 50%;
   display: none;
 }
-.objectif-content .CarouselAvis .elements {
+.CarouselAvis .elements {
   display: flex;
   transition: 1s linear;
   gap: 60px;
 }
-.objectif-content .CarouselAvis .element {
+.CarouselAvis .element {
   flex: 1 0 60px;
 }
-.objectif-content .partenaires {
+
+/*----------------- Listes des partenaires -------------------*/
+.partenaires {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -478,11 +477,11 @@ footer section .footerSectionFirstLine {
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1118px) {
-  .objectif-content .partenaires {
+  .partenaires {
     display: none;
   }
 }
-.objectif-content .partenaires .partenairesTitle {
+.partenaires .partenairesTitle {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -491,7 +490,7 @@ footer section .footerSectionFirstLine {
   margin-bottom: 20px;
   margin-top: 70px;
 }
-.objectif-content .partenaires .partenairesLogos {
+.partenaires .partenairesLogos {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -499,36 +498,38 @@ footer section .footerSectionFirstLine {
   width: 1000px;
   gap: 10px;
 }
-.objectif-content .partenaires .partenairesLogos .img1 {
+.partenaires .partenairesLogos .img1 {
   width: 100px;
   height: 50px;
 }
-.objectif-content .partenaires .partenairesLogos .img2 {
+.partenaires .partenairesLogos .img2 {
   width: 112px;
   height: 83px;
 }
-.objectif-content .partenaires .partenairesLogos .img3 {
+.partenaires .partenairesLogos .img3 {
   width: 220px;
   height: 120px;
 }
-.objectif-content .partenaires .partenairesLogos .img4 {
+.partenaires .partenairesLogos .img4 {
   width: 100px;
   height: 100px;
 }
-.objectif-content .partenaires .partenairesLogos .img5 {
+.partenaires .partenairesLogos .img5 {
   width: 240px;
   height: 120px;
 }
-.objectif-content .partenaires .partenairesLogos .img6 {
+.partenaires .partenairesLogos .img6 {
   width: 100px;
   height: 90px;
 }
-.objectif-content .contactSection {
+
+/*----------------- Formulaire de contact -------------------*/
+.contactSection {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.objectif-content .contactSection .contactTitle {
+.contactSection .contactTitle {
   font-family: "Euclid Flex SemiBold";
   font-size: 32px;
   margin-bottom: 35px;
@@ -536,13 +537,13 @@ footer section .footerSectionFirstLine {
   margin-left: -600px;
 }
 @media screen and (max-width: 900px) {
-  .objectif-content .contactSection .contactTitle {
+  .contactSection .contactTitle {
     margin-left: -50px;
     margin-right: 50px;
     margin-bottom: 0px;
   }
 }
-.objectif-content .contactSection .contactForm {
+.contactSection .contactForm {
   display: flex;
   flex-direction: column;
   width: min(1100px, 100%);
@@ -550,33 +551,33 @@ footer section .footerSectionFirstLine {
   align-items: center;
 }
 @media screen and (max-width: 900px) {
-  .objectif-content .contactSection .contactForm {
+  .contactSection .contactForm {
     margin-top: 23px;
   }
 }
-.objectif-content .contactSection .contactForm .contactFormUpperSide {
+.contactSection .contactForm .contactFormUpperSide {
   display: flex;
   flex-direction: row;
 }
 @media screen and (max-width: 900px) {
-  .objectif-content .contactSection .contactForm .contactFormUpperSide {
+  .contactSection .contactForm .contactFormUpperSide {
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
 }
-.objectif-content .contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide {
+.contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-right: 50px;
 }
 @media screen and (max-width: 900px) {
-  .objectif-content .contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide {
+  .contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide {
     margin-right: 0px;
   }
 }
-.objectif-content .contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide input {
+.contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide input {
   font-family: "Euclid Flex";
   font-size: 24px;
   width: 390px;
@@ -586,17 +587,17 @@ footer section .footerSectionFirstLine {
   padding-left: 20px;
 }
 @media screen and (max-width: 900px) {
-  .objectif-content .contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide input {
+  .contactSection .contactForm .contactFormUpperSide .contactFormUpperLeftSide input {
     width: 333px;
     margin-top: 15px;
   }
 }
-.objectif-content .contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide {
+.contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.objectif-content .contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide input {
+.contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide input {
   font-family: "Euclid Flex";
   font-size: 24px;
   width: 380px;
@@ -606,12 +607,12 @@ footer section .footerSectionFirstLine {
   padding-left: 20px;
 }
 @media screen and (max-width: 900px) {
-  .objectif-content .contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide input {
+  .contactSection .contactForm .contactFormUpperSide .contactFormUpperRightSide input {
     width: 333px;
     margin-top: 15px;
   }
 }
-.objectif-content .contactSection .contactForm .contactFormBottomSide textarea {
+.contactSection .contactForm .contactFormBottomSide textarea {
   width: 820px;
   height: 280px;
   font-family: "Euclid Flex";
@@ -622,12 +623,12 @@ footer section .footerSectionFirstLine {
   padding-left: 20px;
 }
 @media screen and (max-width: 900px) {
-  .objectif-content .contactSection .contactForm .contactFormBottomSide textarea {
+  .contactSection .contactForm .contactFormBottomSide textarea {
     width: 333px;
     margin-top: 15px;
   }
 }
-.objectif-content .contactSection .contactForm button {
+.contactSection .contactForm button {
   margin-top: 20px;
   width: 820px;
   height: 50px;
@@ -640,12 +641,13 @@ footer section .footerSectionFirstLine {
   font-weight: bold;
 }
 @media screen and (max-width: 900px) {
-  .objectif-content .contactSection .contactForm button {
+  .contactSection .contactForm button {
     width: 333px;
     margin-top: 15px;
   }
 }
-.objectif-content .objectif {
+
+.objectif {
   padding-left: 20px;
   padding-right: 20px;
   padding-top: 40px;
@@ -654,41 +656,42 @@ footer section .footerSectionFirstLine {
   width: 564px;
   background-color: #05306E;
 }
-.objectif-content .objectif h2 {
+.objectif h2 {
   margin-bottom: 40px;
   color: #ffffff;
   font-size: 30px;
   font-weight: 700;
 }
-.objectif-content .objectif h3 {
+.objectif h3 {
   color: #ffffff;
   line-height: 40px;
   font-size: 24px;
   font-weight: 400;
 }
-.objectif-content .access {
+
+.access {
   margin-left: 68px;
 }
-.objectif-content .access h2 {
+.access h2 {
   font-size: 32px;
   font-weight: 700;
 }
-.objectif-content .access h3 {
+.access h3 {
   margin-top: 30px;
   color: #000000;
   font-size: 24px;
   font-weight: 400;
 }
-.objectif-content .access div {
+.access div {
   display: flex;
   justify-content: right;
   margin-top: 30px;
   margin-right: 100px;
 }
-.objectif-content .access div a {
+.access div a {
   text-decoration: none;
 }
-.objectif-content .access div a h3 {
+.access div a h3 {
   display: inline;
   background-color: #0952BA;
   color: #fff;
@@ -1243,15 +1246,12 @@ footer section .footerSectionFirstLine {
   .contactBody .contactForm .contactInputs .contactFormPart1 {
     justify-content: center;
     margin-right: 0;
-    background-color: blueviolet;
   }
   .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_1 {
     flex-direction: column;
-    background-color: orange;
   }
   .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_2 {
     flex-direction: column;
-    background-color: red;
   }
 }
 .contactBody .contactForm .contactInputs .contactFormPart1 label {
