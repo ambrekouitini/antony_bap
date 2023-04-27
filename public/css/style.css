@@ -1,5 +1,11 @@
 @import url("https://fonts.cdnfonts.com/css/euclid-flex");
 @import url("https://fonts.cdnfonts.com/css/euclid-flex");
+:root {
+  --main-color: #123B2A;
+  --sec-color: #DBB326;
+  --third-color: #3A4D92;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +24,7 @@
 .navbar {
   width: 100%;
   height: 100px;
-  background: #05306E;
+  background: var(--main-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -77,7 +83,7 @@
     top: 70px;
     left: 0;
     width: 100%;
-    background: #05306E;
+    background: var(--main-color);
     padding: 20px;
     box-sizing: border-box;
   }
@@ -102,7 +108,7 @@ footer {
 footer section {
   width: 100%;
   height: 185px;
-  background-color: #05306E;
+  background-color: var(--main-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,6 +156,12 @@ footer section .footerSectionFirstLine {
   margin-bottom: 25px;
 }
 
+:root {
+  --main-color: #123B2A;
+  --sec-color: #DBB326;
+  --third-color: #3A4D92;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -166,10 +178,11 @@ footer section .footerSectionFirstLine {
 
 .navbar {
   width: 100%;
-  height: 100px;
-  background: #05306E;
+  height: 85px;
+  background: var(--main-color);
   display: flex;
   justify-content: space-between;
+  position: fixed;
   align-items: center;
   padding: 0 50px;
 }
@@ -182,7 +195,7 @@ footer section .footerSectionFirstLine {
 
 .navbar > ul > li {
   list-style: none;
-  margin: 0 40px;
+  margin: 0 16px;
 }
 
 .navbar > ul > li > a {
@@ -243,7 +256,7 @@ footer section .footerSectionFirstLine {
   border-radius: 16px;
   padding: 10px 40px;
   display: inline;
-  background-color: #0952BA;
+  background-color: var(--third-color);
 }
 
 .presentation-content {
@@ -256,9 +269,9 @@ footer section .footerSectionFirstLine {
   font-weight: 700;
 }
 .presentation-content h3 {
-  line-height: 60px;
+  line-height: 49px;
   padding-top: 35px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -277,7 +290,7 @@ footer section .footerSectionFirstLine {
   align-items: center;
 }
 .refParticuliers .refParticuliersBox {
-  background-color: #05306E;
+  background-color: var(--main-color);
   color: white;
   min-height: 217px;
   width: min(90%, 1200px);
@@ -350,7 +363,7 @@ footer section .footerSectionFirstLine {
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background-color: #0952BA;
+  background-color: var(--sec-color);
   color: white;
   border: none;
   font-family: "Euclid Flex";
@@ -417,6 +430,9 @@ footer section .footerSectionFirstLine {
   margin-top: 113px;
   margin-left: 112px;
   margin-right: 112px;
+  /*  background-color: red;
+    display: flex;
+    width: 112px;*/
 }
 @media screen and (max-width: 1125px) {
   .CarouselAvis {
@@ -530,17 +546,13 @@ footer section .footerSectionFirstLine {
   align-items: center;
 }
 .contactSection .contactTitle {
-  font-family: "Euclid Flex SemiBold";
   font-size: 32px;
-  margin-bottom: 35px;
+  text-align: center;
   margin-top: 70px;
-  margin-left: -600px;
 }
 @media screen and (max-width: 900px) {
   .contactSection .contactTitle {
-    margin-left: -50px;
-    margin-right: 50px;
-    margin-bottom: 0px;
+    font-size: 24px;
   }
 }
 .contactSection .contactForm {
@@ -633,7 +645,7 @@ footer section .footerSectionFirstLine {
   width: 820px;
   height: 50px;
   border-radius: 10px;
-  background-color: #0952BA;
+  background-color: var(--third-color);
   color: white;
   border: none;
   font-family: "Euclid Triangle", sans-serif;
@@ -654,7 +666,7 @@ footer section .footerSectionFirstLine {
   padding-bottom: 40px;
   border-radius: 15px;
   width: 564px;
-  background-color: #05306E;
+  background-color: var(--main-color);
 }
 .objectif h2 {
   margin-bottom: 40px;
@@ -665,7 +677,7 @@ footer section .footerSectionFirstLine {
 .objectif h3 {
   color: #ffffff;
   line-height: 40px;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -677,9 +689,9 @@ footer section .footerSectionFirstLine {
   font-weight: 700;
 }
 .access h3 {
-  margin-top: 30px;
+  margin-top: 24px;
   color: #000000;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 .access div {
@@ -693,7 +705,7 @@ footer section .footerSectionFirstLine {
 }
 .access div a h3 {
   display: inline;
-  background-color: #0952BA;
+  background-color: var(--sec-color);
   color: #fff;
   padding: 10px 58px;
   border-radius: 16px;
@@ -712,15 +724,15 @@ footer section .footerSectionFirstLine {
   align-items: center;
   height: 9px;
   width: 90%;
-  background-color: #05306E;
+  background-color: var(--third-color);
   padding: 0 10px;
 }
 .frise-content .frise .point {
   font-size: 30px;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
-  background-color: #05306E;
+  background-color: var(--third-color);
   color: #fff;
   display: flex;
   justify-content: center;
@@ -729,21 +741,21 @@ footer section .footerSectionFirstLine {
 .frise-content .frise .point .stick-bottom {
   border-radius: 10px;
   border-radius: 10px;
-  margin-top: 90px;
+  margin-top: 100px;
   z-index: -1;
   position: absolute;
   height: 150px;
   width: 9px;
-  background-color: #05306E;
+  background-color: var(--third-color);
 }
 .frise-content .frise .point .stick-top {
   border-radius: 10px;
-  margin-bottom: 90px;
+  margin-bottom: 100px;
   z-index: -1;
   position: absolute;
   height: 150px;
   width: 9px;
-  background-color: #05306E;
+  background-color: var(--third-color);
 }
 
 .frise-content-bis {
@@ -762,22 +774,22 @@ footer section .footerSectionFirstLine {
   width: 30%;
 }
 .text-bottom-frise .first-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-bottom-frise .first-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 .text-bottom-frise .second-text {
   width: 30%;
 }
 .text-bottom-frise .second-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-bottom-frise .second-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -793,22 +805,22 @@ footer section .footerSectionFirstLine {
   width: 30%;
 }
 .text-top-frise .first-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-top-frise .first-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 .text-top-frise .second-text {
   width: 30%;
 }
 .text-top-frise .second-text h2 {
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 700;
 }
 .text-top-frise .second-text h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 400;
 }
 
@@ -828,7 +840,6 @@ footer section .footerSectionFirstLine {
     padding-bottom: 40px;
     border-radius: 15px;
     width: 100%;
-    background-color: #05306E;
   }
   .objectif-content .objectif h2 {
     margin-bottom: 40px;
@@ -867,7 +878,6 @@ footer section .footerSectionFirstLine {
   }
   .objectif-content .access div a h3 {
     display: inline;
-    background-color: #0952BA;
     color: #fff;
     padding: 10px 58px;
     border-radius: 16px;
@@ -965,7 +975,6 @@ footer section .footerSectionFirstLine {
     top: 70px;
     left: 0;
     width: 100%;
-    background: #05306E;
     padding: 20px;
     box-sizing: border-box;
   }
@@ -1011,8 +1020,8 @@ footer section .footerSectionFirstLine {
     margin-right: 6%;
   }
   .global-frise .frise-content-bis .frise {
+    height: 9px;
     display: block;
-    background-color: rgba(5, 49, 110, 0);
   }
   .global-frise .frise-content-bis .frise .point {
     margin-bottom: 127px;
@@ -1020,8 +1029,8 @@ footer section .footerSectionFirstLine {
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    background-color: #05306E;
     color: #fff;
+    background-color: var(--third-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1033,7 +1042,7 @@ footer section .footerSectionFirstLine {
     position: absolute;
     height: 230px;
     width: 9px;
-    background-color: #05306E;
+    background-color: var(--third-color);
   }
   .global-frise .frise-content-bis .frise .point .stick-top {
     border-radius: 10px;
@@ -1042,7 +1051,7 @@ footer section .footerSectionFirstLine {
     position: absolute;
     height: 210px;
     width: 9px;
-    background-color: #05306E;
+    background-color: var(--third-color);
   }
   .text-bottom-frise {
     margin-top: 0px;
@@ -1130,6 +1139,7 @@ footer section .footerSectionFirstLine {
     font-size: 22px;
   }
   .presentation-content h3 {
+    line-height: 37px;
     font-size: 18px;
   }
   .objectif-content .objectif h2 {
@@ -1246,12 +1256,15 @@ footer section .footerSectionFirstLine {
   .contactBody .contactForm .contactInputs .contactFormPart1 {
     justify-content: center;
     margin-right: 0;
+    background-color: blueviolet;
   }
   .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_1 {
     flex-direction: column;
+    background-color: orange;
   }
   .contactBody .contactForm .contactInputs .contactFormPart1 .contactFormPart1_2 {
     flex-direction: column;
+    background-color: red;
   }
 }
 .contactBody .contactForm .contactInputs .contactFormPart1 label {
@@ -1401,6 +1414,200 @@ footer section .footerSectionFirstLine {
   height: 50px;
   background-color: blue;
   color: white;
+}
+
+.login {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: row;
+}
+.login .containerLeft {
+  width: 45%;
+  background-color: #123B2A;
+  display: flex;
+  align-items: center;
+}
+.login .containerLeft .title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login .containerLeft .title img {
+  width: 60%;
+}
+.login .containerLeft .title h1 {
+  font-family: "Kanit";
+  color: #FFFFFF;
+  font-size: 80px;
+}
+.login .containerRight {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login .containerRight .formContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login .containerRight .formContainer .mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+  gap: 20px;
+}
+.login .containerRight .formContainer .mainContainer h2 {
+  font-family: "Kanit";
+  font-size: 36px;
+}
+.login .containerRight .formContainer .mainContainer p {
+  font-family: "Euclid Flex";
+  font-size: 20px;
+  color: #434343;
+}
+.login .containerRight .formContainer form {
+  width: 65%;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.login .containerRight .formContainer form .labelContainer {
+  border: 1px solid #000000;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 5px 15px;
+}
+.login .containerRight .formContainer form .labelContainer input {
+  border: none;
+  outline: none;
+  font-family: "Roboto";
+  font-size: 20px;
+  color: #434343;
+}
+.login .containerRight .formContainer form button {
+  background: #3A4D92;
+  border-radius: 23px;
+  border: none;
+  padding: 15px 20px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 18px;
+  color: #FFFFFF;
+  margin: 5% 25%;
+}
+
+.dashboardAdmin {
+  width: 100%;
+  padding-left: 21vw;
+}
+
+.headerAdmin {
+  height: 100%;
+  position: fixed;
+  background-color: #123B2A;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2% 2%;
+}
+.headerAdmin .logoContainer a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.headerAdmin .logoContainer a img {
+  width: 25%;
+}
+.headerAdmin .logoContainer a h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  font-weight: 600;
+  font-family: Kanit;
+}
+.headerAdmin .mainContainer {
+  padding: 25% 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.headerAdmin .mainContainer nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
+}
+.headerAdmin .mainContainer nav .firstSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.headerAdmin .mainContainer nav .secondSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+.headerAdmin .mainContainer nav a {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
+.headerAdmin .mainContainer nav h2 {
+  font-size: 16px;
+  font-family: euclid flex;
+  font-weight: 500;
+}
+.headerAdmin .mainContainer nav span {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  font-weight: 600;
+  font-family: Kanit;
+  padding-bottom: 10px;
+}
+.headerAdmin form {
+  width: 100%;
+  display: flex;
+  align-items: left;
+}
+.headerAdmin form button {
+  gap: 20px;
+  border-style: none;
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  background: none;
+  align-items: center;
+}
+.headerAdmin form button h2 {
+  font-size: 16px;
+  font-family: euclid flex;
+  font-weight: 500;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.css.map */

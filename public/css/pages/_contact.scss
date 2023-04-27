@@ -53,11 +53,14 @@
         @media screen and (max-width: 1160px) {
           justify-content: center;
           margin-right: 0;
+          background-color: blueviolet;
           .contactFormPart1_1{
             flex-direction: column;
+            background-color: orange;
           }
           .contactFormPart1_2{
             flex-direction: column;
+            background-color: red;
           }
         }
         label{
