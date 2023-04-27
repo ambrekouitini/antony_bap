@@ -546,6 +546,8 @@ footer section .footerSectionFirstLine {
   align-items: center;
 }
 .contactSection .contactTitle {
+
+  font-family: "Euclid Flex SemiBold";
   font-size: 32px;
   text-align: center;
   margin-top: 70px;
@@ -553,6 +555,9 @@ footer section .footerSectionFirstLine {
 @media screen and (max-width: 900px) {
   .contactSection .contactTitle {
     font-size: 24px;
+    margin-left: -50px;
+    margin-right: 50px;
+    margin-bottom: 0px;
   }
 }
 .contactSection .contactForm {
@@ -1194,6 +1199,7 @@ footer section .footerSectionFirstLine {
     font-size: 18px;
   }
 }
+
 .index {
   width: 100%;
   height: 100%;
@@ -1577,7 +1583,7 @@ footer section .footerSectionFirstLine {
 }
 .headerAdmin .mainContainer nav h2 {
   font-size: 16px;
-  font-family: euclid flex;
+  font-family: uclid flex;
   font-weight: 500;
 }
 .headerAdmin .mainContainer nav span {
@@ -1592,7 +1598,6 @@ footer section .footerSectionFirstLine {
 .headerAdmin form {
   width: 100%;
   display: flex;
-  align-items: left;
 }
 .headerAdmin form button {
   gap: 20px;
@@ -1610,4 +1615,10 @@ footer section .footerSectionFirstLine {
   color: #fff;
 }
 
+
+.map{
+  width: 1690px;
+  position: relative;
+  height: 1000px;
+}
 /*# sourceMappingURL=style.css.map */
