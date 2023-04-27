@@ -94,5 +94,5 @@ require_once 'footer.php';
 ?>
 </body>
 <script src="public/js/script.js"></script>
-
+<script src='http://www.bing.com/api/maps/mapcontrol?callback=getMap' async></script>
 </html>
