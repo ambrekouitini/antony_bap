@@ -33,28 +33,15 @@
 
 .AccessMap{
   display: flex;
-  .Placeholder{
-    width: 100%;
-    height: 100vh;
-  }
-  .AccessMapFilter{
-    position: absolute;
-    right: 35px;
-
-    width: 73px;
-    height: 73px;
-    border-radius: 48px;
-    border: none;
-
-  }
 
 }
 
 #map{
   width: 10000px;
   position: relative;
-  height: 1000px;
+  height: 780px;
   z-index: -20;
+  margin-left: 0;
 }
 
 .FilterMap{
@@ -66,7 +53,7 @@
   width: 370px;
   --filter-width: 370px;
   --negative-filter-width: -370px;
-  transform: translate(var(--negative-filter-width));
+  transform: translate(var(--filter-width));
 
   z-index: 100;
   padding: 37px;
@@ -99,9 +86,11 @@
       font-size: 34px;
       font-weight: bolder;
       background-color: white;
+      color: black;
     }
   }
   .FilterMapSectionTitle{
+    margin-top: 35px;
     margin-bottom: 35px;
     h3{
       font-family: "Euclid Triangle";
@@ -148,7 +137,6 @@
 
   width: 73px;
   height: 73px;
-  border-radius: 48px;
   border: none;
   cursor: pointer;
 
