@@ -26,6 +26,19 @@
         header('Location: index.php');
     }
 
+    if(isset($_POST['action']) && $_POST['action'] === 'refuser') {
+        $id = $_POST['id'];
+        $connection = new Connection();
+        $connection->RefuseEstablishment($id);
+        header('Location: dashboard-request.php');
+    }
+    if(isset($_POST['action']) && $_POST['action'] === 'accepter') {
+        $id = $_POST['id'];
+        $connection = new Connection();
+        $connection->AcceptEstablishment($id);
+        header('Location: dashboard-request.php');
+    }
+
     require_once 'headerAdmin.php';
 ?>
 
@@ -41,37 +54,66 @@
 <body>
 
 <main class="manageEstablishment">
-    <h1>Afficher Etablissement</h1>
+    <h1>Information de l'établissement</h1>
 
-    <h2> Information de l'établissement </h2>
-    <p> Nom de l'établissement : <?= $establishment['establishment_name'] ?></p>
-    <p> Adresse de l'établissement : <?= $establishment['establishment_adress'] ?></p>
-    <p> Nom du propriétaire : <?= $establishment['owner_firstname'] ?> <?= $establishment['owner_lastname'] ?></p>
-    <p> Email du propriétaire : <?= $establishment['owner_email'] ?></p>
-    <p> Numéro du propriétaire : <?= $establishment['owner_number'] ?></p>
-    <p> Photos de l'établissement : </p>
-    <img src="public/img/<?= $establishment['establishment_photo1'] ?>" alt="photo1">
+    <div class="all">
+        <div class="status">
+            <h2>Statut de la demande</h2>
+            <div class="container">
+                <div class="statusInfo">
+                    <p> Statut de la demande : <?= $establishment['status'] ?></p>
+                    <p> Date de la demande : <?= $establishment['asked_at'] ?></p>
+                </div>
+                <?php if ($establishment['status'] === 'En attente') : ?>
+                    <form method="POST">
+                        <input type="hidden" name="id" value="<?php echo $establishment['id']; ?>">
+                        <button class="accept"type="submit" name="action" value="accepter">Accepter</button>
+                        <button class="refuse" type="submit" name="action" value="refuser">Refuser</button>
+                    </form>
+                <?php endif;
+                ?>
+            </div>
+        </div>
 
-    <form method="POST">
-        <input type="hidden" name="id" value="<?php echo $establishment['id']; ?>">
-        <button type="submit" name="action" value="accepter">Accepter</button>
-        <button type="submit" name="action" value="refuser">Refuser</button>
-    </form>
+        <div class="owner">
+            <h2>Propriétaire</h2>
+            <div class="ownerInfo">
+                <div class="info">
+                    <h3>Nom du propriétaire : </h3>
+                    <p> <?= $establishment['owner_firstname'] ?> <?= $establishment['owner_lastname'] ?></p>
+                </div>
+                <div class="info">
+                    <h3>Email du propriétaire : </h3>
+                    <p> <?= $establishment['owner_email'] ?></p>
+                </div>
+                <div class="info">
+                    <h3>Numéro du propriétaire : </h3>
+                    <p> <?= $establishment['owner_number'] ?></p>
+                </div>
+            </div>
+        </div>
 
-    <?php
-        if(isset($_POST['action']) && $_POST['action'] === 'refuser') {
-            $id = $_POST['id'];
-            $connection = new Connection();
-            $connection->RefuseEstablishment($id);
-            header('Location: dashboard-request.php');
-        }
-        if(isset($_POST['action']) && $_POST['action'] === 'accepter') {
-            $id = $_POST['id'];
-            $connection = new Connection();
-            $connection->AcceptEstablishment($id);
-            header('Location: dashboard-request.php');
-        }
-    ?>
+        <div class="infoEsta">
+            <h2>Informations de l'établissement</h2>
+            <div class="containerEsta">
+                <div class="infoContainer">
+                    <div class="info">
+                        <h3>Nom de l'établissement : </h3>
+                        <p> <?= $establishment['establishment_name'] ?></p>
+                    </div>
+                    <div class="info">
+                        <h3>Adresse de l'établissement : </h3>
+                        <p> <?= $establishment['establishment_adress'] ?></p>
+                    </div>
+                </div>
+                <div class="picturesContainer">
+                    <h3> Photos de l'établissement : </h3>
+                    <img src="public/img/<?= $establishment['pictures'] ?>" alt="photo1">
+                </div>
+            </div>
+        </div>
+    </div>
+
 </main>
 </body>
 </html>

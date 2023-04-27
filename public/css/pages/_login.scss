@@ -6,7 +6,7 @@
     flex-direction: row;
     .containerLeft{
         width: 45%;
-        background-color: #123B2A;
+        background: linear-gradient(90.23deg, #085B68 -93.64%, #222952 100%);
         display: flex;
         align-items: center;
         .title{
@@ -76,7 +76,7 @@
                     }
                 }
                 button{
-                    background: #3A4D92;
+                    background: #FFB800;
                     border-radius: 23px;
                     border: none;
                     padding: 15px 20px;
