@@ -106,6 +106,7 @@ footer section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 0 50px;
   z-index: 999;
   margin-top: 85px;
@@ -113,41 +114,101 @@ footer section {
   font-family: "Euclid Triangle", sans-serif;
   font-size: 16px;
 }
-footer section p, footer section a, footer section a:link, footer section a:visited, footer section a:active, footer section a:hover {
+@media screen and (max-width: 780px) {
+  footer section {
+    height: 285px;
+  }
+}
+footer section .footerClient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 780px) {
+  footer section .footerClient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+footer section .footerClient p, footer section .footerClient a, footer section .footerClient a:link, footer section .footerClient a:visited, footer section .footerClient a:active, footer section .footerClient a:hover {
   text-decoration: none;
   color: white;
 }
 @media screen and (max-width: 780px) {
-  footer section p, footer section a, footer section a:link, footer section a:visited, footer section a:active, footer section a:hover {
-    font-size: 8px;
+  footer section .footerClient p, footer section .footerClient a, footer section .footerClient a:link, footer section .footerClient a:visited, footer section .footerClient a:active, footer section .footerClient a:hover {
+    font-size: 16px;
   }
 }
-footer section .footerSection1 {
+footer section .footerClient .footerSection1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 900px;
+  width: 250px;
 }
-footer section .footerSection2 {
+@media screen and (max-width: 780px) {
+  footer section .footerClient .footerSection1 {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+}
+footer section .footerClient .footerSection2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 900px;
+  width: 250px;
 }
-footer section .footerSection3 {
+@media screen and (max-width: 780px) {
+  footer section .footerClient .footerSection2 {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+}
+footer section .footerClient .footerSection3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  width: 900px;
+  width: 250px;
 }
-footer section .footerSection3 a, footer section .footerSection3 a:link, footer section .footerSection3 a:visited, footer section .footerSection3 a:active, footer section .footerSection3 a:hover {
+footer section .footerClient .footerSection3 a, footer section .footerClient .footerSection3 a:link, footer section .footerClient .footerSection3 a:visited, footer section .footerClient .footerSection3 a:active, footer section .footerClient .footerSection3 a:hover {
   color: white;
+  text-decoration: underline;
 }
-footer section .footerSectionFirstLine {
+@media screen and (max-width: 780px) {
+  footer section .footerClient .footerSection3 {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+}
+footer section .footerClient .footerSectionFirstLine {
   margin-bottom: 25px;
+}
+@media screen and (max-width: 780px) {
+  footer section .footerClient .footerSectionFirstLine {
+    margin-bottom: 0;
+  }
+}
+
+.AdminAccess {
+  position: absolute;
+  margin-bottom: 0;
+  margin-left: 0;
+  transform: translateY(80px);
+}
+.AdminAccess a {
+  font-size: 16px;
+}
+@media screen and (max-width: 780px) {
+  .AdminAccess {
+    transform: translateY(130px);
+  }
+  .AdminAccess a {
+    font-size: 16px;
+  }
 }
 
 * {
@@ -1308,6 +1369,10 @@ footer section .footerSectionFirstLine {
   font-weight: bold;
 }
 
+.accessibilite {
+  overflow-x: hidden;
+}
+
 .sectionSearchBar {
   width: 100%;
   height: 150px;
@@ -1339,32 +1404,97 @@ footer section .footerSectionFirstLine {
 
 .AccessMap {
   display: flex;
-  --map-height: 100vh;
-  height: var(--map-height);
 }
 .AccessMap .Placeholder {
   width: 100vw;
+  height: 780px;
+  z-index: -100;
+  overflow: visible;
 }
 
 .FilterMap {
   display: none;
+  flex-direction: column;
   position: relative;
-  width: 250px;
-  --filter-width: 250px;
-  --negative-filter-width: -250px;
-  height: var(--map-height);
-  background-color: darkgrey;
-  transform: translate(250px);
+  height: 780px;
+  width: 370px;
+  --filter-width: 370px;
+  --negative-filter-width: -370px;
+  transform: translate(var(--negative-filter-width));
+  z-index: 100;
+  padding: 37px;
+  background-color: white;
+}
+.FilterMap .FilterMapTitle {
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+.FilterMap .FilterMapTitle h2 {
+  display: flex;
+  justify-content: center;
+  font-family: "Euclid Triangle";
+  font-size: 24px;
+  font-weight: bold;
+}
+.FilterMap .FilterMapTitle .CloseFilter {
+  left: 40px;
+  margin-right: 90px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  font-family: Inter, serif;
+  font-size: 34px;
+  font-weight: bolder;
+  background-color: white;
+}
+.FilterMap .FilterMapSectionTitle {
+  margin-bottom: 35px;
+}
+.FilterMap .FilterMapSectionTitle h3 {
+  font-family: "Euclid Triangle";
+  font-size: 24px;
+}
+.FilterMap .FilterMapSection {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 35px;
+}
+.FilterMap .FilterMapSection .FilterMapFilterSectionIcons {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.FilterMap .FilterMapSection .FilterMapFilterSectionIcons .FilterMapFilterSectionIcon {
+  width: 57px;
+  height: 57px;
+  border-radius: 30px;
+  border: 1px black solid;
+}
+.FilterMap .FilterMapSection .FilterMapRadiusSectionSlider .progress {
+  background: white;
+  border: solid 1px black;
+  border-radius: 8px;
+  height: 7px;
+  width: 266px;
+  outline: none;
+  transition: background 450ms ease-in;
+  -webkit-appearance: none;
 }
 
 .FilterIcon {
   position: absolute;
   right: 35px;
+  top: 290px;
   width: 73px;
   height: 73px;
   border-radius: 48px;
   border: none;
-  z-index: 20;
+  cursor: pointer;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -1379,7 +1509,7 @@ footer section .footerSectionFirstLine {
 
 .activeMap {
   transform: translate(0px);
-  display: block;
+  display: flex;
 }
 
 .activeIcon {
@@ -1387,18 +1517,24 @@ footer section .footerSectionFirstLine {
 }
 
 .LocationBtn {
-  width: 80px;
-  height: 50px;
-  background-color: blue;
-  color: white;
+  background-color: #ffffff;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 80px;
+  overflow: visible;
+}
+.LocationBtn img {
+  width: 50px;
+  height: 80px;
 }
 
 .Location {
-  background-color: deeppink;
   width: 100%;
   height: 575px;
   padding: 85px 110px;
-  display: flex;
+  display: none;
+  background-color: white;
 }
 .Location img {
   margin-right: 73px;
@@ -1414,6 +1550,7 @@ footer section .footerSectionFirstLine {
 .Location .LocationPres .LocationTabs {
   display: flex;
   gap: 20px;
+  margin-bottom: 40px;
 }
 .Location .LocationPres .LocationTabs .Tab {
   font-family: "Euclid Triangle";
@@ -1434,12 +1571,43 @@ footer section .footerSectionFirstLine {
   background-color: #DBB326;
 }
 .Location .LocationPres .LocationText {
+  margin-left: 30px;
+}
+.Location .LocationPres .LocationText li {
+  counter-increment: my-awesome-counter;
   font-size: 24px;
   gap: 10px;
 }
+.Location .LocationPres .LocationText ol li::before {
+  content: counter(my-awesome-counter) ". ";
+}
 
 .activeLocation {
-  display: block;
+  display: flex;
+}
+
+.options {
+  transform: translateX(-20px);
+  z-index: 20;
+  height: 50px;
+  width: 150px;
+  position: relative;
+}
+
+options::before {
+  content: "<ezaeazezae";
+  display: inline;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 30px;
+  color: red;
+  background-color: yellow;
+}
+
+.FilterIcon {
+  background-color: white;
 }
 
 /*# sourceMappingURL=style.css.map */
