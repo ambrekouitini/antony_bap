@@ -1493,6 +1493,10 @@ button {
   content: counter(my-awesome-counter) ". ";
 }
 
+.activeLocation {
+  display: flex;
+}
+
 .login {
   width: 100%;
   height: 100vh;

@@ -68,11 +68,8 @@
         <div id="map"></div>
     </section>
 
-
-
-
     <button class="LocationBtn">
-        <img src="images/Google_Maps_Pin.png" alt="">
+        <img src="images/arrow.svg" alt="">
     </button>
     <div class="Location">
         <img src="images/AuchanLocation.png" alt="Auchan">
@@ -92,6 +89,7 @@
             </ol>
         </div>
     </div>
+
     <?php
     require_once 'footer.php';
     ?>
