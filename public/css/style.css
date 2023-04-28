@@ -21,87 +21,6 @@
   background: #ffffff;
 }
 
-.navbar {
-  width: 100%;
-  height: 100px;
-  background: #05306E;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 50px;
-  position: fixed;
-  z-index: 999;
-}
-
-.navbar > ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar > ul > li {
-  list-style: none;
-  margin: 0 40px;
-}
-
-.navbar > ul > li > a {
-  text-decoration: none;
-  color: #ffffff;
-  font-size: 20px;
-}
-
-.navbar-toggle {
-  display: none;
-}
-
-.navbar > img {
-  width: 300px;
-}
-
-@media (max-width: 850px) {
-  .navbar {
-    padding: 0 20px;
-  }
-  .navbar > img {
-    width: 200px;
-  }
-  .navbar-toggle {
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    font-size: 30px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  .navbar > ul {
-    text-align: center;
-    align-items: center;
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: #05306E;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  .navbar > ul > li {
-    display: block;
-    margin-bottom: 10px;
-  }
-  .navbar > ul > li > a {
-    font-size: 18px;
-  }
-  .navbar-toggle.active {
-    display: block;
-  }
-  .navbar > ul.active {
-    display: block;
-  }
-}
 /*----------------------------------------------------*/
 footer {
   margin-bottom: 0;
@@ -109,7 +28,7 @@ footer {
 footer section {
   width: 100%;
   height: 185px;
-  background-color: #05306E;
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,8 +76,134 @@ footer section .footerSectionFirstLine {
   margin-bottom: 25px;
 }
 
-.tempMarg {
-  height: 185px;
+:root {
+  --main-color: #222952;
+  --sec-color: #085B68;
+  --third-color: #FFB800;
+  --fourth-color: #123B2A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Euclid Triangle", sans-serif;
+}
+
+.index {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+.navbar {
+  z-index: 99;
+  width: 100%;
+  height: 85px;
+  background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.navbar > ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar > ul > li {
+  list-style: none;
+  margin: 0 23px;
+}
+
+.navbar > ul > li > a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.navbar > img {
+  width: 50px;
+  object-fit: cover;
+}
+
+.accueil-content {
+  height: 573px;
+  width: 100%;
+}
+.accueil-content img {
+  z-index: -1;
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 573px;
+}
+.accueil-content .accueil-text h1 {
+  padding-top: 140px;
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.accueil-content .accueil-text h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.accueil-content .accueil-text h3 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+.accueil-content .accueil-text div {
+  padding-top: 90px;
+  text-align: center;
+}
+.accueil-content .accueil-text div a {
+  text-decoration: none;
+}
+.accueil-content .accueil-text div .button {
+  border-radius: 16px;
+  padding: 10px 40px;
+  display: inline;
+  background-color: var(--third-color);
+}
+
+.presentation-content {
+  padding-left: 111px;
+  padding-right: 147px;
+}
+.presentation-content h2 {
+  padding-top: 90px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.presentation-content h3 {
+  line-height: 49px;
+  padding-top: 35px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.objectif-content {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding-left: 111px;
+  padding-right: 147px;
+  display: flex;
 }
 
 /*----------------- Section referencement de particulier -------------------*/
@@ -241,7 +286,7 @@ footer section .footerSectionFirstLine {
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background-color: #0952BA;
+  background-color: var(--third-color);
   color: white;
   border: none;
   font-family: "Euclid Flex";
@@ -427,19 +472,21 @@ footer section .footerSectionFirstLine {
   width: 564px;
   background: linear-gradient(90deg, var(--sec-color) 0%, var(--main-color) 100%);
 }
-.contactSection .contactTitle {
-  font-family: "Euclid Flex SemiBold";
-  font-size: 32px;
-  margin-bottom: 35px;
-  margin-top: 70px;
-  margin-left: -600px;
+.objectif h2 {
+  margin-bottom: 40px;
+  color: var(--third-color);
+  font-size: 30px;
+  font-weight: 700;
 }
-@media screen and (max-width: 900px) {
-  .contactSection .contactTitle {
-    margin-left: -50px;
-    margin-right: 50px;
-    margin-bottom: 0px;
-  }
+.objectif h3 {
+  color: #ffffff;
+  line-height: 40px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.access {
+  margin-left: 68px;
 }
 .access h2 {
   font-size: 32px;
@@ -549,15 +596,23 @@ footer section .footerSectionFirstLine {
   font-size: 20px;
   font-weight: 400;
 }
-.contactSection .contactForm button {
-  margin-top: 20px;
-  width: 820px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: #0952BA;
-  color: white;
-  border: none;
-  font-family: "Euclid Triangle", sans-serif;
+
+.text-top-frise {
+  margin-bottom: 140px;
+  margin-top: 100px;
+  margin-left: 200px;
+  display: flex;
+  justify-content: left;
+  gap: 8%;
+}
+.text-top-frise .first-text {
+  width: 30%;
+}
+.text-top-frise .first-text h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+.text-top-frise .first-text h3 {
   font-size: 20px;
   font-weight: 400;
 }
@@ -568,10 +623,9 @@ footer section .footerSectionFirstLine {
   font-size: 26px;
   font-weight: 700;
 }
-
-.index {
-  width: 100%;
-  height: 100%;
+.text-top-frise .second-text h3 {
+  font-size: 20px;
+  font-weight: 400;
 }
 
 /*------------    Page Contact   ------------*/
@@ -1743,6 +1797,7 @@ button {
   font-size: 26px;
   text-transform: uppercase;
   padding: 50px 50px 20px 50px;
+  color: #FFB800;
 }
 .manageEstablishment h2 {
   font-weight: 600;
@@ -1782,11 +1837,14 @@ button {
 .manageEstablishment .all .status .container .statusInfo {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  justify-content: flex-end;
 }
 .manageEstablishment .all .status .container form {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  width: 100%;
 }
 .manageEstablishment .all .status .container form button {
   border-radius: 10px;
@@ -1807,32 +1865,39 @@ button {
 .manageEstablishment .all .status .container form .refuse {
   background: #FF0000;
 }
-.manageEstablishment .all .owner {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.manageEstablishment .all .owner .ownerInfo {
-  display: flex;
-  flex-direction: column;
-}
-.manageEstablishment .all .infoEsta {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.manageEstablishment .all .infoEsta .containerEsta .picturesContainer {
+.manageEstablishment .all .secondRow {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 50px;
 }
-.manageEstablishment .all .infoEsta .containerEsta .picturesContainer .picture {
-  width: 200px;
-  height: 200px;
+.manageEstablishment .all .secondRow .owner {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  border-right: solid 1px #aeadad;
+  width: 45%;
+}
+.manageEstablishment .all .secondRow .owner .ownerInfo {
+  display: flex;
+  flex-direction: column;
+}
+.manageEstablishment .all .secondRow .infoEsta {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.manageEstablishment .all .photoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.manageEstablishment .all .photoContainer .picture {
+  width: 400px;
+  height: 400px;
   background: #aeadad;
   border-radius: 10px;
 }
-.manageEstablishment .all .infoEsta .containerEsta .picturesContainer .picture img {
+.manageEstablishment .all .photoContainer .picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1849,6 +1914,87 @@ button {
   font-size: 26px;
   text-transform: uppercase;
   padding: 50px 50px 20px 50px;
+}
+.dashboardFeedback .firstRow form {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 15px;
+  padding: 0 30px;
+}
+.dashboardFeedback .firstRow form input {
+  background: #FFB800;
+  border-radius: 10px;
+  padding: 10px 15px;
+  border: none;
+  color: white;
+}
+.dashboardFeedback .firstRow form input:hover {
+  cursor: pointer;
+}
+.dashboardFeedback .tableHeader {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 30px;
+  border-bottom: 1px solid #6E6E6E;
+}
+.dashboardFeedback .tableHeader .header {
+  padding: 10px;
+  font-size: 18px;
+}
+.dashboardFeedback .allFeedbacks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 30px;
+}
+.dashboardFeedback .allFeedbacks .feedback {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  background: #D9D9D9;
+  border: 2px solid #C2C2C2;
+  border-radius: 15px;
+  padding: 10px;
+  gap: 20px;
+}
+.dashboardFeedback .allFeedbacks .feedback .feedbackInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+}
+.dashboardFeedback .allFeedbacks .feedback .feedbackEstablishment, .dashboardFeedback .allFeedbacks .feedback .feedbackMessage {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.dashboardFeedback .allFeedbacks .feedback .feedbackDate {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: flex-start;
+}
+.dashboardFeedback .allFeedbacks .feedback .feedbackDate .option form {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  gap: 20px;
+}
+.dashboardFeedback .allFeedbacks .feedback .feedbackDate .option form button {
+  border: none;
+  margin: 0;
+  width: auto;
+  height: auto;
+  background: none;
+  color: none;
+}
+.dashboardFeedback .allFeedbacks .feedback .feedbackDate .option form button:hover {
+  cursor: pointer;
 }
 
 .headerAdmin {
@@ -1868,9 +2014,10 @@ button {
   gap: 10px;
   width: 100%;
   text-decoration: none;
+  justify-content: center;
 }
 .headerAdmin .logoContainer a img {
-  width: 25%;
+  width: 40%;
 }
 .headerAdmin .logoContainer a h1 {
   font-size: 28px;
@@ -1920,7 +2067,7 @@ button {
 }
 .headerAdmin .mainContainer nav h2 {
   font-size: 16px;
-  font-family: uclid flex;
+  font-family: euclid flex;
   font-weight: 500;
 }
 .headerAdmin .mainContainer nav span {
@@ -1935,6 +2082,7 @@ button {
 .headerAdmin form {
   width: 100%;
   display: flex;
+  align-items: left;
 }
 .headerAdmin form button {
   gap: 20px;
@@ -1952,10 +2100,4 @@ button {
   color: #fff;
 }
 
-
-.map{
-  width: 1690px;
-  position: relative;
-  height: 1000px;
-}
 /*# sourceMappingURL=style.css.map */

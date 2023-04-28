@@ -21,7 +21,7 @@
 
     if(isset($_GET['searchTerm'])) {
         $searchTerm = $_GET['searchTerm'];
-        $orders = $connection->searchEstablishment($searchTerm);
+        $establishmentsLabeled = $connection->searchEstablishment($searchTerm);
     }
 
     require_once 'headerAdmin.php';
@@ -33,7 +33,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/css/output.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <title>Dashboard Admin</title>
 </head>
 
@@ -70,7 +70,7 @@
                             <p>: <?= $labeled['owner_number'] ?></p>
                         </div>
                         <div class="button">
-                            <a href="dashboard-admin.php?id=<?= $labeled['id'] ?>">Afficher Plus
+                            <a href="manage-labeled.php?id=<?= $labeled['id'] ?>">Afficher Plus
                             <img src="images/arrow.svg" alt=""></a>
                         </div>
                     </div>

@@ -7,7 +7,7 @@
     if (isset($_GET['id'])) {
         $connection = new Connection;
         $establishmentId = $_GET['id'];
-        $establishment = $connection->GetEstablishmentById($establishmentId);
+        $establishment = $connection->GetLabledById($establishmentId);
         $found = true;
     } else {
         $found = false;
@@ -26,19 +26,6 @@
         header('Location: index.php');
     }
 
-    if(isset($_POST['action']) && $_POST['action'] === 'refuser') {
-        $id = $_POST['id'];
-        $connection = new Connection();
-        $connection->RefuseEstablishment($id);
-        header('Location: dashboard-request.php');
-    }
-    if(isset($_POST['action']) && $_POST['action'] === 'accepter') {
-        $id = $_POST['id'];
-        $connection = new Connection();
-        $connection->AcceptEstablishment($id);
-        header('Location: dashboard-request.php');
-    }
-
     require_once 'headerAdmin.php';
 ?>
 
@@ -54,7 +41,7 @@
 <body>
 
 <main class="manageEstablishment">
-    <h1>Information de l'établissement</h1>
+    <h1>Information de l'établissement Labelisé</h1>
 
     <div class="all">
         <div class="status">
@@ -62,16 +49,8 @@
             <div class="container">
                 <div class="statusInfo">
                     <p> Statut de la demande : <?= $establishment['status'] ?></p>
-                    <p> Date de la demande : <?= $establishment['asked_at'] ?></p>
+                    <p> Accepté le : <?= $establishment['accepted_at'] ?></p>
                 </div>
-                <?php if ($establishment['status'] === 'En attente') : ?>
-                    <form method="POST">
-                        <input type="hidden" name="id" value="<?php echo $establishment['id']; ?>">
-                        <button class="accept"type="submit" name="action" value="accepter">Accepter</button>
-                        <button class="refuse" type="submit" name="action" value="refuser">Refuser</button>
-                    </form>
-                <?php endif;
-                ?>
             </div>
         </div>
 

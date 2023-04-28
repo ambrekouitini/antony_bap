@@ -36,8 +36,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>Connexion</title>
 </head>
 
@@ -46,7 +46,7 @@
 <main class="login">
     <div class="containerLeft">
         <div class="title">
-            <img src="/images/antonyLogo.png" alt="logo ville antony">
+            <img src="/images/antonyNewLogo.png" alt="logo ville antony">
             <h1>Access'Tony</h1>
         </div>
     </div>

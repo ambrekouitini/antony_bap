@@ -9,8 +9,8 @@ class Connection
 
     public function __construct()
     {
-        //$this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', 'root');
-        $this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', '');
+        $this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', 'root');
+        //$this->pdo = new PDO('mysql:dbname=antony_bap;host=127.0.0.1', 'root', '');
     }
 
     // USER'S FUNCTION
@@ -121,6 +121,7 @@ class Connection
         return $data;
     }
 
+
     public function RefuseEstablishment($id)
     {
         $query = 'UPDATE establishment SET status = "Refusé" WHERE id = :id';
@@ -172,7 +173,14 @@ class Connection
     }
 
     public function searchEstablishment($searchTerm){
-        $query = "SELECT * FROM establishment WHERE status = 'Accepté' AND (owner_firstname LIKE :search OR owner_lastname LIKE :search OR owner_email LIKE :search OR establishment_name LIKE :search OR establishment_adress LIKE :search)";
+        $query = "    SELECT *
+        FROM labeled
+        WHERE owner_firstname LIKE :search
+            OR owner_lastname LIKE :search
+            OR owner_email LIKE :search
+            OR establishment_name LIKE :search
+            OR establishment_adress LIKE :search
+        ";
         $statement = $this->pdo->prepare($query);
         $statement->bindValue(':search', '%'.$searchTerm.'%', PDO::PARAM_STR);
         $statement->execute();
@@ -199,4 +207,43 @@ class Connection
         $data = $statement->fetchAll();
         return $data;
     }
+
+    public function GetFeedbackByDateAsc()
+    {
+        $query = 'SELECT * FROM feedback ORDER BY send_at ASC';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
+    }
+
+    public function GetFeedbackByDateDesc()
+    {
+        $query = 'SELECT * FROM feedback ORDER BY send_at DESC';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
+    }
+
+    public function DeleteFeedback($id)
+    {
+        $query = 'DELETE FROM feedback WHERE id = :id';
+        $statement = $this->pdo->prepare($query);
+        return $statement->execute([
+            'id' => $id
+        ]);
+    }
+
+    public function GetLabledById($id)
+    {
+        $query = 'SELECT * FROM labeled WHERE id = :id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute([
+            'id' => $id
+        ]);
+        $data = $statement->fetch();
+        return $data;
+    }
+
 }

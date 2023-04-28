@@ -2,8 +2,8 @@
     <header class="headerAdmin">
         <div class="logoContainer">
             <a href="index.php">
-                <img src="images/antonyLogo.png" alt="Logo Access'Tony">
-                <h1>Access'Tony</h1>
+                <img src="images/antonyNewLogo.png" alt="Logo Access'Tony">
+                <!-- <h1>Access'Tony</h1> -->
             </a>
         </div>
         <div class="mainContainer">
